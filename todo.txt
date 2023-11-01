@@ -1,0 +1,20 @@
+/* ToDo : MeidaQurey to maka app resoponsive to any size of screen .
+bool isDesktop = MediaQuery.of(context).size.width >= 600;
+bool isMobile = MediaQuery.of(context).size.width < 600;
+-----------   
+- اضافة ادعية الكرب
+- Add fonts , allow user to choose
+- convert debug  to "نسخة خاصة"  ahtkary , sahih, thaaef 
+- add my thekr to ...
+- tray to remove GetBuilder from floatingButton and make it only to text inside flaoting button .
+- add search to all pages .
+- in search onTap on x : clear search content .
+- مراجعة النصوص .
+- نسخ صيغ التسبيح .
+- معاني الاذكار - المنجد .
+- مائة دعاء من السنة المنجد .
+- نسخ صيغ الاستغفار.
+- add to counter bar decrease unti 0;
+- الانتقال من صفحة الى اخرى عبر السكرول 
+- تلوين السكرول بنفس اللون الرئيسي للتطبيق
+*/

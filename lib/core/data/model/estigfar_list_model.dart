@@ -1,0 +1,31 @@
+import 'package:athkarix/core/data/model/athkar_model.dart';
+
+import '../static/text/estigfar_text.dart';
+
+List<AthkarModel> estigfarList = [
+  AthkarModel(duaText: EstigfarText.estigfar1),
+  AthkarModel(duaText: EstigfarText.estigfar2),
+  AthkarModel(duaText: EstigfarText.estigfar3),
+  AthkarModel(duaText: EstigfarText.estigfar4),
+  AthkarModel(duaText: EstigfarText.estigfar5),
+  AthkarModel(duaText: EstigfarText.estigfar6),
+  AthkarModel(duaText: EstigfarText.estigfar23),
+  AthkarModel(duaText: EstigfarText.estigfar7),
+  AthkarModel(duaText: EstigfarText.estigfar8),
+  AthkarModel(duaText: EstigfarText.estigfar9),
+  AthkarModel(duaText: EstigfarText.estigfar10),
+  AthkarModel(duaText: EstigfarText.estigfar11),
+  AthkarModel(duaText: EstigfarText.estigfar12),
+  AthkarModel(duaText: EstigfarText.estigfar13),
+  AthkarModel(duaText: EstigfarText.estigfar14),
+  AthkarModel(duaText: EstigfarText.estigfar15),
+  AthkarModel(duaText: EstigfarText.estigfar16),
+  AthkarModel(duaText: EstigfarText.estigfar17),
+  AthkarModel(duaText: EstigfarText.estigfar18),
+  AthkarModel(duaText: EstigfarText.estigfar22),
+  AthkarModel(duaText: EstigfarText.estigfar24),
+  AthkarModel(duaText: EstigfarText.estigfar25),
+  AthkarModel(duaText: EstigfarText.estigfar26),
+  AthkarModel(duaText: EstigfarText.estigfar20),
+  AthkarModel(duaText: EstigfarText.estigfar21),
+];
