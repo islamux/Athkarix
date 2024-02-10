@@ -32,8 +32,8 @@ class Estigfar extends StatelessWidget {
               icon: const Icon(Icons.share),
             ),
             const Center(
-              child:  Text(
-                "إستغفار",
+              child: Text(
+                " إستغفار       ",
                 style: TextStyle(
                     color: AppColor.primaryColorGolden,
                     backgroundColor: AppColor.primaryColorBlack2),
@@ -46,10 +46,14 @@ class Estigfar extends StatelessWidget {
           onTap: () {
             Get.toNamed(AppRoute.home);
           },
-          child: const Icon(Icons.arrow_back),
+          child: const Icon(
+            Icons.arrow_back,
+            color: Colors.amber,
+          ),
         ),
         actions: [
           IconButton(
+              color: AppColor.amber,
               onPressed: () {
                 controller.decreaseFontSize();
               },
@@ -66,6 +70,7 @@ class Estigfar extends StatelessWidget {
           ),
 
           IconButton(
+            color: AppColor.amber,
             onPressed: () {
               controller.increaseFontSize();
             },

@@ -31,7 +31,7 @@ class DuaMenSunnah extends StatelessWidget {
               icon: const Icon(Icons.share),
             ),
             const Center(
-              child:  Text(
+              child: Text(
                 "أدعية السنة",
                 style: TextStyle(
                     color: AppColor.primaryColorGolden,
@@ -45,14 +45,17 @@ class DuaMenSunnah extends StatelessWidget {
           onTap: () {
             Get.toNamed(AppRoute.home);
           },
-          child: const Icon(Icons.arrow_back),
+          child: const Icon(
+            Icons.arrow_back,
+            color: Colors.amber,
+          ),
         ),
         actions: [
           IconButton(
               onPressed: () {
                 controller.decreaseFontSize();
               },
-              icon: const Icon(Icons.remove)),
+              icon: const Icon(Icons.remove, color: Colors.amber)),
           // Font between + -
           const Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -68,7 +71,10 @@ class DuaMenSunnah extends StatelessWidget {
               onPressed: () {
                 controller.increaseFontSize();
               },
-              icon: const Icon(Icons.add))
+              icon: const Icon(
+                Icons.add,
+                color: Colors.amber,
+              ))
         ],
       ),
       body: const SafeArea(

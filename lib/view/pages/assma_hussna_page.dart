@@ -27,14 +27,14 @@ class AssmaHussna extends StatelessWidget {
               onPressed: () => customShareContent(controllerAs),
               icon: const Icon(Icons.share),
             ),
-             const Center(
-               child: Text(
-                "الأسماء الحسنى",
+            const Center(
+              child: Text(
+                "الأسماء الحسنى    ",
                 style: TextStyle(
                     color: AppColor.primaryColorGolden,
                     backgroundColor: AppColor.primaryColorBlack2),
-                         ),
-             ),
+              ),
+            ),
           ],
         ),
         centerTitle: true,
@@ -44,14 +44,20 @@ class AssmaHussna extends StatelessWidget {
             Get.find<AssmaHussnaControllerImp>().resetCounter();
             Get.toNamed(AppRoute.home);
           },
-          child: const Icon(Icons.arrow_back),
+          child: const Icon(
+            Icons.arrow_back,
+            color: Colors.amber,
+          ),
         ),
         actions: [
           IconButton(
             onPressed: () {
               controllerAs.decreaseFontSize();
             },
-            icon: const Icon(Icons.remove),
+            icon: const Icon(
+              Icons.remove,
+              color: Colors.amber,
+            ),
           ),
           // Font between + -
           const Row(
@@ -68,7 +74,10 @@ class AssmaHussna extends StatelessWidget {
               onPressed: () {
                 controllerAs.increaseFontSize();
               },
-              icon: const Icon(Icons.add))
+              icon: const Icon(
+                Icons.add,
+                color: Colors.amber,
+              ))
         ],
       ),
       body: const SafeArea(

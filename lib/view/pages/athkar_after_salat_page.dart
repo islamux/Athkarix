@@ -32,14 +32,14 @@ class AthkarAfterSalat extends StatelessWidget {
               onPressed: () => customShareContent(controllerAfter),
               icon: const Icon(Icons.share),
             ),
-             const Center(
-               child: Text(
+            const Center(
+              child: Text(
                 "أذكار بعد الصلاة",
                 style: TextStyle(
                     color: AppColor.primaryColorGolden,
                     backgroundColor: AppColor.primaryColorBlack2),
-                         ),
-             ),
+              ),
+            ),
           ],
         ),
         centerTitle: true,
@@ -50,14 +50,20 @@ class AthkarAfterSalat extends StatelessWidget {
 
             Get.toNamed(AppRoute.home);
           },
-          child: const Icon(Icons.arrow_back),
+          child: const Icon(
+            Icons.arrow_back,
+            color: Colors.amber,
+          ),
         ),
         actions: [
           IconButton(
             onPressed: () {
               controllerAfter.decreaseFontSize();
             },
-            icon: const Icon(Icons.remove),
+            icon: const Icon(
+              Icons.remove,
+              color: Colors.amber,
+            ),
           ),
           // Font between + -
           const Row(
@@ -74,7 +80,10 @@ class AthkarAfterSalat extends StatelessWidget {
               onPressed: () {
                 controllerAfter.increaseFontSize();
               },
-              icon: const Icon(Icons.add))
+              icon: const Icon(
+                Icons.add,
+                color: Colors.amber,
+              ))
         ],
       ),
       body: SafeArea(

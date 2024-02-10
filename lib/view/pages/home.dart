@@ -19,6 +19,7 @@ class Home extends StatelessWidget {
 
     return // Wrap Scaffold to change direction of widgets in pageto rtl (arabic)
         WillPopScope(
+      // todo : replace depricated
       // Make willPopscop first widget
       onWillPop: () => alertExitApp(),
       child: Directionality(
@@ -27,7 +28,7 @@ class Home extends StatelessWidget {
           appBar: AppBar(
             backgroundColor: AppColor.black,
             title: const Center(
-              child:  Text(
+              child: Text(
                 "أذكــــاري",
                 style: TextStyle(
                   color: AppColor.primaryColorGolden,
@@ -43,7 +44,10 @@ class Home extends StatelessWidget {
                 onPressed: () {
                   showSearch(context: context, delegate: DataSearch());
                 },
-                icon: const Icon(Icons.search),
+                icon: const Icon(
+                  Icons.search,
+                  color: Colors.amber,
+                ),
               ),
 
               // Share button

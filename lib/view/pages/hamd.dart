@@ -32,8 +32,8 @@ class Hamd extends StatelessWidget {
                 onPressed: () => customShareContent(controller),
                 icon: const Icon(Icons.share)),
             const Center(
-              child:  Text(
-                "الحمد",
+              child: Text(
+                "الحمد    ",
                 style: TextStyle(
                     color: AppColor.primaryColorGolden,
                     backgroundColor: AppColor.primaryColorBlack2),
@@ -46,14 +46,20 @@ class Hamd extends StatelessWidget {
           onTap: () {
             Get.toNamed(AppRoute.home);
           },
-          child: const Icon(Icons.arrow_back),
+          child: const Icon(
+            Icons.arrow_back,
+            color: Colors.amber,
+          ),
         ),
         actions: [
           IconButton(
               onPressed: () {
                 controller.decreaseFontSize();
               },
-              icon: const Icon(Icons.remove)),
+              icon: const Icon(
+                Icons.remove,
+                color: Colors.amber,
+              )),
           // Font between + -
           const Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -69,7 +75,10 @@ class Hamd extends StatelessWidget {
               onPressed: () {
                 controller.increaseFontSize();
               },
-              icon: const Icon(Icons.add))
+              icon: const Icon(
+                Icons.add,
+                color: Colors.amber,
+              ))
         ],
       ),
       body: SafeArea(

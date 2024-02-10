@@ -2,6 +2,8 @@ import 'package:athkarix/core/data/model/estigfar_list_model.dart';
 import 'package:get/get.dart';
 
 abstract class EstigfarController extends GetxController {
+  // to reset counter when go to any page
+
   void goToHome();
   void increaseFontSize();
   void decreaseFontSize();

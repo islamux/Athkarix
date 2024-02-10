@@ -30,8 +30,8 @@ class AthkarMassa extends StatelessWidget {
               onPressed: () => customShareContent(controllerM),
               icon: const Icon(Icons.share),
             ),
-            const  Center(
-              child:  Text(
+            const Center(
+              child: Text(
                 "أذكار المساء",
                 style: TextStyle(
                     color: AppColor.primaryColorGolden,
@@ -48,14 +48,20 @@ class AthkarMassa extends StatelessWidget {
             //controllerM.resetCounter();
             Get.toNamed(AppRoute.home);
           },
-          child: const Icon(Icons.arrow_back),
+          child: const Icon(
+            Icons.arrow_back,
+            color: Colors.amber,
+          ),
         ),
         actions: [
           IconButton(
             onPressed: () {
               controllerM.decreaseFontSize();
             },
-            icon: const Icon(Icons.remove),
+            icon: const Icon(
+              Icons.remove,
+              color: Colors.amber,
+            ),
           ),
 
           // Font between + -
@@ -73,7 +79,10 @@ class AthkarMassa extends StatelessWidget {
               onPressed: () {
                 controllerM.increaseFontSize();
               },
-              icon: const Icon(Icons.add))
+              icon: const Icon(
+                Icons.add,
+                color: Colors.amber,
+              ))
         ],
       ),
       body: SafeArea(
