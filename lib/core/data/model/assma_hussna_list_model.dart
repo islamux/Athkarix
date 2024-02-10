@@ -69,7 +69,6 @@ List<AthkarModel> assmaHussnaList = [
   AthkarModel(duaText: AssmaHussnaText.assmaHussna71),
   AthkarModel(duaText: AssmaHussnaText.assmaHussna72),
   AthkarModel(duaText: AssmaHussnaText.assmaHussna73),
-  //AthkarModel(duaText: AssmaHussnaText.assmaHussna74), // not exist
   AthkarModel(duaText: AssmaHussnaText.assmaHussna75),
   AthkarModel(duaText: AssmaHussnaText.assmaHussna76),
   AthkarModel(duaText: AssmaHussnaText.assmaHussna77),

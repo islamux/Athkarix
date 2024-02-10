@@ -9,10 +9,6 @@ abstract class EstigfarController extends GetxController {
   void decreaseFontSize();
   void onPageChanged(int index);
   String getShareText(int index);
-  // TODO:
-  void mekeVibrationEvery100();
-  void mekeVibrationEvery1000();
-// Favorite Func
 }
 
 class EstigfarControllerImp extends EstigfarController {
@@ -44,15 +40,5 @@ class EstigfarControllerImp extends EstigfarController {
   @override
   String getShareText(int index) {
     return estigfarList[index].duaText ?? '';
-  }
-
-  @override
-  void mekeVibrationEvery100() {
-    // TODO: implement mekeVibrationEvery100
-  }
-
-  @override
-  void mekeVibrationEvery1000() {
-    // TODO: implement mekeVibrationEvery1000
   }
 }

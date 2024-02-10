@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:athkarix/function/call_us_via_whatsup.dart';
 
 class CustomDrawerListView extends StatelessWidget {
-  const CustomDrawerListView({Key? key}) : super(key: key);
+  const CustomDrawerListView({super.key});
 
   @override
   Widget build(BuildContext context) {

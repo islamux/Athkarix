@@ -18,10 +18,10 @@ class Home extends StatelessWidget {
     final HomeControllerImp controllerE = Get.find<HomeControllerImp>();
 
     return // Wrap Scaffold to change direction of widgets in pageto rtl (arabic)
-        WillPopScope(
-      // todo : replace depricated
-      // Make willPopscop first widget
-      onWillPop: () => alertExitApp(),
+        PopScope(
+      // Make PopScope first widget
+      canPop: true,
+      onPopInvoked: (didPop) => alertExitApp(),
       child: Directionality(
         textDirection: TextDirection.rtl,
         child: Scaffold(

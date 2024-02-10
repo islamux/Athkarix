@@ -8,10 +8,6 @@ abstract class SalatAlaRasoulAllahController extends GetxController {
   void decreaseFontSize();
   void onPageChanged(int index);
   String getShareText(int index);
-
-  // TODO:
-  void mekeVibrationEvery100();
-  void mekeVibrationEvery1000();
 }
 
 class SalatAlaRasoulAllahControllerImp extends SalatAlaRasoulAllahController {
@@ -46,15 +42,5 @@ class SalatAlaRasoulAllahControllerImp extends SalatAlaRasoulAllahController {
   @override
   String getShareText(int index) {
     return salatAlaRasoulAllahList[index].duaText ?? '';
-  }
-
-  @override
-  void mekeVibrationEvery100() {
-    // TODO: implement mekeVibrationEvery100
-  }
-
-  @override
-  void mekeVibrationEvery1000() {
-    // TODO: implement mekeVibrationEvery1000
   }
 }
