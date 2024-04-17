@@ -11,14 +11,12 @@ class DuaMenQuran extends StatelessWidget {
     super.key,
   });
 
-  get controller => null;
-
   @override
   Widget build(BuildContext context) {
     // Inject controller
     //DuaMenQuranControllerImp controller = Get.put((DuaMenQuranControllerImp()));
-    // final DuaMenQuranControllerImp controller =
-    Get.find<DuaMenQuranControllerImp>();
+    final DuaMenQuranControllerImp controller =
+        Get.find<DuaMenQuranControllerImp>();
     return Scaffold(
       appBar: AppBar(
         backgroundColor: AppColor.black,

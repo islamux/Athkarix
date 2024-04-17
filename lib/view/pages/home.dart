@@ -27,6 +27,7 @@ class Home extends StatelessWidget {
         child: Scaffold(
           appBar: AppBar(
             backgroundColor: AppColor.black,
+            foregroundColor: AppColor.amber,
             title: const Center(
               child: Text(
                 "أذكــــاري",
