@@ -4,6 +4,8 @@ import 'package:athkarix/core/data/static/routes_constant.dart';
 import 'package:athkarix/core/data/static/theme/app_color_constant.dart';
 import 'package:athkarix/core/data/static/theme/app_them.dart';
 import 'package:athkarix/function/custom_share_content.dart';
+import 'package:athkarix/function/decrease_font.dart';
+import 'package:athkarix/function/increase_font.dart';
 import 'package:athkarix/view/widget/custom_floating_button.dart';
 import 'package:athkarix/view/widget/custom_text_slider_tasbih.dart';
 import 'package:flutter/material.dart';
@@ -55,7 +57,7 @@ class Tasbih extends StatelessWidget {
         actions: [
           IconButton(
               onPressed: () {
-                controller.decreaseFontSize();
+                decreaseFont(controller);
               },
               icon: const Icon(
                 Icons.remove,
@@ -74,7 +76,7 @@ class Tasbih extends StatelessWidget {
 
           IconButton(
               onPressed: () {
-                controller.increaseFontSize();
+                increaseFont(controller);
               },
               icon: const Icon(
                 Icons.add,

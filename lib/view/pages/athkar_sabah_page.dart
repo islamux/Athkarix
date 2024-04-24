@@ -4,6 +4,8 @@ import 'package:athkarix/core/data/static/routes_constant.dart';
 import 'package:athkarix/core/data/static/theme/app_color_constant.dart';
 import 'package:athkarix/core/data/static/theme/app_them.dart';
 import 'package:athkarix/function/custom_share_content.dart';
+import 'package:athkarix/function/decrease_font.dart';
+import 'package:athkarix/function/increase_font.dart';
 import 'package:athkarix/view/widget/custom_floating_button.dart';
 import 'package:athkarix/view/widget/custom_text_slider_athkar_sabah.dart';
 
@@ -56,7 +58,7 @@ class AthkarSabah extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {
-              controllerS.decreaseFontSize();
+              decreaseFont(controllerS);
             },
             icon: const Icon(
               Icons.remove,
@@ -76,7 +78,7 @@ class AthkarSabah extends StatelessWidget {
 
           IconButton(
               onPressed: () {
-                controllerS.increaseFontSize();
+                increaseFont(controllerS);
               },
               icon: const Icon(
                 Icons.add,

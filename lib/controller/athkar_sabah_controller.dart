@@ -18,6 +18,7 @@ abstract class AthkarSabahController extends GetxController {
 class AthkarSabahControllerImp extends AthkarSabahController {
   // instance from PageController to go to next page in pageview builder.
   PageController pageControllerS = PageController();
+
   // Proberties
   double fontSize = 21.0;
   int currentPageIndex = 0;

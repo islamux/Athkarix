@@ -1,6 +1,8 @@
 import 'package:athkarix/controller/duaa_men_sunnah_controller.dart';
 import 'package:athkarix/core/data/static/routes_constant.dart';
 import 'package:athkarix/function/custom_share_content.dart';
+import 'package:athkarix/function/decrease_font.dart';
+import 'package:athkarix/function/increase_font.dart';
 import 'package:athkarix/view/widget/custom_text_slider_dua_men_sunnah.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -53,7 +55,7 @@ class DuaMenSunnah extends StatelessWidget {
         actions: [
           IconButton(
               onPressed: () {
-                controller.decreaseFontSize();
+                decreaseFont(controller);
               },
               icon: const Icon(Icons.remove, color: Colors.amber)),
           // Font between + -
@@ -69,7 +71,7 @@ class DuaMenSunnah extends StatelessWidget {
 
           IconButton(
               onPressed: () {
-                controller.increaseFontSize();
+                increaseFont(controller);
               },
               icon: const Icon(
                 Icons.add,

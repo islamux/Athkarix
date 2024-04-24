@@ -4,6 +4,8 @@ import 'package:athkarix/core/data/static/routes_constant.dart';
 import 'package:athkarix/core/data/static/theme/app_color_constant.dart';
 import 'package:athkarix/core/data/static/theme/app_them.dart';
 import 'package:athkarix/function/custom_share_content.dart';
+import 'package:athkarix/function/decrease_font.dart';
+import 'package:athkarix/function/increase_font.dart';
 import 'package:athkarix/view/widget/custom_floating_button.dart';
 import 'package:athkarix/view/widget/custom_text_slider_athkar_before_go_to_bed.dart';
 import 'package:flutter/material.dart';
@@ -58,7 +60,7 @@ class AthkarBeforeGoToBed extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {
-              controllerBefore.decreaseFontSize();
+              increaseFont(controllerBefore);
             },
             icon: const Icon(
               Icons.remove,
@@ -78,7 +80,7 @@ class AthkarBeforeGoToBed extends StatelessWidget {
 
           IconButton(
               onPressed: () {
-                controllerBefore.increaseFontSize();
+                decreaseFont(controllerBefore);
               },
               icon: const Icon(
                 Icons.add,

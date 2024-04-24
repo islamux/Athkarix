@@ -4,6 +4,8 @@ import 'package:athkarix/core/data/static/routes_constant.dart';
 import 'package:athkarix/core/data/static/theme/app_color_constant.dart';
 import 'package:athkarix/core/data/static/theme/app_them.dart';
 import 'package:athkarix/function/custom_share_content.dart';
+import 'package:athkarix/function/decrease_font.dart';
+import 'package:athkarix/function/increase_font.dart';
 import 'package:athkarix/view/widget/custom_floating_button.dart';
 import 'package:athkarix/view/widget/custom_text_slider_athkar_after_salat.dart';
 import 'package:flutter/material.dart';
@@ -58,7 +60,7 @@ class AthkarAfterSalat extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {
-              controllerAfter.decreaseFontSize();
+              decreaseFont(controllerAfter);
             },
             icon: const Icon(
               Icons.remove,
@@ -78,7 +80,7 @@ class AthkarAfterSalat extends StatelessWidget {
 
           IconButton(
               onPressed: () {
-                controllerAfter.increaseFontSize();
+                increaseFont(controllerAfter);
               },
               icon: const Icon(
                 Icons.add,

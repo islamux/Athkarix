@@ -3,6 +3,8 @@ import 'package:athkarix/controller/floating_action_button_controller.dart';
 import 'package:athkarix/core/data/static/routes_constant.dart';
 import 'package:athkarix/core/data/static/theme/app_color_constant.dart';
 import 'package:athkarix/function/custom_share_content.dart';
+import 'package:athkarix/function/decrease_font.dart';
+import 'package:athkarix/function/increase_font.dart';
 import 'package:athkarix/view/widget/assmahussna/custom_text_slider_assma_hussna.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -52,7 +54,14 @@ class AssmaHussna extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {
-              controllerAs.decreaseFontSize();
+              decreaseFont(controllerAs);
+
+              // if (controllerAs.fontSize > 21.0) {
+              //   controllerAs.decreaseFontSize();
+              //   if (kDebugMode) {
+              //     print("Font size :${controllerAs.fontSize}");
+              //   }
+              // }
             },
             icon: const Icon(
               Icons.remove,
@@ -72,7 +81,14 @@ class AssmaHussna extends StatelessWidget {
 
           IconButton(
               onPressed: () {
-                controllerAs.increaseFontSize();
+                increaseFont(controllerAs);
+
+                // if (controllerAs.fontSize <= 37.0) {
+                //   controllerAs.increaseFontSize();
+                //   if (kDebugMode) {
+                //     print("Font size :${controllerAs.fontSize}");
+                //   }
+                // }
               },
               icon: const Icon(
                 Icons.add,
