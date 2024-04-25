@@ -1,16 +1,52 @@
 # athkarix
 
-A new Flutter project.
+Athkarix: تطبيق أذكار إسلامية
+Athkarix هو تطبيق Flutter يوفر مجموعة من الأذكار الإسلامية اليومية، بما في ذلك:
 
-## Getting Started
+أذكار الصباح والمساء
+أذكار قبل النوم
+أذكار بعد الصلاة
+أذكار أخرى
+مميزات التطبيق:
 
-This project is a starting point for a Flutter application.
+واجهة مستخدم بسيطة وسهلة الاستخدام
+إمكانية إضافة أذكار مخصصة
+إمكانية حفظ الأذكار المفضلة
+إخطارات للتذكير بقراءة الأذكار
+دعم اللغة العربية
+البدء:
 
-A few resources to get you started if this is your first Flutter project:
+قم بتنزيل التطبيق من متجر Google Play أو متجر Apple App Store.
+افتح التطبيق وقم بتسجيل الدخول (اختياري).
+حدد الأذكار التي تريد قراءتها.
+اضغط على زر "ابدأ القراءة".
+إضافة أذكار مخصصة:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+اضغط على زر "+" في الزاوية العليا اليمنى.
+أدخل اسم الأذكار ونصها.
+اضغط على زر "حفظ".
+حفظ الأذكار المفضلة:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+اضغط على زر النجمة بجوار الأذكار التي تريد حفظها.
+إخطارات التذكير:
+
+انتقل إلى إعدادات التطبيق.
+قم بتمكين الإشعارات للتذكير بقراءة الأذكار.
+حدد وقت التذكير الذي تريده.
+دعم اللغة العربية:
+
+التطبيق يدعم اللغة العربية بشكل كامل.
+يمكنك تغيير لغة التطبيق من إعدادات التطبيق.
+ملاحظات:
+
+التطبيق قيد التطوير، ونحن نعمل على إضافة المزيد من الميزات والمحتوى.
+إذا كان لديك أي ملاحظات أو اقتراحات، فلا تتردد في التواصل معنا.
+شكرًا لاستخدام Athkarix!
+
+معلومات إضافية:
+
+اسم التطبيق: Athkarix
+منصة التطوير: Flutter
+مكتبة إدارة الحالة: GetX
+متجر Google Play: https://play.google.com/store/games?hl=en&gl=US
+متجر Apple App Store: https://www.apple.com/app-store/
