@@ -18,6 +18,7 @@ abstract class AthkarSabahController extends GetxController {
 class AthkarSabahControllerImp extends AthkarSabahController {
   // instance from PageController to go to next page in pageview builder.
   PageController pageControllerS = PageController();
+
   // Proberties
   double fontSize = 21.0;
   int currentPageIndex = 0;
@@ -70,13 +71,10 @@ class AthkarSabahControllerImp extends AthkarSabahController {
   @override
   Future<void> increamentPageController() async {
     currentPageCounter++;
-    print(currentPageIndex);
     if (currentPageCounter >= maxPageCounters[currentPageIndex]) {
       currentPageIndex++;
-      print(currentPageCounter);
       if (currentPageIndex < maxPageCounters.length) {
         currentPageCounter = 1;
-        print(currentPageCounter);
 
         // // vibrate before go to next
         HapticFeedback.vibrate();
@@ -84,7 +82,6 @@ class AthkarSabahControllerImp extends AthkarSabahController {
         pageControllerS.nextPage(
             duration: const Duration(microseconds: 500),
             curve: Curves.easeInOut);
-        print(currentPageCounter);
       } else {
         Get.snackbar(
           'تنبية',

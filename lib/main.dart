@@ -12,7 +12,7 @@ void main() {
 
   // After splash screen now you could run app
   runApp(const Athkari());
-  // wait 2 second showing splash screen.
+  // wait 6 second showing splash screen.
   Future.delayed(const Duration(seconds: 4), () {
     FlutterNativeSplash.remove();
   });

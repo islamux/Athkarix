@@ -3,6 +3,8 @@ import 'package:athkarix/controller/salat_ala_rasoul_controller.dart';
 import 'package:athkarix/core/data/static/routes_constant.dart';
 import 'package:athkarix/core/data/static/theme/app_color_constant.dart';
 import 'package:athkarix/function/custom_share_content.dart';
+import 'package:athkarix/function/decrease_font.dart';
+import 'package:athkarix/function/increase_font.dart';
 import 'package:athkarix/view/widget/custom_floating_button.dart';
 import 'package:athkarix/view/widget/custom_text_slider_salat_ala_rasoul.dart';
 import 'package:flutter/material.dart';
@@ -37,7 +39,7 @@ class SalatAlaRasoulAllah extends StatelessWidget {
               icon: const Icon(Icons.share),
             ),
             const Center(
-              child:  Text(
+              child: Text(
                 "الصلاة على النبي",
                 style: TextStyle(
                     color: AppColor.primaryColorGolden,
@@ -52,14 +54,20 @@ class SalatAlaRasoulAllah extends StatelessWidget {
           onTap: () {
             Get.toNamed(AppRoute.home);
           },
-          child: const Icon(Icons.arrow_back),
+          child: const Icon(
+            Icons.arrow_back,
+            color: Colors.amber,
+          ),
         ),
         actions: [
           IconButton(
               onPressed: () {
-                controller.decreaseFontSize();
+                decreaseFont(controller);
               },
-              icon: const Icon(Icons.remove)),
+              icon: const Icon(
+                Icons.remove,
+                color: Colors.amber,
+              )),
           // Font between + -
           const Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -74,9 +82,12 @@ class SalatAlaRasoulAllah extends StatelessWidget {
 
           IconButton(
               onPressed: () {
-                controller.increaseFontSize();
+                increaseFont(controller);
               },
-              icon: const Icon(Icons.add))
+              icon: const Icon(
+                Icons.add,
+                color: Colors.amber,
+              ))
         ],
       ),
       body: SafeArea(

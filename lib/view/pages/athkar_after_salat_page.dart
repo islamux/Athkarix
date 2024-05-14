@@ -4,6 +4,8 @@ import 'package:athkarix/core/data/static/routes_constant.dart';
 import 'package:athkarix/core/data/static/theme/app_color_constant.dart';
 import 'package:athkarix/core/data/static/theme/app_them.dart';
 import 'package:athkarix/function/custom_share_content.dart';
+import 'package:athkarix/function/decrease_font.dart';
+import 'package:athkarix/function/increase_font.dart';
 import 'package:athkarix/view/widget/custom_floating_button.dart';
 import 'package:athkarix/view/widget/custom_text_slider_athkar_after_salat.dart';
 import 'package:flutter/material.dart';
@@ -32,14 +34,14 @@ class AthkarAfterSalat extends StatelessWidget {
               onPressed: () => customShareContent(controllerAfter),
               icon: const Icon(Icons.share),
             ),
-             const Center(
-               child: Text(
+            const Center(
+              child: Text(
                 "أذكار بعد الصلاة",
                 style: TextStyle(
                     color: AppColor.primaryColorGolden,
                     backgroundColor: AppColor.primaryColorBlack2),
-                         ),
-             ),
+              ),
+            ),
           ],
         ),
         centerTitle: true,
@@ -50,14 +52,20 @@ class AthkarAfterSalat extends StatelessWidget {
 
             Get.toNamed(AppRoute.home);
           },
-          child: const Icon(Icons.arrow_back),
+          child: const Icon(
+            Icons.arrow_back,
+            color: Colors.amber,
+          ),
         ),
         actions: [
           IconButton(
             onPressed: () {
-              controllerAfter.decreaseFontSize();
+              decreaseFont(controllerAfter);
             },
-            icon: const Icon(Icons.remove),
+            icon: const Icon(
+              Icons.remove,
+              color: Colors.amber,
+            ),
           ),
           // Font between + -
           const Row(
@@ -72,9 +80,12 @@ class AthkarAfterSalat extends StatelessWidget {
 
           IconButton(
               onPressed: () {
-                controllerAfter.increaseFontSize();
+                increaseFont(controllerAfter);
               },
-              icon: const Icon(Icons.add))
+              icon: const Icon(
+                Icons.add,
+                color: Colors.amber,
+              ))
         ],
       ),
       body: SafeArea(

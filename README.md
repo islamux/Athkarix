@@ -1,16 +1,32 @@
 # athkarix
 
-A new Flutter project.
+تطبيق أذكار إسلامية
+هو تطبيق يوفر مجموعة من الأذكار الإسلامية اليومية، بما في ذلك:
 
-## Getting Started
+أذكار الصباح والمساء
+أذكار قبل النوم
+أذكار بعد الصلاة
+أذكار أخرى
+مميزات التطبيق:
 
-This project is a starting point for a Flutter application.
+واجهة مستخدم بسيطة وسهلة الاستخدام
+دعم اللغة العربية
 
-A few resources to get you started if this is your first Flutter project:
+البدء:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+قم بتنزيل التطبيق من متجر Google Play أو متجر Apple App Store.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+اضغط على زر النجمة بجوار الأذكار التي تريد حفظها.
+إخطارات التذكير:
+
+التطبيق قيد التطوير، ونحن نعمل على إضافة المزيد من الميزات والمحتوى.
+إذا كان لديك أي ملاحظات أو اقتراحات، فلا تتردد في التواصل معنا.
+شكرًا لاستخدام Athkarix!
+
+معلومات إضافية:
+
+اسم التطبيق: Athkarix
+منصة التطوير: Flutter
+مكتبة إدارة الحالة: GetX
+متجر Google Play: https://play.google.com/store/games?hl=en&gl=US
+متجر Apple App Store: https://www.apple.com/app-store/

@@ -2,6 +2,8 @@ import 'package:athkarix/controller/estigfar_controller.dart';
 import 'package:athkarix/controller/floating_action_button_controller.dart';
 import 'package:athkarix/core/data/static/routes_constant.dart';
 import 'package:athkarix/function/custom_share_content.dart';
+import 'package:athkarix/function/decrease_font.dart';
+import 'package:athkarix/function/increase_font.dart';
 import 'package:athkarix/view/widget/custom_floating_button.dart';
 import 'package:athkarix/view/widget/custom_text_slider_estigfar.dart';
 import 'package:flutter/material.dart';
@@ -32,8 +34,8 @@ class Estigfar extends StatelessWidget {
               icon: const Icon(Icons.share),
             ),
             const Center(
-              child:  Text(
-                "إستغفار",
+              child: Text(
+                " إستغفار       ",
                 style: TextStyle(
                     color: AppColor.primaryColorGolden,
                     backgroundColor: AppColor.primaryColorBlack2),
@@ -46,12 +48,16 @@ class Estigfar extends StatelessWidget {
           onTap: () {
             Get.toNamed(AppRoute.home);
           },
-          child: const Icon(Icons.arrow_back),
+          child: const Icon(
+            Icons.arrow_back,
+            color: Colors.amber,
+          ),
         ),
         actions: [
           IconButton(
+              color: AppColor.amber,
               onPressed: () {
-                controller.decreaseFontSize();
+                decreaseFont(controller);
               },
               icon: const Icon(Icons.remove)),
           // Font between + -
@@ -66,8 +72,9 @@ class Estigfar extends StatelessWidget {
           ),
 
           IconButton(
+            color: AppColor.amber,
             onPressed: () {
-              controller.increaseFontSize();
+              increaseFont(controller);
             },
             icon: const Icon(Icons.add),
           ),

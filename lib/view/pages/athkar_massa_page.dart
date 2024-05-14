@@ -4,6 +4,8 @@ import 'package:athkarix/core/data/static/routes_constant.dart';
 import 'package:athkarix/core/data/static/theme/app_color_constant.dart';
 import 'package:athkarix/core/data/static/theme/app_them.dart';
 import 'package:athkarix/function/custom_share_content.dart';
+import 'package:athkarix/function/decrease_font.dart';
+import 'package:athkarix/function/increase_font.dart';
 import 'package:athkarix/view/widget/custom_floating_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -30,8 +32,8 @@ class AthkarMassa extends StatelessWidget {
               onPressed: () => customShareContent(controllerM),
               icon: const Icon(Icons.share),
             ),
-            const  Center(
-              child:  Text(
+            const Center(
+              child: Text(
                 "أذكار المساء",
                 style: TextStyle(
                     color: AppColor.primaryColorGolden,
@@ -48,14 +50,20 @@ class AthkarMassa extends StatelessWidget {
             //controllerM.resetCounter();
             Get.toNamed(AppRoute.home);
           },
-          child: const Icon(Icons.arrow_back),
+          child: const Icon(
+            Icons.arrow_back,
+            color: Colors.amber,
+          ),
         ),
         actions: [
           IconButton(
             onPressed: () {
-              controllerM.decreaseFontSize();
+              decreaseFont(controllerM);
             },
-            icon: const Icon(Icons.remove),
+            icon: const Icon(
+              Icons.remove,
+              color: Colors.amber,
+            ),
           ),
 
           // Font between + -
@@ -71,9 +79,12 @@ class AthkarMassa extends StatelessWidget {
 
           IconButton(
               onPressed: () {
-                controllerM.increaseFontSize();
+                increaseFont(controllerM);
               },
-              icon: const Icon(Icons.add))
+              icon: const Icon(
+                Icons.add,
+                color: Colors.amber,
+              ))
         ],
       ),
       body: SafeArea(

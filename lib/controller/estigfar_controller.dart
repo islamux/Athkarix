@@ -2,15 +2,13 @@ import 'package:athkarix/core/data/model/estigfar_list_model.dart';
 import 'package:get/get.dart';
 
 abstract class EstigfarController extends GetxController {
+  // to reset counter when go to any page
+
   void goToHome();
   void increaseFontSize();
   void decreaseFontSize();
   void onPageChanged(int index);
   String getShareText(int index);
-  // TODO:
-  void mekeVibrationEvery100();
-  void mekeVibrationEvery1000();
-// Favorite Func
 }
 
 class EstigfarControllerImp extends EstigfarController {
@@ -42,15 +40,5 @@ class EstigfarControllerImp extends EstigfarController {
   @override
   String getShareText(int index) {
     return estigfarList[index].duaText ?? '';
-  }
-
-  @override
-  void mekeVibrationEvery100() {
-    // TODO: implement mekeVibrationEvery100
-  }
-
-  @override
-  void mekeVibrationEvery1000() {
-    // TODO: implement mekeVibrationEvery1000
   }
 }

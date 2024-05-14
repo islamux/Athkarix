@@ -9,9 +9,6 @@ abstract class TasbihController extends GetxController {
   void increamentCounter();
   void resetCounter();
   void onPageChanged(int index);
-  // TODO:
-  void mekeVibrationEvery100();
-  void mekeVibrationEvery1000();
   String getShareText(int index);
 }
 
@@ -54,15 +51,5 @@ class TasbihControllerImp extends TasbihController {
   String getShareText(int index) {
     // import tasbihList
     return tasbihList[index].duaText ?? '';
-  }
-
-  @override
-  void mekeVibrationEvery100() {
-    // TODO: implement mekeVibrationEvery100
-  }
-
-  @override
-  void mekeVibrationEvery1000() {
-    // TODO: implement mekeVibrationEvery1000
   }
 }

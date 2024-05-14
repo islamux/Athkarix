@@ -5,10 +5,6 @@ abstract class FloatingButtonController extends GetxController {
   void increamentCouter();
   void increamentCounterUntil100();
   void reset();
-
-  // TODO:
-  void mekeVibrationEvery100();
-  void mekeVibrationEvery1000();
 }
 
 class FloatingButtonControllerImp extends FloatingButtonController {
@@ -38,15 +34,5 @@ class FloatingButtonControllerImp extends FloatingButtonController {
   void reset() {
     counter = 0;
     update();
-  }
-
-  @override
-  void mekeVibrationEvery100() {
-    // to do later
-  }
-
-  @override
-  void mekeVibrationEvery1000() {
-    // To do later
   }
 }

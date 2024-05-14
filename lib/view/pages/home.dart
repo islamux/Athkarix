@@ -18,16 +18,18 @@ class Home extends StatelessWidget {
     final HomeControllerImp controllerE = Get.find<HomeControllerImp>();
 
     return // Wrap Scaffold to change direction of widgets in pageto rtl (arabic)
-        WillPopScope(
-      // Make willPopscop first widget
-      onWillPop: () => alertExitApp(),
+        PopScope(
+      // Make PopScope first widget
+      canPop: true,
+      onPopInvoked: (didPop) => alertExitApp(),
       child: Directionality(
         textDirection: TextDirection.rtl,
         child: Scaffold(
           appBar: AppBar(
             backgroundColor: AppColor.black,
+            foregroundColor: AppColor.amber,
             title: const Center(
-              child:  Text(
+              child: Text(
                 "أذكــــاري",
                 style: TextStyle(
                   color: AppColor.primaryColorGolden,
@@ -43,7 +45,10 @@ class Home extends StatelessWidget {
                 onPressed: () {
                   showSearch(context: context, delegate: DataSearch());
                 },
-                icon: const Icon(Icons.search),
+                icon: const Icon(
+                  Icons.search,
+                  color: Colors.amber,
+                ),
               ),
 
               // Share button
