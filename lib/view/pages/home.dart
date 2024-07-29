@@ -20,7 +20,7 @@ class Home extends StatelessWidget {
     return // Wrap Scaffold to change direction of widgets in pageto rtl (arabic)
         PopScope(
       // Make PopScope first widget
-      canPop: true,
+      canPop: false,
       onPopInvoked: (didPop) => alertExitApp(),
       child: Directionality(
         textDirection: TextDirection.rtl,
