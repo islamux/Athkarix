@@ -136,7 +136,7 @@ class Home extends StatelessWidget {
                         // Button 3
                         CustomButton(
                           customText: "التسبيح  ",
-                          onPressed: (() => controllerE.goToTasbih()),
+                          onPressed: () => controllerE.goToTasbih(),
                           icon: const Icon(Icons.menu_book),
                         ),
 
@@ -150,8 +150,8 @@ class Home extends StatelessWidget {
                         // Button 21
                         CustomButton(
                           customText: "الصلاة على النبي    ",
-                          onPressed: (() =>
-                              controllerE.goToSalatAlaRasoulAllah()),
+                          onPressed: () =>
+                              controllerE.goToSalatAlaRasoulAllah(),
                           icon: const Icon(Icons.menu_book),
                         ),
 
@@ -184,7 +184,7 @@ class Home extends StatelessWidget {
                         // BUtton 20
                         CustomButton(
                           customText: "الدعاء من القراءن الكريم  ",
-                          onPressed: (() => controllerE.goToDuaMenQuran()),
+                          onPressed: () => controllerE.goToDuaMenQuran(),
                           icon: const Icon(Icons.menu_book),
                         ),
 
