@@ -84,127 +84,120 @@ class Home extends StatelessWidget {
                       fit: BoxFit.cover),
                 ),
               ),
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
+
+              // ----------- //
+              // إسحب للإعلى للمزيد
+              Padding(
+                padding: EdgeInsets.only(
+                  // make the space for any screen
+                  top: MediaQuery.of(context).size.height * 0.1,
+                  right: MediaQuery.of(context).size.width * 0.4,
+                ),
+                child: const Column(
                   children: [
-                    //Button 2
-                    // const SizedBox(
-                    //   height: 0,
-                    // ),
-                    Center(
-                      child: CustomButton(
-                        customText: "أسماء الله الحسنى",
-                        onPressed: () => controllerE.goToAssmaHussna(),
-                        icon: const Icon(Icons.menu_book),
+                    Icon(
+                      Icons.arrow_upward,
+                      color: AppColor.primaryColorGolden,
+                      size: 36,
+                    ),
+                    Text(
+                      "إسحب للأعلى للمزيد",
+                      style: TextStyle(
+                        color: AppColor.primaryColorGolden,
+                        fontSize: 18,
                       ),
-                    ),
-                    // const SizedBox(
-                    //   height: 0,
-                    // ),
-                    Center(
-                      // Button 2
-                      child: CustomButton(
-                        customText: "الإستغفار ",
-                        onPressed: () => controllerE.goToEstigfar(),
-                        icon: const Icon(Icons.menu_book),
-                      ),
-                    ),
-                    // const SizedBox(
-                    //   height: 0,
-                    // ),
-
-                    // Button 3
-                    CustomButton(
-                      customText: "التسبيح  ",
-                      onPressed: (() => controllerE.goToTasbih()),
-                      icon: const Icon(Icons.menu_book),
-                    ),
-                    // const SizedBox(
-                    //   height: 0,
-                    // ),
-
-                    // Button 4
-                    CustomButton(
-                      customText: "الحمد         ",
-                      onPressed: () => controllerE.goToHamd(),
-                      icon: const Icon(Icons.menu_book),
-                    ),
-                    // const SizedBox(
-                    //   height: 0,
-                    // ),
-                    // Button 5
-
-                    // Button 21
-                    CustomButton(
-                      customText: "الصلاة على النبي    ",
-                      onPressed: (() => controllerE.goToSalatAlaRasoulAllah()),
-                      icon: const Icon(Icons.menu_book),
-                    ),
-                    // const SizedBox(
-                    //   height: 0,
-                    // ),
-
-                    CustomButton(
-                      customText: "أذكار الصبـــاح   ",
-                      onPressed: () => controllerE.goToAthkarSabah(),
-                      icon: const Icon(Icons.menu_book),
-                    ),
-
-                    // const SizedBox(
-                    //   height: 0,
-                    // ),
-
-                    CustomButton(
-                      // Button 6
-                      customText: "أذكار المساء   ",
-                      onPressed: () => controllerE.goToAthkarMassa(),
-                      icon: const Icon(Icons.menu_book),
-                    ),
-                    // const SizedBox(
-                    //   height: 0,
-                    // ),
-
-                    // Button 7
-                    CustomButton(
-                      customText: "الأذكار بعد الصلاة المفروضة ",
-                      onPressed: () => controllerE.goToAthkarAfterSalat(),
-                      icon: const Icon(Icons.menu_book),
-                    ),
-
-                    // const SizedBox(
-                    //   height: 0,
-                    // ),
-
-                    // Buttom 9
-                    CustomButton(
-                      customText: "الدعاء من السنــة  ",
-                      onPressed: () => controllerE.goToDuaMenSunnah(),
-                      icon: const Icon(Icons.menu_book),
-                    ),
-                    // const SizedBox(
-                    //   height: 0,
-                    // ),
-
-                    // BUtton 20
-                    CustomButton(
-                      customText: "الدعاء من القراءن الكريم  ",
-                      onPressed: (() => controllerE.goToDuaMenQuran()),
-                      icon: const Icon(Icons.menu_book),
-                    ),
-
-                    // const SizedBox(
-                    //   height: 0,
-                    // ),
-
-                    // Button 8
-                    CustomButton(
-                      customText: " أذكار النوم   ",
-                      onPressed: () => controllerE.goToAthkarBeforeGoToBed(),
-                      icon: const Icon(Icons.menu_book),
                     ),
                   ],
+                ),
+              ),
+
+              Container(
+                padding: const EdgeInsets.only(top: 160, bottom: 130),
+                child: Center(
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.vertical,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        // Button
+                        CustomButton(
+                          customText: "أسماء الله الحسنى",
+                          onPressed: () => controllerE.goToAssmaHussna(),
+                          icon: const Icon(Icons.menu_book),
+                        ),
+
+                        // Button 2
+                        CustomButton(
+                          customText: "الإستغفار ",
+                          onPressed: () => controllerE.goToEstigfar(),
+                          icon: const Icon(Icons.menu_book),
+                        ),
+
+                        // Button 3
+                        CustomButton(
+                          customText: "التسبيح  ",
+                          onPressed: (() => controllerE.goToTasbih()),
+                          icon: const Icon(Icons.menu_book),
+                        ),
+
+                        // Button 4
+                        CustomButton(
+                          customText: "الحمد         ",
+                          onPressed: () => controllerE.goToHamd(),
+                          icon: const Icon(Icons.menu_book),
+                        ),
+
+                        // Button 21
+                        CustomButton(
+                          customText: "الصلاة على النبي    ",
+                          onPressed: (() =>
+                              controllerE.goToSalatAlaRasoulAllah()),
+                          icon: const Icon(Icons.menu_book),
+                        ),
+
+                        CustomButton(
+                          customText: "أذكار الصبـــاح   ",
+                          onPressed: () => controllerE.goToAthkarSabah(),
+                          icon: const Icon(Icons.menu_book),
+                        ),
+
+                        CustomButton(
+                          // Button 6
+                          customText: "أذكار المساء   ",
+                          onPressed: () => controllerE.goToAthkarMassa(),
+                          icon: const Icon(Icons.menu_book),
+                        ),
+                        // Button 7
+                        CustomButton(
+                          customText: "الأذكار بعد الصلاة المفروضة ",
+                          onPressed: () => controllerE.goToAthkarAfterSalat(),
+                          icon: const Icon(Icons.menu_book),
+                        ),
+
+                        // Buttom 9
+                        CustomButton(
+                          customText: "الدعاء من السنــة  ",
+                          onPressed: () => controllerE.goToDuaMenSunnah(),
+                          icon: const Icon(Icons.menu_book),
+                        ),
+
+                        // BUtton 20
+                        CustomButton(
+                          customText: "الدعاء من القراءن الكريم  ",
+                          onPressed: (() => controllerE.goToDuaMenQuran()),
+                          icon: const Icon(Icons.menu_book),
+                        ),
+
+                        // Button 8
+                        CustomButton(
+                          customText: " أذكار النوم   ",
+                          onPressed: () =>
+                              controllerE.goToAthkarBeforeGoToBed(),
+                          icon: const Icon(Icons.menu_book),
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
               ),
             ],
