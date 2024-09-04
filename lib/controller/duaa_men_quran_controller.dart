@@ -1,4 +1,4 @@
-import 'package:athkarix/core/data/model/dua_men_quran_list.dart';
+import 'package:athkarix/core/data/model/model_list/dua_men_quran_list.dart';
 import 'package:athkarix/core/data/static/routes_constant.dart';
 import 'package:get/get.dart';
 

@@ -1,5 +1,5 @@
 import 'package:athkarix/controller/duaa_men_sunnah_controller.dart';
-import 'package:athkarix/core/data/model/dua_men_sunnah_list.dart';
+import 'package:athkarix/core/data/model/model_list/dua_men_sunnah_list.dart';
 import 'package:athkarix/core/data/static/imagelink/image_link.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

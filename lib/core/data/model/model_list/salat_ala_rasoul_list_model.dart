@@ -1,6 +1,6 @@
 import 'package:athkarix/core/data/model/athkar_model.dart';
 
-import '../static/text/salat_ala_rasloul_text.dart';
+import '../../static/text/salat_ala_rasloul_text.dart';
 
 List<AthkarModel> salatAlaRasoulAllahList = [
   AthkarModel(duaText: SalatAlaRasoulAllahText.salat43),

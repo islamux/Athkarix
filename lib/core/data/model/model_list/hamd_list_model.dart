@@ -1,5 +1,5 @@
-import '../static/text/hamd_text.dart';
-import 'athkar_model.dart';
+import '../../static/text/hamd_text.dart';
+import '../athkar_model.dart';
 
 List<AthkarModel> hamdList = [
   AthkarModel(duaText: HamdText.hamd1),

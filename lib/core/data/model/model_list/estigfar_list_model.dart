@@ -1,6 +1,6 @@
 import 'package:athkarix/core/data/model/athkar_model.dart';
 
-import '../static/text/estigfar_text.dart';
+import '../../static/text/estigfar_text.dart';
 
 List<AthkarModel> estigfarList = [
   AthkarModel(duaText: EstigfarText.estigfar1),

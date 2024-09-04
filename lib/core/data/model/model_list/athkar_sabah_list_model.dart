@@ -1,6 +1,6 @@
 import 'package:athkarix/core/data/model/athkar_model.dart';
 
-import '../static/text/ahkar_sabah_text.dart';
+import '../../static/text/ahkar_sabah_text.dart';
 
 List<AthkarModel> athkarSabahList = [
   AthkarModel(duaText: AthkarSabahText.athkarSabah1), //الحمدلله وحده

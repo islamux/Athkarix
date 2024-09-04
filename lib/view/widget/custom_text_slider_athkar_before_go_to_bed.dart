@@ -1,6 +1,7 @@
 import 'package:athkarix/controller/athkar_before_go_to_bed_controller.dart';
-import 'package:athkarix/core/data/model/athkar_before_go_to_bed_list.dart';
+import 'package:athkarix/core/data/model/model_list/athkar_before_go_to_bed_list.dart';
 import 'package:athkarix/core/data/static/imagelink/image_link.dart';
+import 'package:athkarix/view/widget/get_pages/get_pags_texts.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -55,21 +56,15 @@ class CustomTextSliderAthkarBeforeGoToBed extends StatelessWidget {
                           // To make font change when click on button wrab Text() with GetBuilder<Page1controllerImp>(build: (controller) return Text())
                           GetBuilder<AthkarBeforeGoToBedControllerImp>(
                               builder: (controller) {
-                        return Text(
-                          athkarBeforeGoToBedList[i].duaText ?? '',
-                          // Provide a default value (?? '') in case duaText is null
-                          style: //AppTheme.goldenTheme.textTheme.bodyLarge,
-                              TextStyle(
-                            // Problem here is fontsize need to hotreload why?
-                            // I found the solution by wrab Text with GetBuilder to refresh only the
-                            // widgt not all page
-                            fontSize:
-                                //Get.find<AthkarBeforeGoToBedControllerImp>().fontSize,
-                                controllerAfter.fontSize,
-                            fontWeight: FontWeight.w300,
-                            fontFamily: "Amiri",
+                        return RichText(
+                          text: TextSpan(
+                            style: TextStyle(
+                              fontFamily: "AmiriQ",
+                              fontSize: controllerAfter.fontSize,
+                              color: Colors.black,
+                            ),
+                            children: [...getPagesTexts(i)],
                           ),
-
                           textAlign: TextAlign.right,
                         );
                       }),

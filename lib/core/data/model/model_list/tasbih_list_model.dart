@@ -1,6 +1,6 @@
 import 'package:athkarix/core/data/model/athkar_model.dart';
 
-import '../static/text/tasbih_text.dart';
+import '../../static/text/tasbih_text.dart';
 
 List<AthkarModel> tasbihList = [
   AthkarModel(duaText: TasbihText.tasbih21),

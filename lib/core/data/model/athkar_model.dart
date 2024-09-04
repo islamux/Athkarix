@@ -1,6 +1,7 @@
 class AthkarModel {
   // Proberties
   final String? duaText;
+  final String? footer;
   // Constructor
-  AthkarModel({this.duaText});
+  AthkarModel({this.duaText, this.footer = ""});
 }

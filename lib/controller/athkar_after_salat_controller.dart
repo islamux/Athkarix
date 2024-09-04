@@ -1,4 +1,4 @@
-import 'package:athkarix/core/data/model/athkar_after_salat_list.dart';
+import 'package:athkarix/core/data/model/model_list/athkar_after_salat_list.dart';
 import 'package:athkarix/core/data/static/routes_constant.dart';
 import 'package:athkarix/core/data/static/theme/app_color_constant.dart';
 import 'package:flutter/material.dart';

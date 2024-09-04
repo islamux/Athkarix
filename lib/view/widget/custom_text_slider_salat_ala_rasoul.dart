@@ -1,5 +1,5 @@
 import 'package:athkarix/controller/salat_ala_rasoul_controller.dart';
-import 'package:athkarix/core/data/model/salat_ala_rasoul_list_model.dart';
+import 'package:athkarix/core/data/model/model_list/salat_ala_rasoul_list_model.dart';
 import 'package:athkarix/core/data/static/imagelink/image_link.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
