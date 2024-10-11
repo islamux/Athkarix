@@ -3,5 +3,5 @@ class AthkarModel {
   final String? duaText;
   final String? footer;
   // Constructor
-  AthkarModel({this.duaText, this.footer = ""});
+  AthkarModel({this.duaText, this.footer});
 }
