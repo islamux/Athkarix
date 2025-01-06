@@ -45,4 +45,18 @@ class AppTheme {
       ),
     ),
   );
+
+  static TextStyle customTextStyleFooter() {
+    return const TextStyle(
+      color: AppColor.footer,
+      fontWeight: FontWeight.bold,
+    );
+  }
+
+  static TextStyle customTextStyleHadith() {
+    return const TextStyle(
+      color: AppColor.ayahHadith,
+      fontWeight: FontWeight.bold,
+    );
+  }
 }

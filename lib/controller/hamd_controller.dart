@@ -1,4 +1,4 @@
-import 'package:athkarix/core/data/model/hamd_list_model.dart';
+import 'package:athkarix/core/data/model/model_list/hamd_list_model.dart';
 import 'package:athkarix/core/data/static/routes_constant.dart';
 import 'package:get/get.dart';
 

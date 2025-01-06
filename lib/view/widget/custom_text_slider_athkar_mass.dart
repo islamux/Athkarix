@@ -1,5 +1,5 @@
 import 'package:athkarix/controller/athkar_massa_controller.dart';
-import 'package:athkarix/core/data/model/athkar_massa_list_model.dart';
+import 'package:athkarix/core/data/model/model_list/athkar_massa_list_model.dart';
 import 'package:athkarix/core/data/static/imagelink/image_link.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

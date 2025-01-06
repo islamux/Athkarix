@@ -1,5 +1,4 @@
 import 'package:athkarix/core/data/static/theme/app_them.dart';
-import 'package:athkarix/function/share_app.dart';
 import 'package:flutter/material.dart';
 import 'package:athkarix/function/call_us_via_whatsup.dart';
 
@@ -27,7 +26,7 @@ class CustomDrawerListView extends StatelessWidget {
             ' شارك التطبيق عبر وسائل التواصل',
             style: AppTheme.goldenTheme.textTheme.titleMedium,
           ),
-          onTap: () => shareApp(),
+          onTap: () {},
         ),
       ],
     );

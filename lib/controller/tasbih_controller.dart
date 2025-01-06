@@ -1,4 +1,4 @@
-import 'package:athkarix/core/data/model/tasbih_list_model.dart';
+import 'package:athkarix/core/data/model/model_list/tasbih_list_model.dart';
 import 'package:get/get.dart';
 
 abstract class TasbihController extends GetxController {

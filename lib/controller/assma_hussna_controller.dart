@@ -1,4 +1,4 @@
-import 'package:athkarix/core/data/model/assma_hussna_list_model.dart';
+import 'package:athkarix/core/data/model/model_list/assma_hussna_list_model.dart';
 import 'package:athkarix/core/data/static/routes_constant.dart';
 import 'package:athkarix/core/data/static/theme/app_color_constant.dart';
 import 'package:flutter/material.dart';
