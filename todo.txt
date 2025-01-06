@@ -25,3 +25,21 @@ bool isMobile = MediaQuery.of(context).size.width < 600;
 - الصلاة على النبي هزاز عند ال 33 66 100 وكل 100
 - رقم حجم الخط الحالي
 */
+
+
+// update gradle
+upgrade gradle in flutter , vscode 
+1. Open the `android/build.gradle` file.
+2. Locate the `classpath 'com.android.tools.build:gradle:7.3.0'` line.
+3. Update it to `classpath 'com.android.tools.build:gradle:8.1.0'`.
+
+4. Open the `android/gradle/wrapper/gradle-wrapper.properties` file.
+5. Update it to a version compatible with AGP 8.1.0. For AGP 8.1.0, you need at least Gradle 8.0. Update the line to:
+
+6- gradle-wrapper.properties
+distrubition...
+
+7- cd /home/islamux/var/Flutter_Projects/salam/android
+./gradlew wrapper --gradle-version 8.0.2
+
+#gradle
