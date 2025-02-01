@@ -25,7 +25,7 @@ class CustomTextSliderSalatAlaRasoulAllah
         ),
         // 2 in stack
         SizedBox(
-          // to fix auto size of hight of text
+          // to fix auto size of height of text
           height: MediaQuery.of(context).size.height,
 
           child: PageView.builder(
@@ -37,23 +37,42 @@ class CustomTextSliderSalatAlaRasoulAllah
             itemCount: salatAlaRasoulAllahList.length,
             itemBuilder: (context, i) => Column(
               children: [
-                // To make text scrollable make insid contatiner and the container inside Expanded
+                // To make text scrollable make inside container and the container inside Expanded
                 Expanded(
                   child: Container(
                     padding: const EdgeInsets.only(
                         top: 60, left: 32, right: 32, bottom: 60),
                     child: SingleChildScrollView(
                       child: GetBuilder<SalatAlaRasoulAllahControllerImp>(
-                        builder: (controllerR) => Text(
-                          salatAlaRasoulAllahList[i].duaText ?? '',
-                          style: TextStyle(
-                              fontSize:
-                                  //Get.find<SalatAlaRasoulAllahControllerImp>()
-                                  controllerR.fontSize,
-                              fontFamily: "Amiri",
-                              fontWeight: FontWeight.w300),
-                          textAlign: TextAlign.right,
-                        ),
+                        builder: (controllerR) {
+                          return Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                salatAlaRasoulAllahList[i].duaText ?? '',
+                                style: TextStyle(
+                                  fontSize: controllerR.fontSize,
+                                  fontFamily: "Amiri",
+                                  fontWeight: FontWeight.w300,
+                                ),
+                                textAlign: TextAlign.right,
+                              ),
+                              if (salatAlaRasoulAllahList[i].footer != null)
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 16.0),
+                                  child: Text(
+                                    salatAlaRasoulAllahList[i].footer!,
+                                    style: TextStyle(
+                                      fontSize: controllerR.fontSize * 0.8,
+                                      fontWeight: FontWeight.w300,
+                                      fontFamily: "Amiri",
+                                    ),
+                                    textAlign: TextAlign.right,
+                                  ),
+                                ),
+                            ],
+                          );
+                        },
                       ),
                     ),
                   ),

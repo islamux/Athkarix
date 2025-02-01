@@ -49,22 +49,39 @@ class CustomTextSliderDuaMenQuran extends StatelessWidget {
                       // To make font change when click on button wrab Text() with GetBuilder<Page1controllerImp>(build: (controller) return Text())
                       // Wrap Text with column to add share icon , then wrap column with GestureDetector()to make text page clickable.
                       child: GetBuilder<DuaMenQuranControllerImp>(
-                        builder: (controllerQ) => Text(
-                          duaMenQuranList[i].duaText ??
-                              '', // Provide a default value (?? '') in case duaText is null
-                          style: TextStyle(
-                            fontSize:
-                                //Get.find<DuaMenQuranControllerImp>().fontsize,
-                                controllerQ.fontsize,
-                            fontFamily: "Amiri",
-                            fontWeight: FontWeight.w300,
-                          ),
-                          textAlign: TextAlign.right,
-                        ),
+                        builder: (controllerQ) {
+                          return Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                duaMenQuranList[i].duaText ?? '',
+                                style: TextStyle(
+                                  fontSize: controllerQ.fontsize,
+                                  fontFamily: "Amiri",
+                                  fontWeight: FontWeight.w300,
+                                ),
+                                textAlign: TextAlign.right,
+                              ),
+                              if (duaMenQuranList[i].footer != null)
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 16.0),
+                                  child: Text(
+                                    duaMenQuranList[i].footer!,
+                                    style: TextStyle(
+                                      fontSize: controllerQ.fontsize * 0.8,
+                                      fontWeight: FontWeight.w300,
+                                      fontFamily: "Amiri",
+                                    ),
+                                    textAlign: TextAlign.right,
+                                  ),
+                                ),
+                            ],
+                          );
+                        },
                       ),
                     ),
                   ),
-                )
+                ),
               ],
             ),
           ),

@@ -94,7 +94,7 @@ class AthkarMassa extends StatelessWidget {
               Feedback.forTap(context);
               controllerM.increamentPageController();
             },
-            child: const CustomTextSliderAthkarMassa()),
+            child: const CustomTextSliderAthkarMasaa()),
       ),
 
       // Floating Buttons

@@ -50,16 +50,32 @@ class CustomTextSliderDuaMenSunnah extends StatelessWidget {
                       // To make font change when click on button wrab Text() with GetBuilder<Page1controllerImp>(build: (controller) return Text())
                       child: GetBuilder<DuaMenSunnahControllerImp>(
                           builder: (controllerSu) {
-                        return Text(
-                          duaMenSunnahList[i].duaText ?? '',
-                          style: TextStyle(
-                            fontSize:
-                                //Get.find<DuaMenSunnahControllerImp>().fontSize,
-                                controllerSu.fontSize,
-                            fontWeight: FontWeight.w300,
-                            fontFamily: "Amiri",
-                          ),
-                          textAlign: TextAlign.right,
+                        return Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              duaMenSunnahList[i].duaText ?? '',
+                              style: TextStyle(
+                                fontSize: controllerSu.fontSize,
+                                fontWeight: FontWeight.w300,
+                                fontFamily: "Amiri",
+                              ),
+                              textAlign: TextAlign.right,
+                            ),
+                            if (duaMenSunnahList[i].footer != null)
+                              Padding(
+                                padding: const EdgeInsets.only(top: 16.0),
+                                child: Text(
+                                  duaMenSunnahList[i].footer!,
+                                  style: TextStyle(
+                                    fontSize: controllerSu.fontSize * 0.8,
+                                    fontWeight: FontWeight.w300,
+                                    fontFamily: "Amiri",
+                                  ),
+                                  textAlign: TextAlign.right,
+                                ),
+                              ),
+                          ],
                         );
                       }),
                     ),

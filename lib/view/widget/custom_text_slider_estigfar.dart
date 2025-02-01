@@ -4,7 +4,7 @@ import 'package:athkarix/core/data/static/imagelink/image_link.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-// testing to use Getviwe to call controller
+// testing to use GetView to call controller
 class CustomTextSliderEstigfar extends GetView<EstigfarControllerImp> {
   const CustomTextSliderEstigfar({super.key});
 
@@ -21,7 +21,7 @@ class CustomTextSliderEstigfar extends GetView<EstigfarControllerImp> {
           ),
         ),
         SizedBox(
-          // to fix auto size of hight of text
+          // to fix auto size of height of text
           height: MediaQuery.of(context).size.height,
           child: PageView.builder(
             reverse: true,
@@ -39,16 +39,32 @@ class CustomTextSliderEstigfar extends GetView<EstigfarControllerImp> {
                     child: SingleChildScrollView(
                       child: GetBuilder<EstigfarControllerImp>(
                         builder: (controllerE) {
-                          return Text(
-                            estigfarList[i].duaText ?? '',
-                            style: TextStyle(
-                              fontSize:
-                                  //Get.find<EstigfarControllerImp>().fontSize,
-                                  controllerE.fontSize,
-                              fontWeight: FontWeight.w300,
-                              fontFamily: "Amiri",
-                            ),
-                            textAlign: TextAlign.right,
+                          return Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                estigfarList[i].duaText ?? '',
+                                style: TextStyle(
+                                  fontSize: controllerE.fontSize,
+                                  fontWeight: FontWeight.w300,
+                                  fontFamily: "Amiri",
+                                ),
+                                textAlign: TextAlign.right,
+                              ),
+                              if (estigfarList[i].footer != null)
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 16.0),
+                                  child: Text(
+                                    estigfarList[i].footer!,
+                                    style: TextStyle(
+                                      fontSize: controllerE.fontSize * 0.8,
+                                      fontWeight: FontWeight.w300,
+                                      fontFamily: "Amiri",
+                                    ),
+                                    textAlign: TextAlign.right,
+                                  ),
+                                ),
+                            ],
                           );
                         },
                       ),

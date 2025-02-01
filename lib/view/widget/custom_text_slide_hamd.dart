@@ -25,7 +25,7 @@ class CustomTextSliderHamd extends StatelessWidget {
         ),
         // 2 in stack
         SizedBox(
-          // to fix auto size of hight of text
+          // to fix auto size of height of text
           height: MediaQuery.of(context).size.height,
           child: PageView.builder(
             reverse: true,
@@ -43,15 +43,32 @@ class CustomTextSliderHamd extends StatelessWidget {
                     child: SingleChildScrollView(
                       child:
                           GetBuilder<HamdControllerImp>(builder: (controllerH) {
-                        return Text(
-                          hamdList[i].duaText ?? '',
-                          style: TextStyle(
-                            fontSize: //Get.find<HamdControllerImp>().fontSize,
-                                controllerH.fontSize,
-                            fontWeight: FontWeight.w300,
-                            fontFamily: "Amiri",
-                          ),
-                          textAlign: TextAlign.right,
+                        return Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              hamdList[i].duaText ?? '',
+                              style: TextStyle(
+                                fontSize: controllerH.fontSize,
+                                fontWeight: FontWeight.w300,
+                                fontFamily: "Amiri",
+                              ),
+                              textAlign: TextAlign.right,
+                            ),
+                            if (hamdList[i].footer != null)
+                              Padding(
+                                padding: const EdgeInsets.only(top: 16.0),
+                                child: Text(
+                                  hamdList[i].footer!,
+                                  style: TextStyle(
+                                    fontSize: controllerH.fontSize * 0.8,
+                                    fontWeight: FontWeight.w300,
+                                    fontFamily: "Amiri",
+                                  ),
+                                  textAlign: TextAlign.right,
+                                ),
+                              ),
+                          ],
                         );
                       }),
                     ),

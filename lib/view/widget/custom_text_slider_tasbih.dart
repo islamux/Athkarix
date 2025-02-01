@@ -48,21 +48,32 @@ class CustomTextSliderTasbih extends StatelessWidget {
                           // Wrap Text to column to add share icon , then wrap column with GestureDetector to make page text clickable.
                           GetBuilder<TasbihControllerImp>(
                               builder: (controllerT) {
-                        return Text(
-                          tasbihList[i].duaText ??
-                              '', // Provide a default value (?? '') in case duaText is null
-                          //style: themeArabic.textTheme.bodyText1,
-                          style: TextStyle(
-                            // Problem here is fontsize need to hotreload why?
-                            // I found the solution by wrab Text with GetBuilder to refresh only the
-                            // widgt not all page
-                            fontSize:
-                                //Get.find<TasbihControllerImp>().fontSize,
-                                controllerT.fontSize,
-                            fontWeight: FontWeight.w300,
-                            fontFamily: "Amiri",
-                          ),
-                          textAlign: TextAlign.right,
+                        return Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              tasbihList[i].duaText ?? '',
+                              style: TextStyle(
+                                fontSize: controllerT.fontSize,
+                                fontWeight: FontWeight.w300,
+                                fontFamily: "Amiri",
+                              ),
+                              textAlign: TextAlign.right,
+                            ),
+                            if (tasbihList[i].footer != null)
+                              Padding(
+                                padding: const EdgeInsets.only(top: 16.0),
+                                child: Text(
+                                  tasbihList[i].footer!,
+                                  style: TextStyle(
+                                    fontSize: controllerT.fontSize * 0.8,
+                                    fontWeight: FontWeight.w300,
+                                    fontFamily: "Amiri",
+                                  ),
+                                  textAlign: TextAlign.right,
+                                ),
+                              ),
+                          ],
                         );
                       }),
                     ),
