@@ -1,6 +1,7 @@
 import 'package:athkarix/controller/duaa_men_quran_controller.dart';
 import 'package:athkarix/core/data/model/model_list/dua_men_quran_list.dart';
 import 'package:athkarix/core/data/static/imagelink/image_link.dart';
+import 'package:athkarix/view/widget/get_pages/get_pags_texts.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -53,12 +54,16 @@ class CustomTextSliderDuaMenQuran extends StatelessWidget {
                           return Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
-                                duaMenQuranList[i].duaText ?? '',
-                                style: TextStyle(
-                                  fontSize: controllerQ.fontsize,
-                                  fontFamily: "Amiri",
-                                  fontWeight: FontWeight.w300,
+                              RichText(
+                                text: TextSpan(
+                                  style: TextStyle(
+                                    fontFamily: "AmiriQ",
+                                    fontSize: controllerQ.fontsize,
+                                    color: Colors.black,
+                                  ),
+                                  children: [
+                                    ...getPagesTexts(i, duaMenQuranList)
+                                  ],
                                 ),
                                 textAlign: TextAlign.right,
                               ),

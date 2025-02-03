@@ -31,3 +31,22 @@
 مكتبة إدارة الحالة: GetX
 متجر Google Play: https://play.google.com/store/games?hl=en&gl=US
 متجر Apple App Store: https://www.apple.com/app-store/
+
+-----------------
+// Upgrade app 
+- upgrad gradle to 8.2
+- upgrade kotlin to 2.1 
+- upgrade java 18 to 21 
+
+Files to edit
+- app/build.gradle 
+- build.gradle
+- gradle-warpper.properties
+- settings.gradle
+
+steps 
+- flutter clean 
+- flutter pub get
+- cd android
+- ./gradlew clean
+------------------------.

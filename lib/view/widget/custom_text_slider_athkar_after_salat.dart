@@ -1,6 +1,7 @@
 import 'package:athkarix/controller/athkar_after_salat_controller.dart';
 import 'package:athkarix/core/data/model/model_list/athkar_after_salat_list.dart';
 import 'package:athkarix/core/data/static/imagelink/image_link.dart';
+import 'package:athkarix/view/widget/get_pages/get_pags_texts.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -30,8 +31,7 @@ class CustomTextSliderAthkarAfterSalat extends StatelessWidget {
           child: PageView.builder(
             reverse: true,
             // when change page (swap) reset counter in floating to zero
-            onPageChanged: (index) =>
-                controllerAfter.onPageChanged(index),
+            onPageChanged: (index) => controllerAfter.onPageChanged(index),
             controller: controllerAfter.pageControllerS,
             itemCount: athkarAfterSalatList.length,
             itemBuilder: (context, i) => Column(
@@ -47,12 +47,16 @@ class CustomTextSliderAthkarAfterSalat extends StatelessWidget {
                         return Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              athkarAfterSalatList[i].duaText ?? '',
-                              style: TextStyle(
-                                fontSize: controllerAfter.fontSize,
-                                fontWeight: FontWeight.w300,
-                                fontFamily: "Amiri",
+                            RichText(
+                              text: TextSpan(
+                                style: TextStyle(
+                                  fontFamily: "AmiriQ",
+                                  fontSize: controllerAfter.fontSize,
+                                  color: Colors.black,
+                                ),
+                                children: [
+                                  ...getPagesTexts(i, athkarAfterSalatList)
+                                ],
                               ),
                               textAlign: TextAlign.right,
                             ),

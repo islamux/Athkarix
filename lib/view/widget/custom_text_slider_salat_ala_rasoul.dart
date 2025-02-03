@@ -1,6 +1,8 @@
 import 'package:athkarix/controller/salat_ala_rasoul_controller.dart';
+import 'package:athkarix/core/data/model/model_list/estigfar_list_model.dart';
 import 'package:athkarix/core/data/model/model_list/salat_ala_rasoul_list_model.dart';
 import 'package:athkarix/core/data/static/imagelink/image_link.dart';
+import 'package:athkarix/view/widget/get_pages/get_pags_texts.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -48,12 +50,16 @@ class CustomTextSliderSalatAlaRasoulAllah
                           return Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
-                                salatAlaRasoulAllahList[i].duaText ?? '',
-                                style: TextStyle(
-                                  fontSize: controllerR.fontSize,
-                                  fontFamily: "Amiri",
-                                  fontWeight: FontWeight.w300,
+                              RichText(
+                                text: TextSpan(
+                                  style: TextStyle(
+                                    fontFamily: "AmiriQ",
+                                    fontSize: controllerR.fontSize,
+                                    color: Colors.black,
+                                  ),
+                                  children: [
+                                    ...getPagesTexts(i, salatAlaRasoulAllahList)
+                                  ],
                                 ),
                                 textAlign: TextAlign.right,
                               ),

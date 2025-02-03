@@ -1,6 +1,7 @@
 import 'package:athkarix/controller/tasbih_controller.dart';
 import 'package:athkarix/core/data/model/model_list/tasbih_list_model.dart';
 import 'package:athkarix/core/data/static/imagelink/image_link.dart';
+import 'package:athkarix/view/widget/get_pages/get_pags_texts.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -51,12 +52,14 @@ class CustomTextSliderTasbih extends StatelessWidget {
                         return Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              tasbihList[i].duaText ?? '',
-                              style: TextStyle(
-                                fontSize: controllerT.fontSize,
-                                fontWeight: FontWeight.w300,
-                                fontFamily: "Amiri",
+                            RichText(
+                              text: TextSpan(
+                                style: TextStyle(
+                                  fontFamily: "AmiriQ",
+                                  fontSize: controllerT.fontSize,
+                                  color: Colors.black,
+                                ),
+                                children: [...getPagesTexts(i, tasbihList)],
                               ),
                               textAlign: TextAlign.right,
                             ),

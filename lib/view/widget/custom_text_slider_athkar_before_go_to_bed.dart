@@ -1,6 +1,7 @@
 import 'package:athkarix/controller/athkar_before_go_to_bed_controller.dart';
 import 'package:athkarix/core/data/model/model_list/athkar_before_go_to_bed_list.dart';
 import 'package:athkarix/core/data/static/imagelink/image_link.dart';
+import 'package:athkarix/core/data/static/theme/app_them.dart';
 import 'package:athkarix/view/widget/get_pages/get_pags_texts.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -54,7 +55,9 @@ class CustomTextSliderAthkarBeforeGoToBed extends StatelessWidget {
                                   fontSize: controllerAfter.fontSize,
                                   color: Colors.black,
                                 ),
-                                children: [...getPagesTexts(i)],
+                                children: [
+                                  ...getPagesTexts(i, athkarBeforeGoToBedList)
+                                ],
                               ),
                               textAlign: TextAlign.right,
                             ),
@@ -63,11 +66,7 @@ class CustomTextSliderAthkarBeforeGoToBed extends StatelessWidget {
                                 padding: const EdgeInsets.only(top: 16.0),
                                 child: Text(
                                   athkarBeforeGoToBedList[i].footer!,
-                                  style: TextStyle(
-                                    fontSize: controllerAfter.fontSize * 0.8,
-                                    fontWeight: FontWeight.w300,
-                                    fontFamily: "Amiri",
-                                  ),
+                                  style: AppTheme.customTextStyleFooter(),
                                   textAlign: TextAlign.right,
                                 ),
                               ),
