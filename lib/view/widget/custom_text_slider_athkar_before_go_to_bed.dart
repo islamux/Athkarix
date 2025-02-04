@@ -11,7 +11,7 @@ class CustomTextSliderAthkarBeforeGoToBed extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final AthkarBeforeGoToBedControllerImp controllerAfter =
+    final AthkarBeforeGoToBedControllerImp controller =
         Get.find<AthkarBeforeGoToBedControllerImp>();
 
     return Stack(
@@ -32,8 +32,8 @@ class CustomTextSliderAthkarBeforeGoToBed extends StatelessWidget {
           child: PageView.builder(
             reverse: true,
             // when change page (swap) reset counter in floating to zero
-            onPageChanged: (index) => controllerAfter.onPageChanged(index),
-            controller: controllerAfter.pageControllerS,
+            onPageChanged: (index) => controller.onPageChanged(index),
+            controller: controller.pageControllerS,
             itemCount: athkarBeforeGoToBedList.length,
             itemBuilder: (context, i) => Column(
               children: [
@@ -52,7 +52,7 @@ class CustomTextSliderAthkarBeforeGoToBed extends StatelessWidget {
                               text: TextSpan(
                                 style: TextStyle(
                                   fontFamily: "AmiriQ",
-                                  fontSize: controllerAfter.fontSize,
+                                  fontSize: controller.fontSize,
                                   color: Colors.black,
                                 ),
                                 children: [

@@ -11,11 +11,12 @@ class CustomTextSliderAthkarSabah extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final AthkarSabahControllerImp controllerS =
+    final AthkarSabahControllerImp controller =
         Get.find<AthkarSabahControllerImp>();
 
     return Stack(
       children: [
+        // 1 in stack
         Container(
           decoration: const BoxDecoration(
             image: DecorationImage(
@@ -24,12 +25,13 @@ class CustomTextSliderAthkarSabah extends StatelessWidget {
             ),
           ),
         ),
+        // 2 in stack
         SizedBox(
           height: MediaQuery.of(context).size.height,
           child: PageView.builder(
             reverse: true,
-            onPageChanged: (index) => controllerS.onPageChanged(index),
-            controller: controllerS.pageControllerS,
+            onPageChanged: (index) => controller.onPageChanged(index),
+            controller: controller.pageControllerS,
             itemCount: athkarSabahList.length,
             itemBuilder: (context, i) => Column(
               children: [
@@ -39,7 +41,7 @@ class CustomTextSliderAthkarSabah extends StatelessWidget {
                         top: 60, left: 32, right: 32, bottom: 60),
                     child: SingleChildScrollView(
                       child: GetBuilder<AthkarSabahControllerImp>(
-                          builder: (controllerS) {
+                          builder: (controller) {
                         return Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -47,7 +49,7 @@ class CustomTextSliderAthkarSabah extends StatelessWidget {
                               text: TextSpan(
                                 style: TextStyle(
                                   fontFamily: "AmiriQ",
-                                  fontSize: controllerS.fontSize,
+                                  fontSize: controller.fontSize,
                                   color: Colors.black,
                                 ),
                                 children: [

@@ -29,27 +29,3 @@ class FontControllerImp extends FontController {
     update();
   }
 }
-
-// class FontController extends GetxController {
-//   final selectFont = "Amiri".obs;
-//   double fontSize = 21.0;
-
-//   Rx<String> font = ''.obs;
-
-//   void changeFont(String font) {
-//     selectFont.value = font;
-//     update();
-//   }
-
-//   void decreaseFontSize() {
-//     print('font + 2');
-//     fontSize += 2.0;
-//     update();
-//   }
-
-//   void increaseFontSize() {
-//     print('Font - 2');
-//     fontSize -= 2.0;
-//     update();
-//   }
-// }

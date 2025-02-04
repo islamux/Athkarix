@@ -69,10 +69,12 @@ class AthkarSabahControllerImp extends AthkarSabahController {
   }
 
   @override
-  Future<void> increamentPageController() async {
+  void increamentPageController() {
     currentPageCounter++;
+
     if (currentPageCounter >= maxPageCounters[currentPageIndex]) {
       currentPageIndex++;
+
       if (currentPageIndex < maxPageCounters.length) {
         currentPageCounter = 1;
 
