@@ -1,5 +1,4 @@
 import 'package:athkarix/controller/estigfar_controller.dart';
-import 'package:athkarix/core/data/model/model_list/dua_men_quran_list.dart';
 import 'package:athkarix/core/data/model/model_list/estigfar_list_model.dart';
 import 'package:athkarix/core/data/static/imagelink/image_link.dart';
 import 'package:athkarix/view/widget/get_pages/get_pags_texts.dart';

@@ -3,56 +3,65 @@ import 'package:athkarix/core/data/static/text/assma_hussna_text.dart';
 
 List<AthkarModel> assmaHussnaList = [
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna1,
-      footer: AssmaHussnaText.assmaHussna1_Footer),
+    duaText: AssmaHussnaText.assmaHussna1,
+    footer: AssmaHussnaText.assmaHussna1Footer,
+  ),
   //
   AthkarModel(duaText: AssmaHussnaText.assmaHussna2),
   AthkarModel(duaText: AssmaHussnaText.assmaHussna3),
   AthkarModel(duaText: AssmaHussnaText.assmaHussna4),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna5,
-      footer: AssmaHussnaText.assmaHussna5_Footer),
+    duaText: AssmaHussnaText.assmaHussna5,
+    footer: AssmaHussnaText.assmaHussna5Footer,
+  ),
   //
   AthkarModel(duaText: AssmaHussnaText.assmaHussna6),
   AthkarModel(duaText: AssmaHussnaText.assmaHussna7),
   AthkarModel(duaText: AssmaHussnaText.assmaHussna8),
 
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna9,
-      footer: AssmaHussnaText.assmaHussna9_Footer),
+    duaText: AssmaHussnaText.assmaHussna9,
+    footer: AssmaHussnaText.assmaHussna9Footer,
+  ),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna10,
-      footer: AssmaHussnaText.assmaHussna10_Footer),
+    duaText: AssmaHussnaText.assmaHussna10,
+    footer: AssmaHussnaText.assmaHussna10Footer,
+  ),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna11,
-      footer: AssmaHussnaText.assmaHussna11_Footer),
+    duaText: AssmaHussnaText.assmaHussna11,
+    footer: AssmaHussnaText.assmaHussna11Footer,
+  ),
   //
   AthkarModel(duaText: AssmaHussnaText.assmaHussna12),
   AthkarModel(duaText: AssmaHussnaText.assmaHussna13),
   AthkarModel(duaText: AssmaHussnaText.assmaHussna14),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna15,
-      footer: AssmaHussnaText.assmaHussna15_Footer),
+    duaText: AssmaHussnaText.assmaHussna15,
+    footer: AssmaHussnaText.assmaHussna15Footer,
+  ),
   AthkarModel(duaText: AssmaHussnaText.assmaHussna16),
   AthkarModel(duaText: AssmaHussnaText.assmaHussna18),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna19,
-      footer: AssmaHussnaText.assmaHussna19_Footer),
+    duaText: AssmaHussnaText.assmaHussna19,
+    footer: AssmaHussnaText.assmaHussna19Footer,
+  ),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna20,
-      footer: AssmaHussnaText.assmaHussna20_Footer),
+    duaText: AssmaHussnaText.assmaHussna20,
+    footer: AssmaHussnaText.assmaHussna20Footer,
+  ),
   //
   AthkarModel(duaText: AssmaHussnaText.assmaHussna21),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna22,
-      footer: AssmaHussnaText.assmaHussna22_Footer),
+    duaText: AssmaHussnaText.assmaHussna22,
+    footer: AssmaHussnaText.assmaHussna22Footer,
+  ),
   //
   AthkarModel(duaText: AssmaHussnaText.assmaHussna23),
   AthkarModel(duaText: AssmaHussnaText.assmaHussna24),
@@ -60,18 +69,21 @@ List<AthkarModel> assmaHussnaList = [
   AthkarModel(duaText: AssmaHussnaText.assmaHussna26),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna27,
-      footer: AssmaHussnaText.assmaHussna27_Footer),
+    duaText: AssmaHussnaText.assmaHussna27,
+    footer: AssmaHussnaText.assmaHussna27Footer,
+  ),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna28,
-      footer: AssmaHussnaText.assmaHussna28_Footer),
+    duaText: AssmaHussnaText.assmaHussna28,
+    footer: AssmaHussnaText.assmaHussna28Footer,
+  ),
   //
   AthkarModel(duaText: AssmaHussnaText.assmaHussna29),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna30,
-      footer: AssmaHussnaText.assmaHussna30_Footer),
+    duaText: AssmaHussnaText.assmaHussna30,
+    footer: AssmaHussnaText.assmaHussna30Footer,
+  ),
 
   AthkarModel(duaText: AssmaHussnaText.assmaHussna31),
   AthkarModel(duaText: AssmaHussnaText.assmaHussna32),
@@ -89,8 +101,9 @@ List<AthkarModel> assmaHussnaList = [
   AthkarModel(duaText: AssmaHussnaText.assmaHussna44),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna45,
-      footer: AssmaHussnaText.assmaHussna45_Footer),
+    duaText: AssmaHussnaText.assmaHussna45,
+    footer: AssmaHussnaText.assmaHussna45Footer,
+  ),
 
   AthkarModel(duaText: AssmaHussnaText.assmaHussna46),
   AthkarModel(duaText: AssmaHussnaText.assmaHussna47),
@@ -98,12 +111,14 @@ List<AthkarModel> assmaHussnaList = [
   AthkarModel(duaText: AssmaHussnaText.assmaHussna49),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna50,
-      footer: AssmaHussnaText.assmaHussna50_Footer),
+    duaText: AssmaHussnaText.assmaHussna50,
+    footer: AssmaHussnaText.assmaHussna50Footer,
+  ),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna51,
-      footer: AssmaHussnaText.assmaHussna51_Footer),
+    duaText: AssmaHussnaText.assmaHussna51,
+    footer: AssmaHussnaText.assmaHussna51Footer,
+  ),
   AthkarModel(duaText: AssmaHussnaText.assmaHussna52),
   AthkarModel(duaText: AssmaHussnaText.assmaHussna53),
   AthkarModel(duaText: AssmaHussnaText.assmaHussna54),
@@ -119,8 +134,9 @@ List<AthkarModel> assmaHussnaList = [
   AthkarModel(duaText: AssmaHussnaText.assmaHussna64),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna65,
-      footer: AssmaHussnaText.assmaHussna65_Footer),
+    duaText: AssmaHussnaText.assmaHussna65,
+    footer: AssmaHussnaText.assmaHussna65Footer,
+  ),
   //
   AthkarModel(duaText: AssmaHussnaText.assmaHussna66),
   AthkarModel(duaText: AssmaHussnaText.assmaHussna67),
@@ -133,21 +149,24 @@ List<AthkarModel> assmaHussnaList = [
   AthkarModel(duaText: AssmaHussnaText.assmaHussna75),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna76,
-      footer: AssmaHussnaText.assmaHussna76_Footer),
+    duaText: AssmaHussnaText.assmaHussna76,
+    footer: AssmaHussnaText.assmaHussna76Footer,
+  ),
   //
   AthkarModel(duaText: AssmaHussnaText.assmaHussna77),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna78,
-      footer: AssmaHussnaText.assmaHussna78_Footer),
+    duaText: AssmaHussnaText.assmaHussna78,
+    footer: AssmaHussnaText.assmaHussna78Footer,
+  ),
   //
   AthkarModel(duaText: AssmaHussnaText.assmaHussna79),
   AthkarModel(duaText: AssmaHussnaText.assmaHussna80),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna81,
-      footer: AssmaHussnaText.assmaHussna81_Footer),
+    duaText: AssmaHussnaText.assmaHussna81,
+    footer: AssmaHussnaText.assmaHussna81Footer,
+  ),
   //
   AthkarModel(duaText: AssmaHussnaText.assmaHussna82),
   AthkarModel(duaText: AssmaHussnaText.assmaHussna83),
@@ -155,35 +174,41 @@ List<AthkarModel> assmaHussnaList = [
   AthkarModel(duaText: AssmaHussnaText.assmaHussna85),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna86,
-      footer: AssmaHussnaText.assmaHussna86_Footer),
+    duaText: AssmaHussnaText.assmaHussna86,
+    footer: AssmaHussnaText.assmaHussna86Footer,
+  ),
   //
   AthkarModel(duaText: AssmaHussnaText.assmaHussna87),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna88,
-      footer: AssmaHussnaText.assmaHussna88_Footer),
+    duaText: AssmaHussnaText.assmaHussna88,
+    footer: AssmaHussnaText.assmaHussna88Footer,
+  ),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna89,
-      footer: AssmaHussnaText.assmaHussna89_Footer),
+    duaText: AssmaHussnaText.assmaHussna89,
+    footer: AssmaHussnaText.assmaHussna89Footer,
+  ),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna90,
-      footer: AssmaHussnaText.assmaHussna90_Footer),
+    duaText: AssmaHussnaText.assmaHussna90,
+    footer: AssmaHussnaText.assmaHussna90Footer,
+  ),
   //
   AthkarModel(duaText: AssmaHussnaText.assmaHussna91),
   AthkarModel(duaText: AssmaHussnaText.assmaHussna92),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna93,
-      footer: AssmaHussnaText.assmaHussna93_Footer),
+    duaText: AssmaHussnaText.assmaHussna93,
+    footer: AssmaHussnaText.assmaHussna93Footer,
+  ),
   AthkarModel(duaText: AssmaHussnaText.assmaHussna94),
   AthkarModel(duaText: AssmaHussnaText.assmaHussna95),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna96,
-      footer: AssmaHussnaText.assmaHussna96_Footer),
+    duaText: AssmaHussnaText.assmaHussna96,
+    footer: AssmaHussnaText.assmaHussna96Footer,
+  ),
   //
   AthkarModel(duaText: AssmaHussnaText.assmaHussna97),
   AthkarModel(duaText: AssmaHussnaText.assmaHussna98),
@@ -192,8 +217,9 @@ List<AthkarModel> assmaHussnaList = [
   AthkarModel(duaText: AssmaHussnaText.assmaHussna101),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna102,
-      footer: AssmaHussnaText.assmaHussna102_Footer),
+    duaText: AssmaHussnaText.assmaHussna102,
+    footer: AssmaHussnaText.assmaHussna102Footer,
+  ),
 
   AthkarModel(duaText: AssmaHussnaText.assmaHussna103),
   AthkarModel(duaText: AssmaHussnaText.assmaHussna104),
@@ -203,16 +229,18 @@ List<AthkarModel> assmaHussnaList = [
   AthkarModel(duaText: AssmaHussnaText.assmaHussna108),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna109,
-      footer: AssmaHussnaText.assmaHussna109_Footer),
+    duaText: AssmaHussnaText.assmaHussna109,
+    footer: AssmaHussnaText.assmaHussna109Footer,
+  ),
 
   AthkarModel(duaText: AssmaHussnaText.assmaHussna110),
   AthkarModel(duaText: AssmaHussnaText.assmaHussna111),
   AthkarModel(duaText: AssmaHussnaText.assmaHussna112),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna113,
-      footer: AssmaHussnaText.assmaHussna113_Footer),
+    duaText: AssmaHussnaText.assmaHussna113,
+    footer: AssmaHussnaText.assmaHussna113Footer,
+  ),
 
   AthkarModel(duaText: AssmaHussnaText.assmaHussna114),
   AthkarModel(duaText: AssmaHussnaText.assmaHussna115),
@@ -221,8 +249,9 @@ List<AthkarModel> assmaHussnaList = [
   AthkarModel(duaText: AssmaHussnaText.assmaHussna118),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna119,
-      footer: AssmaHussnaText.assmaHussna119_Footer),
+    duaText: AssmaHussnaText.assmaHussna119,
+    footer: AssmaHussnaText.assmaHussna119Footer,
+  ),
   //
   AthkarModel(duaText: AssmaHussnaText.assmaHussna120),
   AthkarModel(duaText: AssmaHussnaText.assmaHussna121),
@@ -236,14 +265,16 @@ List<AthkarModel> assmaHussnaList = [
   AthkarModel(duaText: AssmaHussnaText.assmaHussna129),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna130,
-      footer: AssmaHussnaText.assmaHussna130_Footer),
+    duaText: AssmaHussnaText.assmaHussna130,
+    footer: AssmaHussnaText.assmaHussna130Footer,
+  ),
   //
   AthkarModel(duaText: AssmaHussnaText.assmaHussna131),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna132,
-      footer: AssmaHussnaText.assmaHussna132_Footer),
+    duaText: AssmaHussnaText.assmaHussna132,
+    footer: AssmaHussnaText.assmaHussna132Footer,
+  ),
   //
   AthkarModel(duaText: AssmaHussnaText.assmaHussna133),
   AthkarModel(duaText: AssmaHussnaText.assmaHussna134),
@@ -252,8 +283,9 @@ List<AthkarModel> assmaHussnaList = [
   AthkarModel(duaText: AssmaHussnaText.assmaHussna137),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna138,
-      footer: AssmaHussnaText.assmaHussna138_Footer),
+    duaText: AssmaHussnaText.assmaHussna138,
+    footer: AssmaHussnaText.assmaHussna138Footer,
+  ),
   //
   AthkarModel(duaText: AssmaHussnaText.assmaHussna139),
   AthkarModel(duaText: AssmaHussnaText.assmaHussna140),
@@ -262,8 +294,9 @@ List<AthkarModel> assmaHussnaList = [
   AthkarModel(duaText: AssmaHussnaText.assmaHussna143),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna144,
-      footer: AssmaHussnaText.assmaHussna144_Footer),
+    duaText: AssmaHussnaText.assmaHussna144,
+    footer: AssmaHussnaText.assmaHussna144Footer,
+  ),
   //
   AthkarModel(duaText: AssmaHussnaText.assmaHussna145),
   AthkarModel(duaText: AssmaHussnaText.assmaHussna146),
@@ -273,8 +306,9 @@ List<AthkarModel> assmaHussnaList = [
   AthkarModel(duaText: AssmaHussnaText.assmaHussna150),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna151,
-      footer: AssmaHussnaText.assmaHussna151_Footer),
+    duaText: AssmaHussnaText.assmaHussna151,
+    footer: AssmaHussnaText.assmaHussna151Footer,
+  ),
   //
   AthkarModel(duaText: AssmaHussnaText.assmaHussna152),
   AthkarModel(duaText: AssmaHussnaText.assmaHussna153),
@@ -283,26 +317,31 @@ List<AthkarModel> assmaHussnaList = [
   AthkarModel(duaText: AssmaHussnaText.assmaHussna156),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna157,
-      footer: AssmaHussnaText.assmaHussna157_Footer),
+    duaText: AssmaHussnaText.assmaHussna157,
+    footer: AssmaHussnaText.assmaHussna157Footer,
+  ),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna158,
-      footer: AssmaHussnaText.assmaHussna158_Footer),
+    duaText: AssmaHussnaText.assmaHussna158,
+    footer: AssmaHussnaText.assmaHussna158Footer,
+  ),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna159,
-      footer: AssmaHussnaText.assmaHussna159_Footer),
+    duaText: AssmaHussnaText.assmaHussna159,
+    footer: AssmaHussnaText.assmaHussna159Footer,
+  ),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna160,
-      footer: AssmaHussnaText.assmaHussna160_Footer),
+    duaText: AssmaHussnaText.assmaHussna160,
+    footer: AssmaHussnaText.assmaHussna160Footer,
+  ),
   //
   AthkarModel(duaText: AssmaHussnaText.assmaHussna161),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna162,
-      footer: AssmaHussnaText.assmaHussna162_Footer),
+    duaText: AssmaHussnaText.assmaHussna162,
+    footer: AssmaHussnaText.assmaHussna162Footer,
+  ),
 
   AthkarModel(duaText: AssmaHussnaText.assmaHussna163),
   AthkarModel(duaText: AssmaHussnaText.assmaHussna164),
@@ -312,32 +351,37 @@ List<AthkarModel> assmaHussnaList = [
   AthkarModel(duaText: AssmaHussnaText.assmaHussna168),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna169,
-      footer: AssmaHussnaText.assmaHussna169_Footer),
+    duaText: AssmaHussnaText.assmaHussna169,
+    footer: AssmaHussnaText.assmaHussna169Footer,
+  ),
   //
   AthkarModel(duaText: AssmaHussnaText.assmaHussna170),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna171,
-      footer: AssmaHussnaText.assmaHussna171_Footer),
+    duaText: AssmaHussnaText.assmaHussna171,
+    footer: AssmaHussnaText.assmaHussna171Footer,
+  ),
   //
   AthkarModel(duaText: AssmaHussnaText.assmaHussna172),
   AthkarModel(duaText: AssmaHussnaText.assmaHussna173),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna174,
-      footer: AssmaHussnaText.assmaHussna174_Footer),
+    duaText: AssmaHussnaText.assmaHussna174,
+    footer: AssmaHussnaText.assmaHussna174Footer,
+  ),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna175,
-      footer: AssmaHussnaText.assmaHussna175_Footer),
+    duaText: AssmaHussnaText.assmaHussna175,
+    footer: AssmaHussnaText.assmaHussna175Footer,
+  ),
   //
   AthkarModel(duaText: AssmaHussnaText.assmaHussna176),
   AthkarModel(duaText: AssmaHussnaText.assmaHussna177),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna178,
-      footer: AssmaHussnaText.assmaHussna178_Footer),
+    duaText: AssmaHussnaText.assmaHussna178,
+    footer: AssmaHussnaText.assmaHussna178Footer,
+  ),
   //
   AthkarModel(duaText: AssmaHussnaText.assmaHussna179),
   AthkarModel(duaText: AssmaHussnaText.assmaHussna180),
@@ -351,92 +395,110 @@ List<AthkarModel> assmaHussnaList = [
   AthkarModel(duaText: AssmaHussnaText.assmaHussna188),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna189,
-      footer: AssmaHussnaText.assmaHussna189_Footer),
+    duaText: AssmaHussnaText.assmaHussna189,
+    footer: AssmaHussnaText.assmaHussna189Footer,
+  ),
   //
   AthkarModel(duaText: AssmaHussnaText.assmaHussna190),
   AthkarModel(duaText: AssmaHussnaText.assmaHussna191),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna192,
-      footer: AssmaHussnaText.assmaHussna192_Footer),
+    duaText: AssmaHussnaText.assmaHussna192,
+    footer: AssmaHussnaText.assmaHussna192Footer,
+  ),
   //
   AthkarModel(duaText: AssmaHussnaText.assmaHussna193),
   AthkarModel(duaText: AssmaHussnaText.assmaHussna194),
   AthkarModel(duaText: AssmaHussnaText.assmaHussna195),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna196,
-      footer: AssmaHussnaText.assmaHussna196_Footer),
+    duaText: AssmaHussnaText.assmaHussna196,
+    footer: AssmaHussnaText.assmaHussna196Footer,
+  ),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna197,
-      footer: AssmaHussnaText.assmaHussna197_Footer),
+    duaText: AssmaHussnaText.assmaHussna197,
+    footer: AssmaHussnaText.assmaHussna197Footer,
+  ),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna198,
-      footer: AssmaHussnaText.assmaHussna198_Footer),
+    duaText: AssmaHussnaText.assmaHussna198,
+    footer: AssmaHussnaText.assmaHussna198Footer,
+  ),
   //
   AthkarModel(duaText: AssmaHussnaText.assmaHussna199),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna200,
-      footer: AssmaHussnaText.assmaHussna200_Footer),
+    duaText: AssmaHussnaText.assmaHussna200,
+    footer: AssmaHussnaText.assmaHussna200Footer,
+  ),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna201,
-      footer: AssmaHussnaText.assmaHussna201_Footer),
+    duaText: AssmaHussnaText.assmaHussna201,
+    footer: AssmaHussnaText.assmaHussna201Footer,
+  ),
   //
   AthkarModel(duaText: AssmaHussnaText.assmaHussna202),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna203,
-      footer: AssmaHussnaText.assmaHussna203_Footer),
+    duaText: AssmaHussnaText.assmaHussna203,
+    footer: AssmaHussnaText.assmaHussna203Footer,
+  ),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna204,
-      footer: AssmaHussnaText.assmaHussna204_Footer),
+    duaText: AssmaHussnaText.assmaHussna204,
+    footer: AssmaHussnaText.assmaHussna204Footer,
+  ),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna205,
-      footer: AssmaHussnaText.assmaHussna205_Footer),
+    duaText: AssmaHussnaText.assmaHussna205,
+    footer: AssmaHussnaText.assmaHussna205Footer,
+  ),
   //
   AthkarModel(duaText: AssmaHussnaText.assmaHussna206),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna207,
-      footer: AssmaHussnaText.assmaHussna207_Footer),
+    duaText: AssmaHussnaText.assmaHussna207,
+    footer: AssmaHussnaText.assmaHussna207Footer,
+  ),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna208,
-      footer: AssmaHussnaText.assmaHussna208_Footer),
+    duaText: AssmaHussnaText.assmaHussna208,
+    footer: AssmaHussnaText.assmaHussna208Footer,
+  ),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna209,
-      footer: AssmaHussnaText.assmaHussna209_Footer),
+    duaText: AssmaHussnaText.assmaHussna209,
+    footer: AssmaHussnaText.assmaHussna209Footer,
+  ),
   //
   AthkarModel(duaText: AssmaHussnaText.assmaHussna210),
   AthkarModel(duaText: AssmaHussnaText.assmaHussna211),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna212,
-      footer: AssmaHussnaText.assmaHussna212_Footer),
+    duaText: AssmaHussnaText.assmaHussna212,
+    footer: AssmaHussnaText.assmaHussna212Footer,
+  ),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna213,
-      footer: AssmaHussnaText.assmaHussna213_Footer),
+    duaText: AssmaHussnaText.assmaHussna213,
+    footer: AssmaHussnaText.assmaHussna213Footer,
+  ),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna214,
-      footer: AssmaHussnaText.assmaHussna214_Footer),
+    duaText: AssmaHussnaText.assmaHussna214,
+    footer: AssmaHussnaText.assmaHussna214Footer,
+  ),
 
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna215,
-      footer: AssmaHussnaText.assmaHussna215_Footer),
+    duaText: AssmaHussnaText.assmaHussna215,
+    footer: AssmaHussnaText.assmaHussna215Footer,
+  ),
   //
   AthkarModel(
-      duaText: AssmaHussnaText.assmaHussna216,
-      footer: AssmaHussnaText.assmaHussna216_Footer),
+    duaText: AssmaHussnaText.assmaHussna216,
+    footer: AssmaHussnaText.assmaHussna216Footer,
+  ),
   //
   AthkarModel(duaText: AssmaHussnaText.assmaHussna217),
 ];

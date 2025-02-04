@@ -1,5 +1,5 @@
 class DuaMenQuranText {
-  static const String duamenquran1 = """ 
+  static const String duamenquran1 = """
  الْحَمْدُ لِلهِ وَحْدَهُ، وَالصَّلاةُ وَالسَّلاَمُ عَلَى مَنْ لاَ نَبِيَّ بَعْدَهُ
 
 ١ - {بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ * الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ * الرَّحْمَنِ الرَّحِيمِ * مَالِكِ يَوْمِ الدِّينِ * إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ * اهْدِنَا الصِّرَاط الْمُسْتَقِيمَ * صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ} (١).
@@ -10,7 +10,7 @@ class DuaMenQuranText {
 
 ٤ - {رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الآخِرَةِ
 """;
-  static const String duamenquran1_Footer= """ 
+  static const String duamenquran1Footer = """
 ---------------------
 (١) سورة الفاتحة، الآيات ١ - ٧
 (٢) سورة البقرة، الآية: ١٢٧
@@ -18,7 +18,7 @@ class DuaMenQuranText {
 
   """;
 
-  static const String duamenquran2 = """ 
+  static const String duamenquran2 = """
   
 حَسَنَةً وَقِنَا عَذَابَ النَّارِ} (١)
 
@@ -30,7 +30,7 @@ class DuaMenQuranText {
 
 ٨ - {رَبَّنَا إِنَّنَا آمَنَّا فَاغْفِرْ لَنَا ذُنُوبَنَا وَقِنَا عَذَابَ النَّارِ} (٥)
 """;
-  static const String duamenquran2_Footer= """ 
+  static const String duamenquran2Footer = """
 ---------------------
 (١) سورة البقرة، الآية: ٢٠١
 (٢) سورة البقرة، الآية: ٢٨٥
@@ -40,7 +40,7 @@ class DuaMenQuranText {
 
   """;
 
-  static const String duamenquran3 = """ 
+  static const String duamenquran3 = """
 ٩ - {رَبِّ هَبْ لِي مِن لَّدُنْكَ ذُرِّيَّةً طَيِّبَةً إِنَّكَ سَمِيعُ الدُّعَاءِ} (١)
 
 ١٠ - {رَبَّنَا آمَنَّا بِمَا أَنزَلَتْ وَاتَّبَعْنَا الرَّسُولَ فَاكْتُبْنَا مَعَ الشَّاهِدِينَ} (٢)
@@ -49,7 +49,7 @@ class DuaMenQuranText {
 
 ١٢ - {رَبَّنَا مَا خَلَقْتَ هَذا بَاطِلاً سُبْحَانَكَ فَقِنَا عَذَابَ النَّارِ * رَبَّنَا إِنَّكَ مَن تُدْخِلِ النَّارَ فَقَدْ أَخْزَيْتَهُ وَمَا لِلظَّالِمِينَ مِنْ أَنصَارٍ * رَّبَّنَا إِنَّنَا سَمِعْنَا مُنَادِيًا يُنَادِي لِلإِيمَانِ أَنْ آمِنُواْ بِرَبِّكُمْ فَآمَنَّا رَبَّنَا فَاغْفِرْ لَنَا ذُنُوبَنَا وَكَفِّرْ عَنَّا سَيِّئَاتِنَا وَتَوَفَّنَا مَعَ الأبْرَارِ * رَبَّنَا وَآتِنَا مَا وَعَدتَّنَا عَلَى
 """;
-  static const String duamenquran3_Footer= """ 
+  static const String duamenquran3Footer = """
 \n---------------------
 (١) سورة آل عمران، الآية: ٣٨
 (٢) سورة آل عمران، الآية: ٥٣
@@ -57,7 +57,7 @@ class DuaMenQuranText {
   
   """;
 
-  static const String duamenquran4 = """ 
+  static const String duamenquran4 = """
 رُسُلِكَ وَلاَ تُخْزِنَا يَوْمَ الْقِيَامَةِ إِنَّكَ لاَ تُخْلِفُ الْمِيعَادَ} (١)
 
 ١٣ - {رَبَّنَا آمَنَّا فَاكْتُبْنَا مَعَ الشَّاهِدِينَ} (٢)
@@ -70,7 +70,7 @@ class DuaMenQuranText {
 
 ١٧ - {حَسْبِيَ اللَّهُ لا إِلَهَ إِلاَّ هُوَ عَلَيْهِ تَوَكَّلْتُ وَهُوَ
 """;
-  static const String duamenquran4_Footer= """ 
+  static const String duamenquran4Footer = """
 ---------------------
 (١) سورة آل عمران، الآيات: ١٩١ - ١٩٤
 (٢) سورة المائدة، الآية: ٨٣
@@ -80,7 +80,7 @@ class DuaMenQuranText {
 
   """;
 
-  static const String duamenquran5 = """ 
+  static const String duamenquran5 = """
 رَبُّ الْعَرْشِ الْعَظِيمِ} (١)
 
 ١٨ - {رَبَّنَا لاَ تَجْعَلْنَا فِتْنَةً لِّلْقَوْمِ الظَّالِمِينَ * وَنَجِّنَا بِرَحْمَتِكَ مِنَ الْقَوْمِ الْكَافِرِينَ} (٢)
@@ -91,7 +91,7 @@ class DuaMenQuranText {
 
 ٢١ - {رَبِّ اجْعَلْ هَذَا الْبَلَدَ آمِنًا وَاجْنُبْنِي وَبَنِيَّ أَن
 """;
-  static const String duamenquran5_Footer= """ 
+  static const String duamenquran5Footer = """
 ---------------------
 (١) سورة التوبة، الآية: ١٢٩
 (٢) سورة يونس، الآيتان: ٨٥ - ٨٦
@@ -100,7 +100,7 @@ class DuaMenQuranText {
 
   """;
 
-  static const String duamenquran6 = """ 
+  static const String duamenquran6 = """
   نَّعْبُدَ الأَصْنَامَ} (١)
 
 ٢٢ - {رَبِّ اجْعَلْنِي مُقِيمَ الصَّلاَةِ وَمِن ذُرِّيَّتِي رَبَّنَا وَتَقَبَّلْ دُعَاءِ} (٢)
@@ -111,7 +111,7 @@ class DuaMenQuranText {
 
 ٢٥ - {رَبِّ اشْرَحْ لِي صَدْرِي* وَيَسِّرْ لِي أَمْرِي* وَاحْلُلْ عُقْدَةً مِّن لِّسَانِي، يَفْقَهُوا قَوْلِي} (٥)
 """;
-  static const String duamenquran6_Footer= """ 
+  static const String duamenquran6Footer = """
 ---------------------
 (١) سورة إبراهيم، الآية: ٣٥
 (٢) سورة إبراهيم، الآية: ٤٠
@@ -121,7 +121,7 @@ class DuaMenQuranText {
 
   """;
 
-  static const String duamenquran7 = """ 
+  static const String duamenquran7 = """
 
  ٢٦ - {رَّبِّ زِدْنِي عِلْمًا} (١)
 
@@ -135,7 +135,7 @@ class DuaMenQuranText {
 
 ٣١ - {رَّبِّ اغْفِرْ وَارْحَمْ وَأَنتَ خَيْرُ الرَّاحِمِينَ} (٦)
 """;
-  static const String duamenquran7_Footer= """ 
+  static const String duamenquran7Footer = """
 ---------------------
 (١) سورة طه، الآية: ١١٤
 (٢) سورة الأنبياء، الآية: ٨٧
@@ -146,7 +146,7 @@ class DuaMenQuranText {
 
   """;
 
-  static const String duamenquran8 = """ 
+  static const String duamenquran8 = """
 ٣٢ - {رَبَّنَا اصْرِفْ عَنَّا عَذَابَ جَهَنَّمَ إِنَّ عَذَابَهَا كَانَ غَرَامًا*إِنَّهَا سَاءَتْ مُسْتَقَرًّا وَمُقَامًا} (١)
 
 ٣٣ - {رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ وَاجْعَلْنَا لِلْمُتَّقِينَ إِمَامًا} (٢)
@@ -155,7 +155,7 @@ class DuaMenQuranText {
 
 ٣٥ - {وَلا تُخْزِنِي يَوْمَ يُبْعَثُونَ * يَوْمَ لَا يَنْفَعُ مَالٌ وَلَا بَنُونَ * إِلَّا مَنْ أَتَى اللَّهَ بِقَلْبٍ سَلِيمٍ} (٤)
 """;
-  static const String duamenquran8_Footer= """ 
+  static const String duamenquran8Footer = """
 ---------------------
 (١) سورة الفرقان، الآيتان: ٦٥ - ٦٦
 (٢) سورة الفرقان، الآية: ٨٤
@@ -164,7 +164,7 @@ class DuaMenQuranText {
 
   """;
 
-  static const String duamenquran9 = """ 
+  static const String duamenquran9 = """
  ٣٦ - {رَبِّ أَوْزِعْنِي أَنْ أَشْكُرَ نِعْمَتَكَ الَّتِي أَنْعَمْتَ عَلَيَّ وَعَلَى وَالِدَيَّ وَأَنْ أَعْمَلَ صَالِحًا تَرْضَاهُ وَأَدْخِلْنِي بِرَحْمَتِكَ فِي عِبَادِكَ الصَّالِحِين} (١)
 
 ٣٧ - {رَبِّ إِنِّي ظَلَمْتُ نَفْسِي فَاغْفِرْ لِي} (٢)
@@ -177,7 +177,7 @@ class DuaMenQuranText {
 
 ٤١ - {رَبِّ انصُرْنِي عَلَى الْقَوْمِ الْمُفْسِدِينَ} (٦)
 """;
-  static const String duamenquran9_Footer= """ 
+  static const String duamenquran9Footer = """
 ---------------------
 (١) سورة النمل، الآية: ١٩
 (٢) سورة القصص، الآية: ١٦
@@ -188,7 +188,7 @@ class DuaMenQuranText {
 
   """;
 
-  static const String duamenquran10 = """ 
+  static const String duamenquran10 = """
 ٤٢ - {رَبِّ هَبْ لِي مِنَ الصَّالِحِينَ} (١)
 
 ٤٣ - {رَبِّ أَوْزِعْنِي أَنْ أَشْكُرَ نِعْمَتَكَ الَّتِي أَنْعَمْتَ عَلَيَّ وَعَلَى وَالِدَيَّ وَأَنْ أَعْمَلَ صَالِحًا تَرْضَاهُ وَأَصْلِحْ لِي فِي ذُرِّيَّتِي إِنِّي تُبْتُ إِلَيْكَ وَإِنِّي مِنَ الْمُسْلِمِينَ} (٢)
@@ -199,7 +199,7 @@ class DuaMenQuranText {
 
 ٤٦ - {رَبَّنَا لا تَجْعَلْنَا فِتْنَةً لِّلَّذِينَ كَفَرُوا وَاغْفِرْ لَنَا رَبَّنَا إِنَّكَ أَنتَ
 """;
-  static const String duamenquran10_Footer= """ 
+  static const String duamenquran10Footer = """
 ---------------------
 (١) سورة الصافات، الآية: ١٠٠
 (٢) سورة الأحقاف، الآية: ١٥
@@ -208,7 +208,7 @@ class DuaMenQuranText {
 
   """;
 
-  static const String duamenquran11 = """ 
+  static const String duamenquran11 = """
   
  الْعَزِيزُ الْحَكِيمُ} (١)
 
@@ -220,7 +220,7 @@ class DuaMenQuranText {
 
 ٥٠ - ((اللَّهُمَّ آتِني الحِكْمَةَ الَّتي مَنْ أُوتِيهَا
 """;
-  static const String duamenquran11_Footer= """ 
+  static const String duamenquran11Footer = """
 ---------------------
 (١) سورة الممتحنة، الآية: ٥
 (٢) سورة التحريم، الآية: ٨
@@ -229,7 +229,7 @@ class DuaMenQuranText {
 
   """;
 
-  static const String duamenquran12 = """ 
+  static const String duamenquran12 = """
   
  فَقَدْ أُوتِيَ خَيْرًا كَثِيرًا)) (١)
 
@@ -241,7 +241,7 @@ class DuaMenQuranText {
 
 ٥٤ - ((اللهمّ آتنا في الدنيا حسنة، وفي الآخرة حسنة وقنا عذاب النار)) (٥)
 """;
-  static const String duamenquran12_Footer= """ 
+  static const String duamenquran12Footer = """
 ---------------------
 (١) مقتبس من سورة البقرة، الآية:٢٦٩
 (٢) مقتبس من سورة إبراهيم، الآية: ٢٧

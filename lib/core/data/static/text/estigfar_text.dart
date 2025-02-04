@@ -12,7 +12,7 @@ class EstigfarText {
   static const String estigfar4 = """
 لا إِلَهَ إِلا أَنتَ سُبْحَانَكَ إِنِّي كُنتُ مِنَ الظَّالِمِينَ
 """;
-  static const String estigfar4_Footer= """
+  static const String estigfar4Footer = """
 ----------
 (٢) سورة الأنبياء، الآية: ٨٧
   """;
@@ -20,7 +20,7 @@ class EstigfarText {
   static const String estigfar5 = """
 أستغفر الله وأتوب إليه
 """;
-  static const String estigfar5_Footer= """
+  static const String estigfar5Footer = """
 ----------
   عن أبى هريرة رضى الله عنه قال: (ما رأيت أحدا أكثر أن يقول: (أستغفر الله وأتوب إليه من رسول الله صلى الله عليه وسلم
   """;
@@ -35,8 +35,8 @@ class EstigfarText {
 
   static const String estigfar8 = """
 رَبِّ إِنِّي ظَلَمْتُ نَفْسِي فَاغْفِرْ لِي
- """; 
-  static const String estigfar8_Footer= """
+ """;
+  static const String estigfar8Footer = """
 ----------
 (٢) سورة القصص، الآية: ١٦
   """;
@@ -48,7 +48,7 @@ class EstigfarText {
   static const String estigfar10 = """
 رَبَّنَا اغْفِرْ لِي وَلِوَالِدَيَّ وَلِلْمُؤْمِنِينَ يَوْمَ يَقُومُ الْحِسَابُ
 """;
-  static const String estigfar10_Footer= """
+  static const String estigfar10Footer = """
 ----------
 (٣) سورة إبراهيم، الآية: ٤١
   """;
@@ -56,7 +56,7 @@ class EstigfarText {
   static const String estigfar11 = """
 سَمِعْنَا وَأَطَعْنَا غُفْرَانَكَ رَبَّنَا وَإِلَيْكَ الْمَصِيرُ
 """;
-  static const String estigfar11_Footer= """
+  static const String estigfar11Footer = """
 ------------
 (٢) سورة البقرة، الآية: ٢٨٥
 
@@ -68,15 +68,15 @@ class EstigfarText {
 
   static const String estigfar16 = """
 رَبَّنَا اغْفِرْ لَنَا وَلِإِخْوَانِنَا الَّذِينَ سَبَقُونَا بِالإِيمَانِ وَلا تَجْعَلْ فِي قُلُوبِنَا غِلاً لِّلَّذِينَ آمَنُوا رَبَّنَا إِنَّكَ رَؤُوفٌ رَّحِيمٌ
-"""; 
-  static const String estigfar16_Footer= """
+""";
+  static const String estigfar16Footer = """
 ----------
 (٣) سورة الحشر، الآية: ١٠
  """;
   static const String estigfar17 = """
 رَبَّنَا ظَلَمْنَا أَنفُسَنَا وَإِن لَّمْ تَغْفِرْ لَنَا وَتَرْحَمْنَا لَنَكُونَنَّ مِنَ الْخَاسِرِينَ
-"""; 
-  static const String estigfar17_Footer= """
+""";
+  static const String estigfar17Footer = """
 ----------
 (٣) سورة الأعراف، الآية: ٢٣
  """;
@@ -84,29 +84,29 @@ class EstigfarText {
   static const String estigfar13 = """
 رَبَّنَا أَتْمِمْ لَنَا نُورَنَا وَاغْفِرْ لَنَا إِنَّكَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ
 """;
-  static const String estigfar13_Footer= """
+  static const String estigfar13Footer = """
 ----------
 (٢) سورة التحريم، الآية: ٨
  """;
   static const String estigfar14 = """
 رَبِّ اغْفِرْ لِي وَلِوَالِدَيَّ وَلِمَن دَخَلَ بَيْتِيَ مُؤْمِنًا وَلِلْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ
 """;
-  static const String estigfar14_Footer= """
+  static const String estigfar14Footer = """
 ----------
 (٣) سورة نوح، الآية: ٢٨
  """;
   static const String estigfar15 = """
 اللهم اغفر لنا وارحمنا وتب علينا إنك أنت التواب الرحيم
- """; 
-  static const String estigfar15_Footer= """
+ """;
+  static const String estigfar15Footer = """
 ----------
   وقد روى عن النبى صلى الله عليه وسلم: (أن من قاله غفر له وإن كان فر من الزحف (خرجه أبو داود والترمذى وفى كتاب عمل اليوم والليلة للنسائى عن خباب بن الأرت قال: قلت يا رسول الله كيف نستغفر؟ قال: قل) اللهم اغفر لنا وارحمنا وتب علينا إنك أنت التواب الرحيم) 
 
  """;
   static const String estigfar18 = """
   رب اغفر لى وتب على إنك أنت التواب الغفور
- """; 
-  static const String estigfar18_Footer= """
+ """;
+  static const String estigfar18Footer = """
 ----------
   (وفى الأربعة عن ابن عمر قال: (إن كنا لنعد لرسول الله صلى الله عليه وسلم فى المجلس الواحد مائة مرة يقول: (رب اغفر لى وتب على إنك أنت التواب الغفور)
 
@@ -122,8 +122,8 @@ class EstigfarText {
 
   static const String estigfar22 = """
 أسألك من خير ما تعلم وأعوذ بك من شر ما تعلم وأستغفرك لما تعلم إنك أنت علام الغيوب
-"""; 
-  static const String estigfar22_Footer= """
+""";
+  static const String estigfar22Footer = """
 ----------
  (يَومَ يَبعَثُهُمُ اللهُ جَمِيعاً فَيُنِبّئُهُم بِماَ عَمِلُوا أَحصَاهُ اللهُ وَنَسُوهُ) سورة المجادلة: آية ٦ وفى حديث شداد بن أوس عن النبى صلى الله عليه وسلم: (أسألك من خير ما تعلم وأعوذ بك من شر ما تعلم وأستغفرك لما تعلم إنك أنت علام الغيوب) 
  """;
@@ -133,21 +133,21 @@ class EstigfarText {
   static const String estigfar24 = """
 رَبَّنَا لاَ تُؤَاخِذْنَا إِن نَّسِينَا أَوْ أَخْطَأْنَا رَبَّنَا وَلاَ تَحْمِلْ عَلَيْنَا إِصْرًا كَمَا حَمَلْتَهُ عَلَى الَّذِينَ مِن قَبْلِنَا رَبَّنَا وَلاَ تُحَمِّلْنَا مَا لاَ طَاقَةَ لَنَا بِهِ وَاعْفُ عَنَّا وَاغْفِرْ لَنَا وَارْحَمْنَآ أَنتَ مَوْلاَنَا فَانصُرْنَا عَلَى الْقَوْمِ الْكَافِرِينَ
 """;
-  static const String estigfar24_Footer= """
+  static const String estigfar24Footer = """
 ----------
 (٣) سورة البقرة، الآية: ٢٨٦
  """;
   static const String estigfar25 = """
 رَبَّنَا إِنَّنَا آمَنَّا فَاغْفِرْ لَنَا ذُنُوبَنَا وَقِنَا عَذَابَ النَّارِ
 """;
-  static const String estigfar25_Footer= """
+  static const String estigfar25Footer = """
 ----------
 (٥) سورة آل عمران، الآية: ١٦.
  """;
   static const String estigfar26 = """
 ربَّنَا اغْفِرْ لَنَا ذُنُوبَنَا وَإِسْرَافَنَا فِي أَمْرِنَا وَثَبِّتْ أَقْدَامَنَا وانصُرْنَا عَلَى الْقَوْمِ الْكَافِرِينَ
 """;
-  static const String estigfar26_Footer= """
+  static const String estigfar26Footer = """
 ----------
 (٣) سورة آل عمران، الآية: ١٤٧.
  """;

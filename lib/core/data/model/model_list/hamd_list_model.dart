@@ -2,8 +2,10 @@ import '../../static/text/hamd_text.dart';
 import '../athkar_model.dart';
 
 List<AthkarModel> hamdList = [
-  AthkarModel(duaText: HamdText.hamd1),
-  AthkarModel(footer: HamdText.hamd1_Footer),
+  AthkarModel(
+    duaText: HamdText.hamd1,
+    footer: HamdText.hamd1Footer,
+  ),
   AthkarModel(duaText: HamdText.hamd2),
   AthkarModel(duaText: HamdText.hamd14),
   AthkarModel(duaText: HamdText.hamd15),
@@ -56,9 +58,15 @@ List<AthkarModel> hamdList = [
   AthkarModel(duaText: HamdText.hamd52),
   AthkarModel(duaText: HamdText.hamd53),
   AthkarModel(duaText: HamdText.hamd54),
-  AthkarModel(duaText: HamdText.hamd55),
-  AthkarModel(footer: HamdText.hamd55_Footer),
-  AthkarModel(duaText: HamdText.hamd56),
-  AthkarModel(footer: HamdText.hamd56_Footer),
+  //
+  AthkarModel(
+    duaText: HamdText.hamd55,
+    footer: HamdText.hamd55Footer,
+  ),
+  //
+  AthkarModel(
+    duaText: HamdText.hamd56,
+    footer: HamdText.hamd56Footer,
+  ),
   AthkarModel(duaText: HamdText.hamd0),
 ];

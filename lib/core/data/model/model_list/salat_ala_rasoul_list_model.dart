@@ -4,33 +4,61 @@ import '../../static/text/salat_ala_rasloul_text.dart';
 
 List<AthkarModel> salatAlaRasoulAllahList = [
   AthkarModel(duaText: SalatAlaRasoulAllahText.salat43),
-  AthkarModel(duaText: SalatAlaRasoulAllahText.salat1),
-  AthkarModel(footer: SalatAlaRasoulAllahText.salat1_Footer),
-  AthkarModel(duaText: SalatAlaRasoulAllahText.salat2),
-  AthkarModel(footer: SalatAlaRasoulAllahText.salat2_Footer),
-  AthkarModel(duaText: SalatAlaRasoulAllahText.salat3),
-  AthkarModel(footer: SalatAlaRasoulAllahText.salat3_Footer),
-  AthkarModel(duaText: SalatAlaRasoulAllahText.salat4),
-  AthkarModel(footer: SalatAlaRasoulAllahText.salat4_Footer),
-  AthkarModel(duaText: SalatAlaRasoulAllahText.salat44),
-  AthkarModel(footer: SalatAlaRasoulAllahText.salat44_Footer),
-  AthkarModel(duaText: SalatAlaRasoulAllahText.salat5),
-  AthkarModel(footer: SalatAlaRasoulAllahText.salat5_Footer),
-  AthkarModel(duaText: SalatAlaRasoulAllahText.salat8),
-  AthkarModel(footer: SalatAlaRasoulAllahText.salat8_Footer),
-  AthkarModel(duaText: SalatAlaRasoulAllahText.salat10),
-  AthkarModel(footer: SalatAlaRasoulAllahText.salat10_Footer),
-  AthkarModel(duaText: SalatAlaRasoulAllahText.salat11),
-  AthkarModel(footer: SalatAlaRasoulAllahText.salat11_Footer),
-  AthkarModel(duaText: SalatAlaRasoulAllahText.salat12),
-  AthkarModel(footer: SalatAlaRasoulAllahText.salat12_Footer),
-  AthkarModel(duaText: SalatAlaRasoulAllahText.salat13),
-  AthkarModel(footer: SalatAlaRasoulAllahText.salat13_Footer),
-  AthkarModel(duaText: SalatAlaRasoulAllahText.salat14),
-  AthkarModel(footer: SalatAlaRasoulAllahText.salat14_Footer),
+  //
+  AthkarModel(
+      duaText: SalatAlaRasoulAllahText.salat1,
+      footer: SalatAlaRasoulAllahText.salat1Footer),
+  //
+  AthkarModel(
+      duaText: SalatAlaRasoulAllahText.salat2,
+      footer: SalatAlaRasoulAllahText.salat2Footer),
+  //
+  AthkarModel(
+      duaText: SalatAlaRasoulAllahText.salat3,
+      footer: SalatAlaRasoulAllahText.salat3Footer),
+  //
+  AthkarModel(
+      duaText: SalatAlaRasoulAllahText.salat4,
+      footer: SalatAlaRasoulAllahText.salat4Footer),
+  //
+  AthkarModel(
+      duaText: SalatAlaRasoulAllahText.salat44,
+      footer: SalatAlaRasoulAllahText.salat44Footer),
+  //
+  AthkarModel(
+      duaText: SalatAlaRasoulAllahText.salat5,
+      footer: SalatAlaRasoulAllahText.salat5Footer),
+  //
+  AthkarModel(
+      duaText: SalatAlaRasoulAllahText.salat8,
+      footer: SalatAlaRasoulAllahText.salat8Footer),
+  //
+  AthkarModel(
+      duaText: SalatAlaRasoulAllahText.salat10,
+      footer: SalatAlaRasoulAllahText.salat10Footer),
+  //
+  AthkarModel(
+      duaText: SalatAlaRasoulAllahText.salat11,
+      footer: SalatAlaRasoulAllahText.salat11Footer),
+  //
+  AthkarModel(
+      duaText: SalatAlaRasoulAllahText.salat12,
+      footer: SalatAlaRasoulAllahText.salat12Footer),
+  //
+  AthkarModel(
+      duaText: SalatAlaRasoulAllahText.salat13,
+      footer: SalatAlaRasoulAllahText.salat13Footer),
+  //
+  AthkarModel(
+      duaText: SalatAlaRasoulAllahText.salat14,
+      footer: SalatAlaRasoulAllahText.salat14Footer),
+  //
   AthkarModel(duaText: SalatAlaRasoulAllahText.salat15),
-  AthkarModel(duaText: SalatAlaRasoulAllahText.salat16),
-  AthkarModel(footer: SalatAlaRasoulAllahText.salat16_Footer),
+  //
+  AthkarModel(
+      duaText: SalatAlaRasoulAllahText.salat16,
+      footer: SalatAlaRasoulAllahText.salat16Footer),
+  //
   AthkarModel(duaText: SalatAlaRasoulAllahText.salat17),
   AthkarModel(duaText: SalatAlaRasoulAllahText.salat18),
   AthkarModel(duaText: SalatAlaRasoulAllahText.salat19),
@@ -60,6 +88,8 @@ List<AthkarModel> salatAlaRasoulAllahList = [
   AthkarModel(duaText: SalatAlaRasoulAllahText.salat40),
   AthkarModel(duaText: SalatAlaRasoulAllahText.salat41),
   AthkarModel(duaText: SalatAlaRasoulAllahText.salat42),
-  AthkarModel(duaText: SalatAlaRasoulAllahText.salat44),
-  AthkarModel(footer: SalatAlaRasoulAllahText.salat44_Footer),
+  //
+  AthkarModel(
+      duaText: SalatAlaRasoulAllahText.salat44,
+      footer: SalatAlaRasoulAllahText.salat44Footer),
 ];
