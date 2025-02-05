@@ -53,7 +53,7 @@ class CustomTextSliderSalatAlaRasoulAllah
                               RichText(
                                 text: TextSpan(
                                   style: TextStyle(
-                                    fontFamily: "AmiriQ",
+                                    fontFamily: "Amiri",
                                     fontSize: controllerR.fontSize,
                                     color: Colors.black,
                                   ),

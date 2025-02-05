@@ -47,7 +47,7 @@ class CustomTextSliderEstigfar extends GetView<EstigfarControllerImp> {
                               RichText(
                                 text: TextSpan(
                                   style: TextStyle(
-                                    fontFamily: "AmiriQ",
+                                    fontFamily: "Amiri",
                                     fontSize: controllerE.fontSize,
                                     color: Colors.black,
                                   ),

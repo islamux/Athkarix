@@ -46,6 +46,13 @@ class AppTheme {
     ),
   );
 
+  static TextStyle customTextStyleText() {
+    return const TextStyle(
+      color: AppColor.primaryColorBlack,
+      fontWeight: FontWeight.bold,
+    );
+  }
+
   static TextStyle customTextStyleFooter() {
     return const TextStyle(
       color: AppColor.footer,

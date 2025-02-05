@@ -51,7 +51,7 @@ class CustomTextSliderAthkarAfterSalat extends StatelessWidget {
                             RichText(
                               text: TextSpan(
                                 style: TextStyle(
-                                  fontFamily: "AmiriQ",
+                                  fontFamily: "Amiri",
                                   fontSize: controllerAfter.fontSize,
                                   color: Colors.black,
                                 ),

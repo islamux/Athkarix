@@ -58,7 +58,7 @@ class CustomTextSliderDuaMenQuran extends StatelessWidget {
                               RichText(
                                 text: TextSpan(
                                   style: TextStyle(
-                                    fontFamily: "AmiriQ",
+                                    fontFamily: "Amiri",
                                     fontSize: controllerQ.fontsize,
                                     color: Colors.black,
                                   ),

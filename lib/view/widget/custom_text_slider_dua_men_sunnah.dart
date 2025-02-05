@@ -1,6 +1,5 @@
 import 'package:athkarix/controller/duaa_men_sunnah_controller.dart';
 import 'package:athkarix/core/data/model/model_list/dua_men_sunnah_list.dart';
-import 'package:athkarix/core/data/model/model_list/tasbih_list_model.dart';
 import 'package:athkarix/core/data/static/imagelink/image_link.dart';
 import 'package:athkarix/view/widget/get_pages/get_pags_texts.dart';
 import 'package:flutter/material.dart';
@@ -58,7 +57,7 @@ class CustomTextSliderDuaMenSunnah extends StatelessWidget {
                             RichText(
                               text: TextSpan(
                                 style: TextStyle(
-                                  fontFamily: "AmiriQ",
+                                  fontFamily: "Amiri",
                                   fontSize: controllerSu.fontSize,
                                   color: Colors.black,
                                 ),

@@ -56,7 +56,7 @@ class CustomTextSliderTasbih extends StatelessWidget {
                             RichText(
                               text: TextSpan(
                                 style: TextStyle(
-                                  fontFamily: "AmiriQ",
+                                  fontFamily: "Amiri",
                                   fontSize: controllerT.fontSize,
                                   color: Colors.black,
                                 ),

@@ -48,7 +48,7 @@ class CustomTextSliderAthkarSabah extends StatelessWidget {
                             RichText(
                               text: TextSpan(
                                 style: TextStyle(
-                                  fontFamily: "AmiriQ",
+                                  fontFamily: "Amiri",
                                   fontSize: controller.fontSize,
                                   color: Colors.black,
                                 ),
