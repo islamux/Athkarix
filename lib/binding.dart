@@ -30,7 +30,6 @@ class MyBinding extends Bindings {
     Get.put(HomeControllerImp());
     Get.put(AssmaHussnaControllerImp());
     Get.put(AthkarBeforeGoToBedControllerImp());
-    // binding Floating controller button
     Get.put(FloatingButtonControllerImp());
   }
 }

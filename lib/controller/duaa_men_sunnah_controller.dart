@@ -4,13 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 abstract class DuaMenSunnahController extends GetxController {
-  //next();
-  //void duaMenSunnah();
   void goToHome();
   void increaseFontSize();
   void decreaseFontSize();
   void onPageChanged(int index);
-
   String getShareText(int index);
 }
 
@@ -22,9 +19,6 @@ class DuaMenSunnahControllerImp extends DuaMenSunnahController {
   double fontSize = 21.0;
   int counter = 0;
 
-  // @override
-  // duaMenSunnah() {}
-
   @override
   goToHome() {
     Get.toNamed(AppRoute.home);
@@ -35,9 +29,6 @@ class DuaMenSunnahControllerImp extends DuaMenSunnahController {
     currentPageIndex = index;
     update();
   }
-
-  // @override
-  // next() {}
 
   @override
   decreaseFontSize() {
@@ -53,7 +44,6 @@ class DuaMenSunnahControllerImp extends DuaMenSunnahController {
 
   @override
   String getShareText(int index) {
-    // import tasbihList
     return duaMenSunnahList[index].duaText ?? '';
   }
 }

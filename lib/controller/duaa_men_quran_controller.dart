@@ -1,10 +1,9 @@
 import 'package:athkarix/core/data/model/model_list/dua_men_quran_list.dart';
 import 'package:athkarix/core/data/static/routes_constant.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 abstract class DuaMenQuranController extends GetxController {
-  next(); // tray to remove
-  void duaMenSunnah();
   void goToHome();
   void increaseFontSize();
   void decreaseFontSize();
@@ -13,13 +12,12 @@ abstract class DuaMenQuranController extends GetxController {
 }
 
 class DuaMenQuranControllerImp extends DuaMenQuranController {
+  final PageController pageControllerQuran = PageController();
   // Proberties
   int currentPageIndex = 0;
   int currentPageCounter = 0;
-  double fontsize = 21.0;
-
-  @override
-  duaMenSunnah() {}
+  double fontSize = 21.0;
+  int counter = 0;
 
   @override
   goToHome() {
@@ -33,17 +31,14 @@ class DuaMenQuranControllerImp extends DuaMenQuranController {
   }
 
   @override
-  next() {}
-
-  @override
   decreaseFontSize() {
-    fontsize -= 2;
+    fontSize -= 2;
     update();
   }
 
   @override
   increaseFontSize() {
-    fontsize += 2;
+    fontSize += 2;
     update();
   }
 

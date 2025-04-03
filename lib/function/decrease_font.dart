@@ -4,7 +4,7 @@ decreaseFont(controller) {
   if (controller.fontSize > 21.0) {
     controller.decreaseFontSize();
     if (kDebugMode) {
-      print("Font size :${controller.fontSize}");
+      print("Font size From Function :${controller.fontSize}");
     }
   }
 }

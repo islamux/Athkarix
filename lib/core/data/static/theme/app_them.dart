@@ -20,13 +20,13 @@ class AppTheme {
         fontSize: 60.0,
       ),
       titleLarge: const TextStyle(
-        fontSize: 20.0,
+        fontSize: 21.0,
         fontWeight: FontWeight.w500,
         color: AppColor.primaryColorBlack,
       ),
       // Start Main colors in app
       titleMedium: const TextStyle(
-        fontSize: 20.0,
+        fontSize: 21.0,
         fontWeight: FontWeight.bold,
         color: AppColor.primaryColorBlack2,
       )

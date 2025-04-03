@@ -171,7 +171,7 @@ class AthkarSabahText {
 
  """;
   static const String athkarSabah1111 = """
-سُبْحَانَ اللَّهِ وَبِحَمْدِهِ *
+سُبْحَانَ اللَّهِ وَبِحَمْدِهِ
   (مائة مرَّةٍ)
 """;
   static const String athkarSabah1111Footer = """

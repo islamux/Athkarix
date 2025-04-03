@@ -15,8 +15,6 @@ class DuaMenQuran extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Inject controller
-    //DuaMenQuranControllerImp controller = Get.put((DuaMenQuranControllerImp()));
     final DuaMenQuranControllerImp controller =
         Get.find<DuaMenQuranControllerImp>();
     return Scaffold(

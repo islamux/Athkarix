@@ -16,9 +16,6 @@ class DuaMenSunnah extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Inject controller
-    // DuaMenSunnahControllerImp controller =
-    //     Get.put((DuaMenSunnahControllerImp()));
     final DuaMenSunnahControllerImp controller =
         Get.find<DuaMenSunnahControllerImp>();
 
