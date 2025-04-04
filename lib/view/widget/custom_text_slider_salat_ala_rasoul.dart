@@ -12,7 +12,7 @@ class CustomTextSliderSalatAlaRasoulAllah
 
   @override
   Widget build(BuildContext context) {
-    // Inject athkarSabahControllerImp ==> show above // here instead.....
+    // Inject athkarSabahControllerImp ==> show above 'GetView'// here instead.....
     return Stack(
       // add background
       children: [
