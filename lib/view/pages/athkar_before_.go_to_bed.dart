@@ -60,7 +60,7 @@ class AthkarBeforeGoToBed extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {
-              increaseFont(controllerBefore);
+              decreaseFont(controllerBefore);
             },
             icon: const Icon(
               Icons.remove,
@@ -80,7 +80,7 @@ class AthkarBeforeGoToBed extends StatelessWidget {
 
           IconButton(
               onPressed: () {
-                decreaseFont(controllerBefore);
+                increaseFont(controllerBefore);
               },
               icon: const Icon(
                 Icons.add,
