@@ -14,7 +14,7 @@ class SalatAlaRasoulAllahControllerImp extends SalatAlaRasoulAllahController {
   // Proberties
   int currentPageIndex = 0;
   int currentPageCounter = 0;
-  double fontSize = 21.0;
+  double fontSize = 29.0;
 
   @override
   onPageChanged(int index) {

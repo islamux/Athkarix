@@ -19,7 +19,7 @@ class AthkarBeforeGoToBedControllerImp extends AthkarBeforeGoToBedController {
   // instance from PageController to go to next page in pageview builder.
   PageController pageControllerS = PageController();
   // Proberties
-  double fontSize = 21.0;
+  double fontSize = 29.0;
   int currentPageIndex = 0;
   int currentPageCounter = 0;
 

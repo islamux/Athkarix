@@ -20,7 +20,7 @@ class AthkarMassaControllerImp extends AthkarMassaController {
   final PageController pageControllerM = PageController();
 
   // Proberties
-  double fontSize = 21.0;
+  double fontSize = 29.0;
 
   // PageController for go to next page in pageview builder
   int currentPageIndex = 0;

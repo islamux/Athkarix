@@ -18,7 +18,7 @@ abstract class AssmaHussnaController extends GetxController {
 class AssmaHussnaControllerImp extends AssmaHussnaController {
   final PageController pageControllerAssma = PageController();
   // Proberties
-  double fontSize = 21.0;
+  double fontSize = 29.0;
   int currentPageIndex = 0;
   int currentPageCounter = 0;
   List maxPageCounters = [];
