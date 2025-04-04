@@ -15,7 +15,7 @@ class HamdControllerImp extends HamdController {
   // Proberties
   int currentPageIndex = 0;
   int currentPageCounter = 0;
-  double fontSize = 29.0;
+  double fontSize = 21.0;
 
   @override
   next() {}

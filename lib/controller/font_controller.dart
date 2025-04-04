@@ -8,7 +8,7 @@ abstract class FontController extends GetxController {
 
 class FontControllerImp extends FontController {
   final selectFont = "Amiri".obs;
-  double fontSize = 29.0;
+  double fontSize = 21.0;
 
   @override
   void changeFont(Object? font) {

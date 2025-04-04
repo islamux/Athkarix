@@ -12,7 +12,7 @@ abstract class EstigfarController extends GetxController {
 }
 
 class EstigfarControllerImp extends EstigfarController {
-  double fontSize = 29.0;
+  double fontSize = 21.0;
   int currentPageIndex = 0;
   int currentPageCounter = 0;
 

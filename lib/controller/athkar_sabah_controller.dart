@@ -20,7 +20,7 @@ class AthkarSabahControllerImp extends AthkarSabahController {
   PageController pageControllerS = PageController();
 
   // Proberties
-  double fontSize = 29.0;
+  double fontSize = 21.0;
   int currentPageIndex = 0;
   int currentPageCounter = 0;
 
