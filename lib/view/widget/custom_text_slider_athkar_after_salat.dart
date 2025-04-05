@@ -45,16 +45,15 @@ class CustomTextSliderAthkarAfterSalat extends StatelessWidget {
                     child: SingleChildScrollView(
                       child: GetBuilder<AthkarAfterSalatControllerImp>(
                           builder: (controller) {
+                        // Wrap with Obx to listen to FontControllerImp changes if needed,
+                        // but Theme access might be sufficient. Let's try without first.
                         return Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             RichText(
                               text: TextSpan(
-                                style: TextStyle(
-                                  fontFamily: "Amiri",
-                                  fontSize: controllerAfter.fontSize,
-                                  color: Colors.black,
-                                ),
+                                // Use the theme style which gets font family and size from FontControllerImp
+                                style: Theme.of(context).textTheme.bodyLarge,
                                 children: [
                                   ...getPagesTexts(i, athkarAfterSalatList)
                                 ],

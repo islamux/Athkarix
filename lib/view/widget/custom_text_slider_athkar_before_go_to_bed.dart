@@ -45,16 +45,14 @@ class CustomTextSliderAthkarBeforeGoToBed extends StatelessWidget {
                     child: SingleChildScrollView(
                       child: GetBuilder<AthkarBeforeGoToBedControllerImp>(
                           builder: (controller) {
+                        // Wrap with Obx if needed, but Theme access should suffice.
                         return Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             RichText(
                               text: TextSpan(
-                                style: TextStyle(
-                                  fontFamily: "Amiri",
-                                  fontSize: controller.fontSize,
-                                  color: Colors.black,
-                                ),
+                                // Use the theme style which gets font family and size from FontControllerImp
+                                style: Theme.of(context).textTheme.bodyLarge,
                                 children: [
                                   ...getPagesTexts(i, athkarBeforeGoToBedList)
                                 ],

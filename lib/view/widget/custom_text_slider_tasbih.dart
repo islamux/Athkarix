@@ -55,11 +55,8 @@ class CustomTextSliderTasbih extends StatelessWidget {
                           children: [
                             RichText(
                               text: TextSpan(
-                                style: TextStyle(
-                                  fontFamily: "Amiri",
-                                  fontSize: controllerT.fontSize,
-                                  color: Colors.black,
-                                ),
+                                // Use the theme style which gets font family and size from FontControllerImp
+                                style: Theme.of(context).textTheme.bodyLarge,
                                 children: [...getPagesTexts(i, tasbihList)],
                               ),
                               textAlign: TextAlign.right,

@@ -7,8 +7,14 @@ abstract class FontController extends GetxController {
 }
 
 class FontControllerImp extends FontController {
-  final selectFont = "Amiri".obs;
-  double fontSize = 21.0;
+  // Make fontSize reactive
+  final RxDouble fontSize = 21.0.obs;
+  // Keep track of the selected font family
+  final RxString selectFont = "Amiri".obs;
+
+  // Define boundaries
+  final double maxFontSize = 37.0;
+  final double minFontSize = 21.0; // Based on decreaseFont logic
 
   @override
   void changeFont(Object? font) {
@@ -18,14 +24,28 @@ class FontControllerImp extends FontController {
   }
 
   @override
-  void decreaseFontSize() {
-    fontSize += 2.0;
-    update();
+  void increaseFontSize() {
+    // Increase font size, respecting the maximum limit
+    if (fontSize.value < maxFontSize) {
+      fontSize.value += 2.0;
+      // Ensure it doesn't exceed max exactly if step is large
+      if (fontSize.value > maxFontSize) {
+        fontSize.value = maxFontSize;
+      }
+    }
+    // update() is not needed for .obs variables when using Obx
   }
 
   @override
-  void increaseFontSize() {
-    fontSize -= 2.0;
-    update();
+  void decreaseFontSize() {
+    // Decrease font size, respecting the minimum limit
+    if (fontSize.value > minFontSize) {
+      fontSize.value -= 2.0;
+      // Ensure it doesn't go below min exactly if step is large
+      if (fontSize.value < minFontSize) {
+        fontSize.value = minFontSize;
+      }
+    }
+     // update() is not needed for .obs variables when using Obx
   }
 }

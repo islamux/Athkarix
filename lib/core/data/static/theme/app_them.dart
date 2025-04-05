@@ -5,65 +5,93 @@ import 'package:get/get.dart';
 
 class AppTheme {
   //static final FontControllerImp fontController = Get.put(FontControllerImp());
-  static final FontControllerImp fontController = Get.put(FontControllerImp());
+  static final FontControllerImp fontController = Get.find<FontControllerImp>(); // Use Get.find() if already put elsewhere, or ensure Get.put() runs first.
 
-  static ThemeData goldenTheme = ThemeData(
-    fontFamily: 'Amiri',
-    textTheme: TextTheme(
-      displayLarge: const TextStyle(
+  // Make the theme generation dynamic based on the controller's state
+  static ThemeData get goldenTheme {
+    // Access reactive values here
+    String currentFontFamily = fontController.selectFont.value;
+    double currentFontSize = fontController.fontSize.value;
+
+    return ThemeData(
+      fontFamily: currentFontFamily, // Use reactive font family
+      textTheme: TextTheme(
+        displayLarge: TextStyle( // Keep const if not using reactive values
         fontSize: 96.0,
         fontWeight: FontWeight.w500,
         color: AppColor.black,
       ),
-      displayMedium: const TextStyle(
+      displayMedium: TextStyle( // Remove const
         fontWeight: FontWeight.w500,
         fontSize: 60.0,
+        fontFamily: currentFontFamily, // Ensure consistency if needed
       ),
-      titleLarge: const TextStyle(
-        fontSize: 21.0,
+      titleLarge: TextStyle( // Make non-const if using reactive values
+        fontSize: 21.0, // Or potentially currentFontSize * factor?
         fontWeight: FontWeight.w500,
-        color: AppColor.primaryColorBlack,
+        fontFamily: currentFontFamily,
+        color: AppColor.primaryColorBlack, // Keep color
       ),
-      // Start Main colors in app
-      titleMedium: const TextStyle(
-        fontSize: 21.0,
+      titleMedium: TextStyle( // Make non-const
+        fontSize: 21.0, // Or potentially currentFontSize * factor?
         fontWeight: FontWeight.bold,
-        color: AppColor.primaryColorBlack2,
-      )
-      // End fonts in app
-      ,
+        fontFamily: currentFontFamily,
+        color: AppColor.primaryColorBlack2, // Keep color
+      ),
       bodyLarge: TextStyle(
-        fontSize: fontController.fontSize,
-        color: AppColor.black,
+        fontSize: currentFontSize, // Use .value
+        fontFamily: currentFontFamily,
+        color: AppColor.black, // Keep color
+        height: 1.6, // Consider adding line height for readability
       ),
       bodyMedium: TextStyle(
-        fontSize: fontController.fontSize,
+        fontSize: currentFontSize, // Use .value
+        fontFamily: currentFontFamily,
+        height: 1.6, // Consider adding line height
+        // Potentially add a default color if needed
       ),
       labelLarge: TextStyle(
         fontWeight: FontWeight.w700,
-        fontSize: fontController.fontSize,
+        fontSize: currentFontSize, // Use .value
+        fontFamily: currentFontFamily,
+        // Potentially add a default color if needed
       ),
+      // Add other styles if needed, using currentFontSize and currentFontFamily
     ),
+    // Apply other theme properties if necessary
   );
+ } // End of getter
 
+  // Update custom styles to use reactive values
   static TextStyle customTextStyleText() {
-    return const TextStyle(
+     // Access controller directly or pass it if needed
+     final controller = Get.find<FontControllerImp>();
+    return TextStyle(
       color: AppColor.primaryColorBlack,
       fontWeight: FontWeight.bold,
+      fontFamily: controller.selectFont.value,
+      fontSize: controller.fontSize.value, // Add font size if desired for this style
     );
   }
 
   static TextStyle customTextStyleFooter() {
-    return const TextStyle(
+    final controller = Get.find<FontControllerImp>();
+    return TextStyle(
       color: AppColor.footer,
       fontWeight: FontWeight.bold,
+      fontFamily: controller.selectFont.value,
+      fontSize: controller.fontSize.value * 0.8, // Example: Footer text is smaller
     );
   }
 
   static TextStyle customTextStyleHadith() {
-    return const TextStyle(
+    final controller = Get.find<FontControllerImp>();
+    return TextStyle(
       color: AppColor.ayahHadith,
       fontWeight: FontWeight.bold,
+      fontFamily: controller.selectFont.value,
+      fontSize: controller.fontSize.value, // Use base size or adjust
+      height: 1.7, // Example: Slightly more line spacing for Hadith
     );
   }
 }
