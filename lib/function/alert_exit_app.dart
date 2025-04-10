@@ -9,6 +9,7 @@ Future<bool> alertExitApp() {
   Get.defaultDialog(
     title: "! تنبيه  ",
     middleText: "هل أنهيت أذكارك ؟",
+    middleTextStyle: const TextStyle(fontSize: 16.0),
     backgroundColor: const Color.fromRGBO(255, 224, 130, 1),
     confirmTextColor: AppColor.black,
     actions: [

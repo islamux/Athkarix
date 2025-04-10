@@ -4,8 +4,6 @@ import 'package:athkarix/core/data/static/routes_constant.dart';
 import 'package:athkarix/core/data/static/theme/app_color_constant.dart';
 import 'package:athkarix/core/data/static/theme/app_them.dart';
 import 'package:athkarix/function/custom_share_content.dart';
-import 'package:athkarix/function/decrease_font.dart';
-import 'package:athkarix/function/increase_font.dart';
 import 'package:athkarix/view/widget/custom_floating_button.dart';
 import 'package:athkarix/view/widget/custom_text_slider_athkar_before_go_to_bed.dart';
 import 'package:flutter/material.dart';
@@ -60,7 +58,9 @@ class AthkarBeforeGoToBed extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {
-              decreaseFont(controllerBefore);
+              if (controllerBefore.fontSize > 15.0) {
+                controllerBefore.decreaseFontSize();
+              }
             },
             icon: const Icon(
               Icons.remove,
@@ -68,19 +68,23 @@ class AthkarBeforeGoToBed extends StatelessWidget {
             ),
           ),
           // Font between + -
-          const Row(
+          Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
                 "الخط",
-                style: TextStyle(color: AppColor.primaryColorGolden),
+                style: TextStyle(
+                    fontSize: Theme.of(context).textTheme.titleLarge?.fontSize,
+                    color: AppColor.primaryColorGolden),
               ),
             ],
           ),
 
           IconButton(
               onPressed: () {
-                increaseFont(controllerBefore);
+                if (controllerBefore.fontSize <= 37.0) {
+                  controllerBefore.increaseFontSize();
+                }
               },
               icon: const Icon(
                 Icons.add,
@@ -88,14 +92,10 @@ class AthkarBeforeGoToBed extends StatelessWidget {
               ))
         ],
       ),
-      body: SafeArea(
-        child: GestureDetector(
-            onTap: () {
-              // test adding sound when tap
-              Feedback.forTap(context);
-              controllerBefore.increamentPageController();
-            },
-            child: const CustomTextSliderAthkarBeforeGoToBed()),
+      body: const SafeArea(
+        child: Column(
+          children: [Expanded(child: CustomTextSliderAthkarBeforeGoToBed())],
+        ),
       ),
 
       // Floating Buttons

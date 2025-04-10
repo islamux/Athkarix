@@ -52,15 +52,9 @@ class CustomTextSliderAssmaHussna extends StatelessWidget {
                             builder: (controllerAs) {
                               return Text(
                                 assmaHussnaList[i].duaText ?? '',
-                                // Provide a default value (?? '') in case duaText is null
                                 style: //AppTheme.goldenTheme.textTheme.bodyLarge,
                                     TextStyle(
-                                  // Problem here is fontsize need to hotreload why?
-                                  // I found the solution by wrab Text with GetBuilder to refresh only the
-                                  // widgt not all page
-                                  fontSize:
-                                      //Get.find<AssmaHussnaControllerImp>().fontSize,
-                                      controllerAs.fontSize,
+                                  fontSize: controllerAs.fontSize,
                                   fontWeight: FontWeight.w300,
                                   fontFamily: "Amiri",
                                 ),

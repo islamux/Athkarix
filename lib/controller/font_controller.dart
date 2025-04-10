@@ -8,7 +8,7 @@ abstract class FontController extends GetxController {
 
 class FontControllerImp extends FontController {
   // Make fontSize reactive
-  final RxDouble fontSize = 21.0.obs;
+  final RxDouble fontSize = 28.6.obs; // Updated default font size
   // Keep track of the selected font family
   final RxString selectFont = "Amiri".obs;
 
@@ -46,6 +46,6 @@ class FontControllerImp extends FontController {
         fontSize.value = minFontSize;
       }
     }
-     // update() is not needed for .obs variables when using Obx
+    // update() is not needed for .obs variables when using Obx
   }
 }

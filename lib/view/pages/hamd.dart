@@ -3,8 +3,6 @@ import 'package:athkarix/controller/hamd_controller.dart';
 import 'package:athkarix/core/data/static/routes_constant.dart';
 import 'package:athkarix/core/data/static/theme/app_color_constant.dart';
 import 'package:athkarix/function/custom_share_content.dart';
-import 'package:athkarix/function/decrease_font.dart';
-import 'package:athkarix/function/increase_font.dart';
 import 'package:athkarix/view/widget/custom_floating_button.dart';
 import 'package:athkarix/view/widget/custom_text_slide_hamd.dart';
 import 'package:flutter/material.dart';
@@ -56,26 +54,32 @@ class Hamd extends StatelessWidget {
         actions: [
           IconButton(
               onPressed: () {
-                decreaseFont(controller);
+                if (controller.fontSize > 15.0) {
+                  controller.decreaseFontSize();
+                }
               },
               icon: const Icon(
                 Icons.remove,
                 color: Colors.amber,
               )),
           // Font between + -
-          const Row(
+          Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
                 "الخط",
-                style: TextStyle(color: AppColor.primaryColorGolden),
+                style: TextStyle(
+                    fontSize: Theme.of(context).textTheme.titleLarge?.fontSize,
+                    color: AppColor.primaryColorGolden),
               ),
             ],
           ),
 
           IconButton(
               onPressed: () {
-                increaseFont(controller);
+                if (controller.fontSize <= 37.0) {
+                  controller.increaseFontSize();
+                }
               },
               icon: const Icon(
                 Icons.add,

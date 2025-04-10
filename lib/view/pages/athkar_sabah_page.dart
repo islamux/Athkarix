@@ -4,8 +4,6 @@ import 'package:athkarix/core/data/static/routes_constant.dart';
 import 'package:athkarix/core/data/static/theme/app_color_constant.dart';
 import 'package:athkarix/core/data/static/theme/app_them.dart';
 import 'package:athkarix/function/custom_share_content.dart';
-import 'package:athkarix/function/decrease_font.dart';
-import 'package:athkarix/function/increase_font.dart';
 import 'package:athkarix/view/widget/custom_floating_button.dart';
 import 'package:athkarix/view/widget/custom_text_slider_athkar_sabah.dart';
 
@@ -58,7 +56,9 @@ class AthkarSabah extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {
-              decreaseFont(controllerS);
+              if (controllerS.fontSize > 15.0) {
+                controllerS.decreaseFontSize();
+              }
             },
             icon: const Icon(
               Icons.remove,
@@ -66,19 +66,23 @@ class AthkarSabah extends StatelessWidget {
             ),
           ),
           // Font between + -
-          const Row(
+          Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
                 "الخط",
-                style: TextStyle(color: AppColor.primaryColorGolden),
+                style: TextStyle(
+                    fontSize: Theme.of(context).textTheme.titleLarge?.fontSize,
+                    color: AppColor.primaryColorGolden),
               ),
             ],
           ),
 
           IconButton(
               onPressed: () {
-                increaseFont(controllerS);
+                if (controllerS.fontSize <= 37.0) {
+                  controllerS.increaseFontSize();
+                }
               },
               icon: const Icon(
                 Icons.add,

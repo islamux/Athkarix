@@ -11,12 +11,14 @@ import 'package:athkarix/controller/hamd_controller.dart';
 import 'package:athkarix/controller/home_controller.dart';
 import 'package:athkarix/controller/salat_ala_rasoul_controller.dart';
 import 'package:athkarix/controller/tasbih_controller.dart';
+import 'package:athkarix/controller/font_controller.dart'; // Add this import
 import 'package:get/get.dart';
 
 class MyBinding extends Bindings {
   @override
   void dependencies() {
-    // i'd tray to add Font controller to binding but theres is some problem , it require Get.put()
+    // Initialize FontControllerImp
+    Get.put(FontControllerImp()); // Add this line
     // binding Page controller
     Get.put(EstigfarControllerImp());
     Get.put(TasbihControllerImp());
