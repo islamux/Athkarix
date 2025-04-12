@@ -2,6 +2,7 @@ import 'package:athkarix/controller/assma_hussna_controller.dart';
 import 'package:athkarix/core/data/model/model_list/assma_hussna_list_model.dart';
 import 'package:athkarix/core/data/static/imagelink/image_link.dart';
 import 'package:athkarix/core/data/static/theme/app_color_constant.dart';
+import 'package:athkarix/core/data/static/theme/app_them.dart'; // Import AppTheme
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -46,21 +47,11 @@ class CustomTextSliderAssmaHussna extends StatelessWidget {
                         padding: const EdgeInsets.only(
                             top: 60, left: 32, right: 32, bottom: 60),
                         child: SingleChildScrollView(
-                          child:
-                              // To make font change when click on button wrab Text() with GetBuilder<Page1controllerImp>(build: (controller) return Text())
-                              GetBuilder<AssmaHussnaControllerImp>(
-                            builder: (controllerAs) {
-                              return Text(
-                                assmaHussnaList[i].duaText ?? '',
-                                style: //AppTheme.goldenTheme.textTheme.bodyLarge,
-                                    TextStyle(
-                                  fontSize: controllerAs.fontSize,
-                                  fontWeight: FontWeight.w300,
-                                  fontFamily: "Amiri",
-                                ),
-                                textAlign: TextAlign.right,
-                              );
-                            },
+                          child: Text(
+                            assmaHussnaList[i].duaText ?? '',
+                            style: AppTheme
+                                .goldenTheme.textTheme.bodyLarge, // Use theme style
+                            textAlign: TextAlign.right,
                           ),
                         ),
                       ),

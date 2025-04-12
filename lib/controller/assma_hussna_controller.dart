@@ -6,8 +6,6 @@ import 'package:get/get.dart';
 
 abstract class AssmaHussnaController extends GetxController {
   void goToHome(); // مؤقتا
-  void increaseFontSize();
-  void decreaseFontSize();
   void resetCounter();
   void onPageChanged(int index);
   String getShareText(int index);
@@ -18,7 +16,6 @@ abstract class AssmaHussnaController extends GetxController {
 class AssmaHussnaControllerImp extends AssmaHussnaController {
   final PageController pageControllerAssma = PageController();
   // Proberties
-  double fontSize = 21.0;
   int currentPageIndex = 0;
   int currentPageCounter = 0;
   List maxPageCounters = [];
@@ -26,18 +23,6 @@ class AssmaHussnaControllerImp extends AssmaHussnaController {
   @override
   goToHome() {
     Get.toNamed(AppRoute.home);
-  }
-
-  @override
-  increaseFontSize() {
-    fontSize += 2.0;
-    update();
-  }
-
-  @override
-  decreaseFontSize() {
-    fontSize -= 2.0;
-    update();
   }
 
   @override

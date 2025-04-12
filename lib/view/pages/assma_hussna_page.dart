@@ -1,5 +1,6 @@
 import 'package:athkarix/controller/assma_hussna_controller.dart';
 import 'package:athkarix/controller/floating_action_button_controller.dart';
+import 'package:athkarix/controller/font_controller.dart'; // Import FontControllerImp
 import 'package:athkarix/core/data/static/routes_constant.dart';
 import 'package:athkarix/core/data/static/theme/app_color_constant.dart';
 import 'package:athkarix/function/custom_share_content.dart';
@@ -14,6 +15,8 @@ class AssmaHussna extends StatelessWidget {
   Widget build(BuildContext context) {
     final AssmaHussnaControllerImp controllerAs =
         Get.find<AssmaHussnaControllerImp>();
+    final FontControllerImp fontController =
+        Get.find<FontControllerImp>(); // Get FontControllerImp instance
     //AssmaHussnaControllerImp controllerAs = Get.put(AthkarSabahControllerImp());
     Get.put(FloatingButtonControllerImp());
     return Scaffold(
@@ -52,9 +55,7 @@ class AssmaHussna extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {
-              if (controllerAs.fontSize > 15.0) {
-                controllerAs.decreaseFontSize();
-              }
+              fontController.decreaseFontSize(); // Use FontControllerImp
             },
             icon: const Icon(
               Icons.remove,
@@ -76,9 +77,7 @@ class AssmaHussna extends StatelessWidget {
 
           IconButton(
               onPressed: () {
-                if (controllerAs.fontSize <= 37.0) {
-                  controllerAs.increaseFontSize();
-                }
+                fontController.increaseFontSize(); // Use FontControllerImp
               },
               icon: const Icon(
                 Icons.add,
