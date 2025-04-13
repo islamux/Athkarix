@@ -1,84 +1,20 @@
 import 'package:athkarix/core/data/model/model_list/assma_hussna_list_model.dart';
-import 'package:athkarix/core/data/static/routes_constant.dart';
-import 'package:athkarix/core/data/static/theme/app_color_constant.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:athkarix/controller/base_athkar_controller.dart';
 
-abstract class AssmaHussnaController extends GetxController {
-  void goToHome(); // مؤقتا
-  void resetCounter();
-  void onPageChanged(int index);
-  String getShareText(int index);
-  void increamentPageController();
-  void goToPage(int pageIndex); // for slider()
-}
-
-class AssmaHussnaControllerImp extends AssmaHussnaController {
+class AssmaHussnaControllerImp extends BaseAthkarController {
   final PageController pageControllerAssma = PageController();
-  // Proberties
-  int currentPageIndex = 0;
-  int currentPageCounter = 0;
-  List maxPageCounters = [];
+
+  // new from clin ai
+  @override
+  PageController get pageController => pageControllerAssma;
 
   @override
-  goToHome() {
-    Get.toNamed(AppRoute.home);
-  }
+  List<dynamic> get dataList => assmaHussnaList;
 
   @override
-  void resetCounter() {
-    currentPageCounter = 0;
-
-    update();
-  }
-
-  // method to handle page change
-  @override
-  void onPageChanged(int index) {
-    currentPageIndex = index; // try to fix using casting
-    // reset counter
-    resetCounter();
-  }
+  List<int> get maxPageCounters => List.filled(assmaHussnaList.length, 1);
 
   @override
-  String getShareText(int index) {
-    return assmaHussnaList[index].duaText ?? '';
-  }
-
-  @override
-  void increamentPageController() {
-    currentPageCounter++;
-
-    if (currentPageCounter >= maxPageCounters[currentPageIndex]) {
-      currentPageIndex++;
-
-      if (currentPageIndex < maxPageCounters.length) {
-        currentPageCounter = 0;
-
-        pageControllerAssma.nextPage(
-            duration: const Duration(microseconds: 500),
-            curve: Curves.easeInOut);
-      } else {
-        Get.snackbar(
-          'الحمدلله',
-          '! أنهيت  قراءة أسماء الله الحسنى',
-          colorText: AppColor.black,
-          backgroundColor: AppColor.transparent,
-          duration: const Duration(seconds: 5),
-          snackPosition: SnackPosition.BOTTOM,
-        );
-      }
-    }
-
-    update();
-  }
-
-  @override
-  void goToPage(int pageIndex) {
-    pageControllerAssma.animateToPage(
-      pageIndex,
-      duration: const Duration(microseconds: 300),
-      curve: Curves.easeInOut,
-    );
-  }
+  String get completionMessage => 'أنهيت قراءة أسماء الله الحسنى !';
 }
