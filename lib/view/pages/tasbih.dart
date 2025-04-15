@@ -1,4 +1,5 @@
 import 'package:athkarix/controller/floating_action_button_controller.dart';
+import 'package:athkarix/controller/font_controller.dart';
 import 'package:athkarix/controller/tasbih_controller.dart';
 import 'package:athkarix/core/data/static/routes_constant.dart';
 import 'package:athkarix/core/data/static/theme/app_color_constant.dart';
@@ -21,6 +22,8 @@ class Tasbih extends StatelessWidget {
     //TasbihControllerImp controller = Get.put(TasbihControllerImp());
     FloatingButtonControllerImp floatingController =
         Get.put(FloatingButtonControllerImp());
+
+    final FontControllerImp fontControllerImp = Get.find<FontControllerImp>();
     return Scaffold(
       appBar: AppBar(
         backgroundColor: AppColor.black,
@@ -55,8 +58,8 @@ class Tasbih extends StatelessWidget {
         actions: [
           IconButton(
               onPressed: () {
-                if (controller.fontSize > 15.0) {
-                  controller.decreaseFontSize();
+                if (fontControllerImp.fontSize > 15.0) {
+                  fontControllerImp.decreaseFontSize();
                 }
               },
               icon: const Icon(
@@ -79,8 +82,8 @@ class Tasbih extends StatelessWidget {
 
           IconButton(
               onPressed: () {
-                if (controller.fontSize <= 37.0) {
-                  controller.increamentCounter();
+                if (fontControllerImp.fontSize <= 37.0) {
+                  fontControllerImp.increaseFontSize();
                 }
               },
               icon: const Icon(

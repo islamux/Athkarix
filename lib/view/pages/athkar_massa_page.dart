@@ -1,14 +1,14 @@
 import 'package:athkarix/controller/athkar_massa_controller.dart';
 import 'package:athkarix/controller/floating_action_button_controller.dart';
+import 'package:athkarix/controller/font_controller.dart';
 import 'package:athkarix/core/data/static/routes_constant.dart';
 import 'package:athkarix/core/data/static/theme/app_color_constant.dart';
 import 'package:athkarix/core/data/static/theme/app_them.dart';
 import 'package:athkarix/function/custom_share_content.dart';
 import 'package:athkarix/view/widget/custom_floating_button.dart';
+import 'package:athkarix/view/widget/custom_text_slider_athkar_massa.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import '../widget/custom_text_slider_athkar_mass.dart';
 
 class AthkarMassa extends StatelessWidget {
   const AthkarMassa({super.key});
@@ -18,6 +18,7 @@ class AthkarMassa extends StatelessWidget {
     //AthkarMassaControllerImp controllerM = Get.put(AthkarMassaControllerImp());
     final controllerM = Get.find<AthkarMassaControllerImp>();
     Get.put(FloatingButtonControllerImp());
+    FontControllerImp fontControllerImp = Get.find<FontControllerImp>();
 
     return Scaffold(
       appBar: AppBar(
@@ -56,8 +57,8 @@ class AthkarMassa extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {
-              if (controllerM.fontSize > 15.0) {
-                controllerM.decreaseFontSize();
+              if (fontControllerImp.fontSize > 15.0) {
+                fontControllerImp.decreaseFontSize();
               }
             },
             icon: const Icon(
@@ -81,8 +82,8 @@ class AthkarMassa extends StatelessWidget {
 
           IconButton(
               onPressed: () {
-                if (controllerM.fontSize <= 37.0) {}
-                controllerM.increaseFontSize();
+                if (fontControllerImp.fontSize <= 37.0) {}
+                fontControllerImp.increaseFontSize();
               },
               icon: const Icon(
                 Icons.add,
@@ -97,7 +98,7 @@ class AthkarMassa extends StatelessWidget {
               Feedback.forTap(context);
               controllerM.increamentPageController();
             },
-            child: const CustomTextSliderAthkarMasaa()),
+            child: const CustomTextSliderAthkarMassa()),
       ),
 
       // Floating Buttons

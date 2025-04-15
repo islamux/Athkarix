@@ -1,20 +1,19 @@
-import 'package:athkarix/controller/duaa_men_sunnah_controller.dart';
-import 'package:athkarix/core/data/model/model_list/dua_men_sunnah_list.dart';
+import 'package:athkarix/controller/hamd_controller.dart';
+import 'package:athkarix/core/data/model/model_list/hamd_list_model.dart';
 import 'package:athkarix/core/data/static/imagelink/image_link.dart';
 import 'package:athkarix/core/data/static/theme/app_color_constant.dart';
 import 'package:athkarix/core/data/static/theme/app_them.dart'; // Import AppTheme
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class CustomTextSliderDuaMenSunnah extends StatelessWidget {
-  const CustomTextSliderDuaMenSunnah({super.key});
+class CustomTextSliderHamd extends StatelessWidget {
+  const CustomTextSliderHamd({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final DuaMenSunnahControllerImp controllerS =
-        Get.find<DuaMenSunnahControllerImp>();
+    final HamdControllerImp controllerH = Get.find<HamdControllerImp>();
     // to enable refresh ui (slider() moving)
-    return GetBuilder<DuaMenSunnahControllerImp>(
+    return GetBuilder<HamdControllerImp>(
       builder: (_) {
         return Stack(
           children: [
@@ -34,11 +33,11 @@ class CustomTextSliderDuaMenSunnah extends StatelessWidget {
               child: PageView.builder(
                 reverse: true,
                 // to enable move through pages slider() using pageController
-                controller: controllerS.pageControllerSunnah,
+                controller: controllerH.pageControllerHamd,
                 onPageChanged: (index) =>
                     // How to pass index. ==> onPageChanged(index)
-                    controllerS.onPageChanged(index),
-                itemCount: duaMenSunnahList.length,
+                    controllerH.onPageChanged(index),
+                itemCount: hamdList.length,
                 itemBuilder: (context, i) => Column(
                   children: [
                     // To make text scrollable make insid contatiner and the container inside Expanded
@@ -48,7 +47,7 @@ class CustomTextSliderDuaMenSunnah extends StatelessWidget {
                             top: 60, left: 32, right: 32, bottom: 60),
                         child: SingleChildScrollView(
                           child: Text(
-                            duaMenSunnahList[i].duaText ?? '',
+                            hamdList[i].duaText ?? '',
                             style: AppTheme.goldenTheme.textTheme
                                 .bodyLarge, // Use theme style
                             textAlign: TextAlign.right,
@@ -73,18 +72,18 @@ class CustomTextSliderDuaMenSunnah extends StatelessWidget {
                     child: Slider(
                       activeColor: AppColor.black,
                       inactiveColor: AppColor.grey,
-                      value: controllerS.currentPageIndex.toDouble(),
+                      value: controllerH.currentPageIndex.toDouble(),
                       onChanged: (double value) {
-                        controllerS.goToPage(value.toInt());
+                        controllerH.goToPage(value.toInt());
                       },
                       min: 0,
-                      max: duaMenSunnahList.length.toDouble() - 1,
+                      max: hamdList.length.toDouble() - 1,
                     ),
                   ),
                   // Display current page number
                   Text(
-                    //'${controllerS.currentPageCounter + 1} / ${duaMenSunnahList.length}',
-                    '${controllerS.currentPageIndex.toInt()} / ${duaMenSunnahList.length}',
+                    //'${controllerH.currentPageCounter + 1} / ${hamdList.length}',
+                    '${controllerH.currentPageIndex.toInt()} / ${hamdList.length}',
                     style: const TextStyle(
                         fontSize: 14, fontWeight: FontWeight.bold),
                   )

@@ -1,5 +1,6 @@
 import 'package:athkarix/controller/athkar_before_go_to_bed_controller.dart';
 import 'package:athkarix/controller/floating_action_button_controller.dart';
+import 'package:athkarix/controller/font_controller.dart';
 import 'package:athkarix/core/data/static/routes_constant.dart';
 import 'package:athkarix/core/data/static/theme/app_color_constant.dart';
 import 'package:athkarix/core/data/static/theme/app_them.dart';
@@ -20,6 +21,7 @@ class AthkarBeforeGoToBed extends StatelessWidget {
         Get.find<AthkarBeforeGoToBedControllerImp>();
 
     Get.find<FloatingButtonControllerImp>();
+    final FontControllerImp fontControllerImp = Get.find<FontControllerImp>();
 
     return Scaffold(
       appBar: AppBar(
@@ -58,8 +60,8 @@ class AthkarBeforeGoToBed extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {
-              if (controllerBefore.fontSize > 15.0) {
-                controllerBefore.decreaseFontSize();
+              if (fontControllerImp.fontSize > 15.0) {
+                fontControllerImp.decreaseFontSize();
               }
             },
             icon: const Icon(
@@ -82,8 +84,8 @@ class AthkarBeforeGoToBed extends StatelessWidget {
 
           IconButton(
               onPressed: () {
-                if (controllerBefore.fontSize <= 37.0) {
-                  controllerBefore.increaseFontSize();
+                if (fontControllerImp.fontSize <= 37.0) {
+                  fontControllerImp.increaseFontSize();
                 }
               },
               icon: const Icon(

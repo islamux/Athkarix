@@ -7,7 +7,7 @@ import 'view/pages/home.dart';
 
 void main() {
   // splash screen
-  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+//  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
 //  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
   // After splash screen now you could run app

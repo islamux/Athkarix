@@ -1,10 +1,11 @@
 import 'package:athkarix/controller/floating_action_button_controller.dart';
+import 'package:athkarix/controller/font_controller.dart';
 import 'package:athkarix/controller/hamd_controller.dart';
 import 'package:athkarix/core/data/static/routes_constant.dart';
 import 'package:athkarix/core/data/static/theme/app_color_constant.dart';
 import 'package:athkarix/function/custom_share_content.dart';
 import 'package:athkarix/view/widget/custom_floating_button.dart';
-import 'package:athkarix/view/widget/custom_text_slide_hamd.dart';
+import 'package:athkarix/view/widget/custom_text_slider_hamd.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -22,6 +23,8 @@ class Hamd extends StatelessWidget {
     final HamdControllerImp controller = Get.find<HamdControllerImp>();
     final FloatingButtonControllerImp floatingController =
         Get.find<FloatingButtonControllerImp>();
+
+    final FontControllerImp fontControllerImp = Get.find<FontControllerImp>();
     return Scaffold(
       appBar: AppBar(
         backgroundColor: AppColor.black,
@@ -54,8 +57,8 @@ class Hamd extends StatelessWidget {
         actions: [
           IconButton(
               onPressed: () {
-                if (controller.fontSize > 15.0) {
-                  controller.decreaseFontSize();
+                if (fontControllerImp.fontSize > 15.0) {
+                  fontControllerImp.decreaseFontSize();
                 }
               },
               icon: const Icon(
@@ -77,8 +80,8 @@ class Hamd extends StatelessWidget {
 
           IconButton(
               onPressed: () {
-                if (controller.fontSize <= 37.0) {
-                  controller.increaseFontSize();
+                if (fontControllerImp.fontSize <= 37.0) {
+                  fontControllerImp.increaseFontSize();
                 }
               },
               icon: const Icon(

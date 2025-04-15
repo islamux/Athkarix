@@ -1,5 +1,6 @@
 import 'package:athkarix/controller/estigfar_controller.dart';
 import 'package:athkarix/controller/floating_action_button_controller.dart';
+import 'package:athkarix/controller/font_controller.dart';
 import 'package:athkarix/core/data/static/routes_constant.dart';
 import 'package:athkarix/function/custom_share_content.dart';
 import 'package:athkarix/view/widget/custom_floating_button.dart';
@@ -20,6 +21,8 @@ class Estigfar extends StatelessWidget {
     final EstigfarControllerImp controller = Get.find<EstigfarControllerImp>();
     FloatingButtonControllerImp floatingController =
         Get.put(FloatingButtonControllerImp());
+
+    final FontControllerImp fontControllerImp = Get.find<FontControllerImp>();
 
     return Scaffold(
       appBar: AppBar(
@@ -55,8 +58,8 @@ class Estigfar extends StatelessWidget {
           IconButton(
               color: AppColor.amber,
               onPressed: () {
-                if (controller.fontSize > 15.0) {
-                  controller.decreaseFontSize();
+                if (fontControllerImp.fontSize > 15.0) {
+                  fontControllerImp.decreaseFontSize();
                 }
               },
               icon: const Icon(Icons.remove)),
@@ -76,8 +79,8 @@ class Estigfar extends StatelessWidget {
           IconButton(
             color: AppColor.amber,
             onPressed: () {
-              if (controller.fontSize <= 37.0) {
-                controller.increaseFontSize();
+              if (fontControllerImp.fontSize <= 37.0) {
+                fontControllerImp.increaseFontSize();
               }
             },
             icon: const Icon(Icons.add),

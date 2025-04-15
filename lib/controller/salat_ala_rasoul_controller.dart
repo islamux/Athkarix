@@ -1,46 +1,53 @@
+import 'package:athkarix/controller/base_athkar_controller.dart';
 import 'package:athkarix/core/data/model/model_list/salat_ala_rasoul_list_model.dart';
-import 'package:athkarix/core/data/static/routes_constant.dart';
-import 'package:get/get.dart';
+import 'package:flutter/material.dart';
 
-abstract class SalatAlaRasoulAllahController extends GetxController {
-  void goToHome(); // مؤقتا
-  void increaseFontSize();
-  void decreaseFontSize();
-  void onPageChanged(int index);
-  String getShareText(int index);
-}
-
-class SalatAlaRasoulAllahControllerImp extends SalatAlaRasoulAllahController {
-  // Proberties
-  int currentPageIndex = 0;
-  int currentPageCounter = 0;
-  double fontSize = 21.0;
+class SalatAlaRasoulAllahControllerImp extends BaseAthkarController {
+  final PageController pageControllerR = PageController();
+  // new from clin ai
+  @override
+  PageController get pageController => pageControllerR;
 
   @override
-  onPageChanged(int index) {
-    currentPageIndex = index;
-    update();
-  }
+  List<dynamic> get dataList => salatAlaRasoulAllahList;
 
   @override
-  goToHome() {
-    Get.toNamed(AppRoute.home);
-  }
+  List<int> get maxPageCounters =>
+      List.filled(salatAlaRasoulAllahList.length, 1);
 
   @override
-  increaseFontSize() {
-    fontSize += 2.0;
-    update();
-  }
+  String get completionMessage => 'أنهيت الصلاة على الرسول';
 
-  @override
-  decreaseFontSize() {
-    fontSize -= 2.0;
-    update();
-  }
+  // // Proberties
+  // int currentPageIndex = 0;
+  // int currentPageCounter = 0;
+  // double fontSize = 21.0;
 
-  @override
-  String getShareText(int index) {
-    return salatAlaRasoulAllahList[index].duaText ?? '';
-  }
+  // @override
+  // onPageChanged(int index) {
+  //   currentPageIndex = index;
+  //   update();
+  // }
+
+  // @override
+  // goToHome() {
+  //   Get.toNamed(AppRoute.home);
+  // }
+
+  // @override
+  // increaseFontSize() {
+  //   fontSize += 2.0;
+  //   update();
+  // }
+
+  // @override
+  // decreaseFontSize() {
+  //   fontSize -= 2.0;
+  //   update();
+  // }
+
+  // @override
+  // String getShareText(int index) {
+  //   return salatAlaRasoulAllahList[index].duaText ?? '';
+  // }
 }

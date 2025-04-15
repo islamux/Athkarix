@@ -1,4 +1,5 @@
 import 'package:athkarix/controller/floating_action_button_controller.dart';
+import 'package:athkarix/controller/font_controller.dart';
 import 'package:athkarix/controller/salat_ala_rasoul_controller.dart';
 import 'package:athkarix/core/data/static/routes_constant.dart';
 import 'package:athkarix/core/data/static/theme/app_color_constant.dart';
@@ -26,6 +27,7 @@ class SalatAlaRasoulAllah extends StatelessWidget {
     FloatingButtonControllerImp floatingController =
         Get.put(FloatingButtonControllerImp());
 
+    final FontControllerImp fontControllerImp = Get.find<FontControllerImp>();
     return Scaffold(
       appBar: AppBar(
         backgroundColor: AppColor.black,
@@ -60,8 +62,8 @@ class SalatAlaRasoulAllah extends StatelessWidget {
         actions: [
           IconButton(
               onPressed: () {
-                if (controller.fontSize > 15.0) {
-                  controller.decreaseFontSize();
+                if (fontControllerImp.fontSize > 15.0) {
+                  fontControllerImp.decreaseFontSize();
                 }
               },
               icon: const Icon(
@@ -84,8 +86,8 @@ class SalatAlaRasoulAllah extends StatelessWidget {
 
           IconButton(
               onPressed: () {
-                if (controller.fontSize <= 37.0) {
-                  controller.increaseFontSize();
+                if (fontControllerImp.fontSize <= 37.0) {
+                  fontControllerImp.increaseFontSize();
                 }
               },
               icon: const Icon(
@@ -100,7 +102,7 @@ class SalatAlaRasoulAllah extends StatelessWidget {
               Feedback.forTap(context);
               floatingController.increamentCouter();
             },
-            child: const CustomTextSliderSalatAlaRasoulAllah()),
+            child: const CustomTextSliderSalatAlaRasoul()),
       ),
 
       // floating button
