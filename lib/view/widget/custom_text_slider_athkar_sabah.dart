@@ -42,20 +42,26 @@ class CustomTextSliderAthkarSabah extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          RichText(
-                            text: TextSpan(
-                              style: AppTheme.goldenTheme.textTheme.bodyLarge,
-                              children: [...getPagesTexts(i, athkarSabahList)],
+                          Obx(
+                            () => RichText(
+                              text: TextSpan(
+                                style: AppTheme.goldenTheme.textTheme.bodyLarge,
+                                children: [
+                                  ...getPagesTexts(i, athkarSabahList)
+                                ],
+                              ),
+                              textAlign: TextAlign.right,
                             ),
-                            textAlign: TextAlign.right,
                           ),
                           if (athkarSabahList[i].footer != null)
                             Padding(
                               padding: const EdgeInsets.only(top: 16.0),
-                              child: Text(
-                                athkarSabahList[i].footer!,
-                                style: AppTheme.customTextStyleFooter(),
-                                textAlign: TextAlign.right,
+                              child: Obx(
+                                () => Text(
+                                  athkarSabahList[i].footer!,
+                                  style: AppTheme.customTextStyleFooter(),
+                                  textAlign: TextAlign.right,
+                                ),
                               ),
                             ),
                         ],

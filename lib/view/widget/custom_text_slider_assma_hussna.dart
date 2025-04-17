@@ -47,11 +47,13 @@ class CustomTextSliderAssmaHussna extends StatelessWidget {
                         padding: const EdgeInsets.only(
                             top: 60, left: 32, right: 32, bottom: 60),
                         child: SingleChildScrollView(
-                          child: Text(
-                            assmaHussnaList[i].duaText ?? '',
-                            style: AppTheme
-                                .goldenTheme.textTheme.bodyLarge, // Use theme style
-                            textAlign: TextAlign.right,
+                          child: Obx(
+                            () => Text(
+                              assmaHussnaList[i].duaText ?? '',
+                              style: AppTheme.goldenTheme.textTheme
+                                  .bodyLarge, // Use theme style
+                              textAlign: TextAlign.right,
+                            ),
                           ),
                         ),
                       ),
