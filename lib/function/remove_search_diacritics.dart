@@ -1,31 +1,25 @@
 String removeSearchDiacritics(String text) {
-  return text == null
-      ? ''
-      : text.replaceAll(RegExp(r'[^\u0621-\u064A\s]'),
-          ''); // Removes all characters except Arabic letters and spaces
+  if (text.isEmpty) return '';
+  
+  // Handle both partial and exact matches
+  final normalized = text
+    .replaceAll(RegExp(r'[^\u0621-\u064A\s]'), '')  // Remove non-Arabic characters
+    .replaceAll(/\s+/g, ' ')  // Normalize spaces
+    .trim();
+    
+  return normalized;
 }
 
-// String removeSearchDiacritics(String text) {
-//   if (text == null || text.isEmpty) {
-//     return '';
-//   }
-
-//   final normalizedText = NFD.characters.from(text); // Normalize to NFD form
-//   final diacriticRemoved =
-//       removeAllDiacritics(normalizedText); // Remove diacritics
-//   return diacriticRemoved.join();
-// }
-
-// String removeAllDiacritics(Iterable<String> characters) {
-//   return characters
-//       .where((char) => !char.codeUnitAt(0).isDiacritic)
-//       .toList()
-//       .join();
-// }
-
-// extension StringExtension on String {
-//   bool isDiacritic() {
-//     final codeUnit = codeUnitAt(0);
-//     return codeUnit >= 0x0300 && codeUnit <= 0x036F; // Common diacritics range
-//   }
-// }
+// Add scoring function for better matches
+int getSearchScore(String query, String content) {
+  final normalizedQuery = removeSearchDiacritics(query);
+  final normalizedContent = removeSearchDiacritics(content);
+  
+  // Exact match gets highest score
+  if (normalizedContent == normalizedQuery) return 100;
+  // Word boundary match gets medium score
+  if (normalizedContent.contains(" $normalizedQuery ")) return 75;
+  // Partial match gets lower score
+  if (normalizedContent.contains(normalizedQuery)) return 50;
+  return 0;
+}

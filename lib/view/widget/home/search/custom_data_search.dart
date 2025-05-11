@@ -9,10 +9,48 @@ import 'package:athkarix/core/data/model/model_list/salat_ala_rasoul_list_model.
 import 'package:athkarix/function/remove_search_diacritics.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
+import 'package:speech_to_text/speech_to_text.dart' as stt;
 import 'custom_search_result.dart';
 
+class SearchAnalytics {
+  static void logSearch(String query, int resultCount) {
+    // Log search metrics
+    print('Search: $query, Results: $resultCount');
+  }
+
+  static void logSearchResult(String query, AthkarModel selected) {
+    // Log which results users click on
+    print('Selected: ${selected.duaText} from search: $query');
+  }
+}
+
 class DataSearch extends SearchDelegate {
+  final stt.SpeechToText speechToText = stt.SpeechToText();
+  final Map<String, bool> _filters = {
+    'athkarSabah': true,
+    'athkarMassa': true,
+    'duaQuran': true,
+    'duaSunnah': true,
+    'estigfar': true,
+    'hamd': true,
+    'salatAlaRasoul': true,
+  };
+
+  Widget _buildFilterChips() {
+    return Wrap(
+      spacing: 8.0,
+      children: _filters.keys.map((String key) {
+        return FilterChip(
+          label: Text(key),
+          selected: _filters[key]!,
+          onSelected: (bool selected) {
+            _filters[key] = selected;
+          },
+        );
+      }).toList(),
+    );
+  }
+
   final List<AthkarModel> athkar = [
     ...athkarSabahList,
     ...athkarMassaList,
@@ -22,6 +60,21 @@ class DataSearch extends SearchDelegate {
     ...hamdList,
     ...salatAlaRasoulAllahList,
   ];
+  final List<String> _searchHistory = [];
+
+  Future<void> startVoiceSearch() async {
+    try {
+      // Implement voice recognition
+      // Use speech_to_text package
+      final String result = await speechToText.listen(
+        locale: 'ar_SA', // Arabic locale
+      );
+      query = result;
+      showResults(context);
+    } catch (e) {
+      print('Voice search error: $e');
+    }
+  }
 
   @override
   String get searchFieldLabel => "إبحث";
@@ -42,12 +95,19 @@ class DataSearch extends SearchDelegate {
   }
 
   @override
-  Widget? buildLeading(BuildContext context) {
-    return IconButton(
-      onPressed: () {
-        close(context, null);
-      },
-      icon: const Icon(Icons.arrow_back),
+  Widget buildLeading(BuildContext context) {
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () => close(context, null),
+        ),
+        IconButton(
+          icon: const Icon(Icons.mic),
+          onPressed: startVoiceSearch,
+        ),
+      ],
     );
   }
 
@@ -58,6 +118,27 @@ class DataSearch extends SearchDelegate {
 
   @override
   Widget buildSuggestions(BuildContext context) {
+    if (query.isEmpty) {
+      return ListView.builder(
+        itemCount: _searchHistory.length,
+        itemBuilder: (context, index) {
+          return ListTile(
+            leading: const Icon(Icons.history),
+            title: Text(_searchHistory[index]),
+            onTap: () {
+              query = _searchHistory[index];
+              showResults(context);
+            },
+            trailing: IconButton(
+              icon: const Icon(Icons.clear),
+              onPressed: () {
+                _searchHistory.removeAt(index);
+              },
+            ),
+          );
+        },
+      );
+    }
     final String queryWithoutDiacritics =
         removeSearchDiacritics(query.toLowerCase());
     final List<AthkarModel> filteredAthkar = query.isEmpty
