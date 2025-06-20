@@ -1,8 +1,3 @@
-To update the `README.md` of `@islamux/Athkarix` so it matches the style and structure of the one in `@islamux/voices-of-truth`, I will first draft a new README.md for Athkarix. I will reuse the sections and style, but adapt the content to fit Athkarix, which appears to be an Islamic app (أذكار) based on the current README (in Arabic) and the likely purpose.
-
-Here's a new README draft for `Athkarix`, in the same structure as the "voices-of-truth" project, but tailored for an أذكار (Athkar) application:
-
-````markdown name=README.md
 # 📿 Athkarix - تطبيق الأذكار الذكي
 
 ![Flutter](https://img.shields.io/badge/Flutter-3.x-blue?logo=flutter&style=flat-square)
@@ -134,5 +129,3 @@ Read more: [https://opensource.org/licenses/MIT](https://opensource.org/licenses
 - Community-contributed Athkar/duas
 - Widget support for quick access
 ````
-
-**You can now copy and use this as your new README.md for Athkarix. If you'd like me to make further customizations or you want a PR-ready file, just let me know!**
