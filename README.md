@@ -61,39 +61,6 @@ flutter run
 flutter run
 ```
 
----
-
-## 📂 File Structure
-
-```
-Athkarix/
-├── android/
-├── assets/
-│   ├── athkar/
-│   └── images/
-├── ios/
-├── lib/
-│   ├── data/
-│   │   └── athkar.dart
-│   ├── l10n/
-│   │   ├── ar.json
-│   │   └── en.json
-│   ├── screens/
-│   │   ├── home_screen.dart
-│   │   ├── athkar_screen.dart
-│   │   └── settings_screen.dart
-│   ├── widgets/
-│   │   ├── athkar_card.dart
-│   │   └── tasbeeh_counter.dart
-│   ├── main.dart
-│   └── ...
-├── pubspec.yaml
-├── README.md
-└── ...
-```
-
----
-
 ## 🧠 How It Works
 
 - Uses local JSON/TypeScript data modules for Athkar and Duas.
