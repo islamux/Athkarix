@@ -38,7 +38,7 @@ class CustomTextSliderAssmaHussna extends StatelessWidget {
                 onPageChanged: (index) =>
                     // How to pass index. ==> onPageChanged(index)
                     controllerAs.onPageChanged(index),
-                itemCount: assmaHussnaList.length,
+                itemCount: controllerAs.dataList.length,
                 itemBuilder: (context, i) => Column(
                   children: [
                     // To make text scrollable make insid contatiner and the container inside Expanded
@@ -49,7 +49,7 @@ class CustomTextSliderAssmaHussna extends StatelessWidget {
                         child: SingleChildScrollView(
                           child: Obx(
                             () => Text(
-                              assmaHussnaList[i].duaText ?? '',
+                              controllerAs.dataList[i].duaText ?? '',
                               style: AppTheme.goldenTheme.textTheme
                                   .bodyLarge, // Use theme style
                               textAlign: TextAlign.right,
@@ -80,13 +80,12 @@ class CustomTextSliderAssmaHussna extends StatelessWidget {
                         controllerAs.goToPage(value.toInt());
                       },
                       min: 0,
-                      max: assmaHussnaList.length.toDouble() - 1,
+                      max: controllerAs.dataList.length.toDouble() - 1,
                     ),
                   ),
                   // Display current page number
                   Text(
-                    //'${controllerAs.currentPageCounter + 1} / ${assmaHussnaList.length}',
-                    '${controllerAs.currentPageIndex.toInt()} / ${assmaHussnaList.length}',
+                    '${controllerAs.currentPageCounter + 1} / ${controllerAs.dataList.length}',
                     style: const TextStyle(
                         fontSize: 14, fontWeight: FontWeight.bold),
                   )

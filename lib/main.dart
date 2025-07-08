@@ -6,22 +6,16 @@ import 'binding.dart';
 import 'view/pages/home.dart';
 
 void main() {
-  // splash screen
-//  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
-//  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
-
-  // After splash screen now you could run app
+  // splash screen (commented for now)
+  // WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  // FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+  
   runApp(const Athkari());
-  // wait 6 second showing splash screen.
-  Future.delayed(const Duration(seconds: 4), () {
-    FlutterNativeSplash.remove();
-  });
-}
-
-class FlutterNativeSplash {
-  static void preserve({required WidgetsBinding widgetsBinding}) {}
-
-  static void remove() {}
+  
+  // Remove splash after delay (commented for now)
+  // Future.delayed(const Duration(seconds: 4), () {
+  //   FlutterNativeSplash.remove();
+  // });
 }
 
 class Athkari extends StatelessWidget {

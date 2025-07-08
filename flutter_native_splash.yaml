@@ -1,0 +1,8 @@
+flutter_native_splash:
+  image: assets/images/athkari5.jpg
+  color: "#121212"
+  android: true
+  ios: true
+  web: false
+  android_gravity: center
+  ios_content_mode: center
