@@ -3,6 +3,7 @@ import 'package:athkarix/controller/athkar_after_salat_controller.dart';
 import 'package:athkarix/controller/athkar_before_go_to_bed_controller.dart';
 import 'package:athkarix/controller/athkar_massa_controller.dart';
 import 'package:athkarix/controller/athkar_sabah_controller.dart';
+import 'package:athkarix/controller/comprehensive_adhkar_controller.dart';
 import 'package:athkarix/controller/duaa_men_quran_controller.dart';
 import 'package:athkarix/controller/duaa_men_sunnah_controller.dart';
 import 'package:athkarix/controller/estigfar_controller.dart';
@@ -32,6 +33,7 @@ class MyBinding extends Bindings {
     Get.put(HomeControllerImp());
     Get.put(AssmaHussnaControllerImp());
     Get.put(AthkarBeforeGoToBedControllerImp());
+    Get.put(ComprehensiveAdhkarControllerImp());
     Get.put(FloatingButtonControllerImp());
   }
 }

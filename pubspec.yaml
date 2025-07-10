@@ -45,6 +45,7 @@ flutter:
     - assets/images/91k.jpg
     - assets/images/athkari5.jpg
     - assets/json/
+    - lib/core/data/json/adkar.json
 
   fonts:
     - family: Amiri

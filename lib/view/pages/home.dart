@@ -97,7 +97,7 @@ class Home extends StatelessWidget {
                     ),
                     Container(
                       // Fixed height to show only 7 buttons
-                      height: 600, // Adjust this value to show exactly 7 buttons
+                      height: 400, // Adjust this value to show exactly 7 buttons
                       child: ListView(
                         padding: const EdgeInsets.symmetric(
                             horizontal: 20, vertical: 10),
@@ -188,6 +188,14 @@ class Home extends StatelessWidget {
                             customText: " أذكار النوم   ",
                             onPressed: () =>
                                 controllerE.goToAthkarBeforeGoToBed(),
+                            icon: const Icon(Icons.menu_book),
+                          ),
+                        ),
+                        const SizedBox(height: 15),
+                        Center(
+                          child: CustomButton(
+                            customText: "الأذكار الشاملة",
+                            onPressed: () => controllerE.goToComprehensiveAdhkar(),
                             icon: const Icon(Icons.menu_book),
                           ),
                         ),
