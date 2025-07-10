@@ -21,17 +21,18 @@ class CustomButton extends StatelessWidget {
     return // Button 1
         MaterialButton(
       onPressed: onPressed,
-      color: AppColor.amber,
+      padding: const EdgeInsets.symmetric(vertical: 2, horizontal: 16),
+      color: AppColor.primaryColorGolden,
       textColor: AppColor.black,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20.0),
+        borderRadius: BorderRadius.circular(10.0),
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
           // Icon customised as you like in your code
           icon,
-          const SizedBox(width: 5),
+          const SizedBox(width: 16),
           Text(
             customText,
             style: AppTheme.goldenTheme.textTheme.titleMedium,
