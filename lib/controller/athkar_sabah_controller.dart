@@ -1,5 +1,5 @@
+import 'dart:convert';
 import 'package:athkarix/controller/base_athkar_controller.dart';
-import 'package:athkarix/core/data/model/model_list/athkar_sabah_list_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -7,6 +7,9 @@ import 'package:get/get.dart';
 class AthkarSabahControllerImp extends BaseAthkarController {
   // instance from PageController to go to next page in pageview builder.
   PageController pageControllerS = PageController();
+  
+  // The loaded adhkar list from JSON
+  List<dynamic>? adhkarSabahList;
 
   // Provide the specific PageController for this page
   @override
@@ -16,14 +19,33 @@ class AthkarSabahControllerImp extends BaseAthkarController {
   @override
   String get completionMessage => 'أنهيت أذكار الصباح !';
 
-// Provide the specific data list for this page
-// Make sure the model list is imported: import 'package:athkarix/core/data/model/model_list/athkar_sabah_list_model.dart';
+  // Provide the specific data list for this page  
   @override
-  List<dynamic> get dataList => athkarSabahList;
+  List<dynamic> get dataList => adhkarSabahList ?? [];
+  
+  @override
+  void onInit() {
+    super.onInit();
+    loadAdhkarData();
+  }
+  
+  // Load adhkar from the specific JSON file
+  Future<void> loadAdhkarData() async {
+    final String jsonString = await rootBundle.loadString('lib/core/data/json/adhkar_sabah.json');
+    adhkarSabahList = json.decode(jsonString);
+    update();
+  }
 
-  // Provide the specific max counters for this page (use the existing list)
+  // Provide the specific max counters for this page
   @override
-  List<int> get maxPageCounters => [
+  List<int> get maxPageCounters {
+    // Generate max counters dynamically from loaded data
+    if (adhkarSabahList != null && adhkarSabahList!.isNotEmpty) {
+      return adhkarSabahList!.map((item) => item['count'] as int? ?? 1).toList();
+    }
+    
+    // Return default list if data not loaded yet
+    return [
         1,
         1,
         3,
@@ -49,6 +71,7 @@ class AthkarSabahControllerImp extends BaseAthkarController {
         100,
         10
       ];
+  }
 
   // --- Optional Specific Overrides ---
   // If Athkar Sabah needs a different starting counter or specific haptic feedback,

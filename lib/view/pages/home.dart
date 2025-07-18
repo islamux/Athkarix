@@ -95,114 +95,141 @@ class Home extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Container(
+                    SizedBox(
                       // Fixed height to show only 7 buttons
-                      height: 400, // Adjust this value to show exactly 7 buttons
+                      height:
+                          400, // Adjust this value to show exactly 7 buttons
                       child: ListView(
                         padding: const EdgeInsets.symmetric(
                             horizontal: 20, vertical: 10),
                         children: [
-                        Center(
-                          child: CustomButton(
-                            customText: "أسماء الله الحسنى",
-                            onPressed: () => controllerE.goToAssmaHussna(),
-                            icon: const Icon(Icons.menu_book),
+                          Center(
+                            child: CustomButton(
+                              customText: "أسماء الله الحسنى",
+                              onPressed: () => controllerE.goToAssmaHussna(),
+                              icon: const Icon(Icons.menu_book),
+                            ),
                           ),
-                        ),
-                        const SizedBox(height: 15),
-                        Center(
-                          child: CustomButton(
-                            customText: "الإستغفار ",
-                            onPressed: () => controllerE.goToEstigfar(),
-                            icon: const Icon(Icons.menu_book),
+                          const SizedBox(height: 15),
+                          Center(
+                            child: CustomButton(
+                              customText: "الإستغفار ",
+                              onPressed: () => controllerE.goToEstigfar(),
+                              icon: const Icon(Icons.menu_book),
+                            ),
                           ),
-                        ),
-                        const SizedBox(height: 15),
-                        Center(
-                          child: CustomButton(
-                            customText: "التسبيح  ",
-                            onPressed: () => controllerE.goToTasbih(),
-                            icon: const Icon(Icons.menu_book),
+                          const SizedBox(height: 15),
+                          Center(
+                            child: CustomButton(
+                              customText: "التسبيح  ",
+                              onPressed: () => controllerE.goToTasbih(),
+                              icon: const Icon(Icons.menu_book),
+                            ),
                           ),
-                        ),
-                        const SizedBox(height: 15),
-                        Center(
-                          child: CustomButton(
-                            customText: "الحمد         ",
-                            onPressed: () => controllerE.goToHamd(),
-                            icon: const Icon(Icons.menu_book),
+                          const SizedBox(height: 15),
+                          Center(
+                            child: CustomButton(
+                              customText: "الحمد         ",
+                              onPressed: () => controllerE.goToHamd(),
+                              icon: const Icon(Icons.menu_book),
+                            ),
                           ),
-                        ),
-                        const SizedBox(height: 15),
-                        Center(
-                          child: CustomButton(
-                            customText: "الصلاة على النبي    ",
-                            onPressed: () =>
-                                controllerE.goToSalatAlaRasoulAllah(),
-                            icon: const Icon(Icons.menu_book),
+                          const SizedBox(height: 15),
+                          Center(
+                            child: CustomButton(
+                              customText: "الصلاة على النبي    ",
+                              onPressed: () =>
+                                  controllerE.goToSalatAlaRasoulAllah(),
+                              icon: const Icon(Icons.menu_book),
+                            ),
                           ),
-                        ),
-                        const SizedBox(height: 15),
-                        Center(
-                          child: CustomButton(
-                            customText: "أذكار الصبـــاح   ",
-                            onPressed: () => controllerE.goToAthkarSabah(),
-                            icon: const Icon(Icons.menu_book),
+                          const SizedBox(height: 15),
+                          Center(
+                            child: CustomButton(
+                              customText: "أذكار الصبـــاح   ",
+                              onPressed: () => controllerE.goToAthkarSabah(),
+                              icon: const Icon(Icons.menu_book),
+                            ),
                           ),
-                        ),
-                        const SizedBox(height: 15),
-                        Center(
-                          child: CustomButton(
-                            customText: "أذكار المساء   ",
-                            onPressed: () => controllerE.goToAthkarMassa(),
-                            icon: const Icon(Icons.menu_book),
+                          const SizedBox(height: 15),
+                          Center(
+                            child: CustomButton(
+                              customText: "أذكار المساء   ",
+                              onPressed: () => controllerE.goToAthkarMassa(),
+                              icon: const Icon(Icons.menu_book),
+                            ),
                           ),
-                        ),
-                        const SizedBox(height: 15),
-                        Center(
-                          child: CustomButton(
-                            customText: "الأذكار بعد الصلاة المفروضة ",
-                            onPressed: () => controllerE.goToAthkarAfterSalat(),
-                            icon: const Icon(Icons.menu_book),
+                          const SizedBox(height: 15),
+                          Center(
+                            child: CustomButton(
+                              customText: "الأذكار بعد الصلاة المفروضة ",
+                              onPressed: () =>
+                                  controllerE.goToAthkarAfterSalat(),
+                              icon: const Icon(Icons.menu_book),
+                            ),
                           ),
-                        ),
-                        const SizedBox(height: 15),
-                        Center(
-                          child: CustomButton(
-                            customText: "الدعاء من السنــة  ",
-                            onPressed: () => controllerE.goToDuaMenSunnah(),
-                            icon: const Icon(Icons.menu_book),
+                          const SizedBox(height: 15),
+                          Center(
+                            child: CustomButton(
+                              customText: "الدعاء من السنــة  ",
+                              onPressed: () => controllerE.goToDuaMenSunnah(),
+                              icon: const Icon(Icons.menu_book),
+                            ),
                           ),
-                        ),
-                        const SizedBox(height: 15),
-                        Center(
-                          child: CustomButton(
-                            customText: "الدعاء من القراءن الكريم  ",
-                            onPressed: () => controllerE.goToDuaMenQuran(),
-                            icon: const Icon(Icons.menu_book),
+                          const SizedBox(height: 15),
+                          Center(
+                            child: CustomButton(
+                              customText: "الدعاء من القراءن الكريم  ",
+                              onPressed: () => controllerE.goToDuaMenQuran(),
+                              icon: const Icon(Icons.menu_book),
+                            ),
                           ),
-                        ),
-                        const SizedBox(height: 15),
-                        Center(
-                          child: CustomButton(
-                            customText: " أذكار النوم   ",
-                            onPressed: () =>
-                                controllerE.goToAthkarBeforeGoToBed(),
-                            icon: const Icon(Icons.menu_book),
+                          const SizedBox(height: 15),
+                          Center(
+                            child: CustomButton(
+                              customText: " أذكار النوم   ",
+                              onPressed: () =>
+                                  controllerE.goToAthkarBeforeGoToBed(),
+                              icon: const Icon(Icons.menu_book),
+                            ),
                           ),
-                        ),
-                        const SizedBox(height: 15),
-                        Center(
-                          child: CustomButton(
-                            customText: "الأذكار الشاملة",
-                            onPressed: () => controllerE.goToComprehensiveAdhkar(),
-                            icon: const Icon(Icons.menu_book),
+                          const SizedBox(height: 15),
+                          Center(
+                            child: CustomButton(
+                              customText: "أذكار النوم الجديدة",
+                              onPressed: () => controllerE.goToAthkarNawm(),
+                              icon: const Icon(Icons.menu_book),
+                            ),
                           ),
-                        ),
-                        const SizedBox(height: 15),
-                      ],
+                          const SizedBox(height: 15),
+                          Center(
+                            child: CustomButton(
+                              customText: "أذكار الاستيقاظ",
+                              onPressed: () => controllerE.goToAthkarIstiqadh(),
+                              icon: const Icon(Icons.menu_book),
+                            ),
+                          ),
+                          const SizedBox(height: 15),
+                          Center(
+                            child: CustomButton(
+                              customText: "أذكار أخرى",
+                              onPressed: () => controllerE.goToAthkarOther(),
+                              icon: const Icon(Icons.menu_book),
+                            ),
+                          ),
+                          const SizedBox(height: 15),
+                          Center(
+                            child: CustomButton(
+                              customText: "الأذكار الشاملة",
+                              onPressed: () =>
+                                  controllerE.goToComprehensiveAdhkar(),
+                              icon: const Icon(Icons.menu_book),
+                            ),
+                          ),
+                          const SizedBox(height: 15),
+                        ],
+                      ),
                     ),
-                  ),
                   ],
                 ),
               ),

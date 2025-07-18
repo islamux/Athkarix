@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'package:athkarix/controller/comprehensive_adhkar_controller.dart';
 import 'package:athkarix/controller/floating_action_button_controller.dart';
 import 'package:athkarix/controller/font_controller.dart';
@@ -9,7 +8,6 @@ import 'package:athkarix/core/data/static/theme/app_them.dart';
 import 'package:athkarix/function/custom_share_content.dart';
 import 'package:athkarix/view/widget/custom_floating_button.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 class ComprehensiveAdhkar extends StatelessWidget {
@@ -142,12 +140,15 @@ class ComprehensiveAdhkar extends StatelessWidget {
                                     Obx(
                                       () => RichText(
                                         text: TextSpan(
-                                          style: AppTheme.goldenTheme.textTheme.bodyLarge,
+                                          style: AppTheme
+                                              .goldenTheme.textTheme.bodyLarge,
                                           children: [
                                             TextSpan(
-                                              text: snapshot.data![i]['text'] ?? '',
+                                              text: snapshot.data![i]['text'] ??
+                                                  '',
                                               style: TextStyle(
-                                                fontSize: fontControllerImp.fontSize.value,
+                                                fontSize: fontControllerImp
+                                                    .fontSize.value,
                                                 color: AppColor.black,
                                               ),
                                             ),
@@ -156,27 +157,34 @@ class ComprehensiveAdhkar extends StatelessWidget {
                                         textAlign: TextAlign.right,
                                       ),
                                     ),
-                                    if (snapshot.data![i]['description'] != null &&
-                                        snapshot.data![i]['description'].isNotEmpty)
+                                    if (snapshot.data![i]['description'] !=
+                                            null &&
+                                        snapshot
+                                            .data![i]['description'].isNotEmpty)
                                       Padding(
-                                        padding: const EdgeInsets.only(top: 16.0),
+                                        padding:
+                                            const EdgeInsets.only(top: 16.0),
                                         child: Obx(
                                           () => Text(
                                             snapshot.data![i]['description'],
-                                            style: AppTheme.customTextStyleFooter(),
+                                            style: AppTheme
+                                                .customTextStyleFooter(),
                                             textAlign: TextAlign.right,
                                           ),
                                         ),
                                       ),
-                                    if (snapshot.data![i]['reference'] != null &&
-                                        snapshot.data![i]['reference'].isNotEmpty)
+                                    if (snapshot.data![i]['reference'] !=
+                                            null &&
+                                        snapshot
+                                            .data![i]['reference'].isNotEmpty)
                                       Padding(
-                                        padding: const EdgeInsets.only(top: 8.0),
+                                        padding:
+                                            const EdgeInsets.only(top: 8.0),
                                         child: Text(
                                           "المصدر: ${snapshot.data![i]['reference']}",
-                                          style: TextStyle(
+                                          style: const TextStyle(
                                             fontSize: 14,
-                                            color: AppColor.primaryColorGolden.withOpacity(0.8),
+                                            color: AppColor.primaryColorGolden,
                                             fontStyle: FontStyle.italic,
                                           ),
                                           textAlign: TextAlign.right,
@@ -190,14 +198,15 @@ class ComprehensiveAdhkar extends StatelessWidget {
                                           vertical: 8,
                                         ),
                                         decoration: BoxDecoration(
-                                          color: AppColor.primaryColorGolden.withOpacity(0.2),
-                                          borderRadius: BorderRadius.circular(20),
+                                          color: AppColor.black,
+                                          borderRadius:
+                                              BorderRadius.circular(20),
                                         ),
                                         child: Text(
                                           "عدد المرات: ${snapshot.data![i]['count'] ?? 1}",
                                           style: const TextStyle(
                                             fontSize: 16,
-                                            color: AppColor.black,
+                                            color: AppColor.primaryColorGolden,
                                             fontWeight: FontWeight.bold,
                                           ),
                                         ),

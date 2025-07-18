@@ -1,4 +1,4 @@
-import 'package:athkarix/controller/athkar_sabah_controller.dart';
+import 'package:athkarix/controller/athkar_istiqadh_controller.dart';
 import 'package:athkarix/controller/floating_action_button_controller.dart';
 import 'package:athkarix/controller/font_controller.dart';
 import 'package:athkarix/core/data/static/routes_constant.dart';
@@ -6,17 +6,16 @@ import 'package:athkarix/core/data/static/theme/app_color_constant.dart';
 import 'package:athkarix/core/data/static/theme/app_them.dart';
 import 'package:athkarix/function/custom_share_content.dart';
 import 'package:athkarix/view/widget/custom_floating_button.dart';
-import 'package:athkarix/view/widget/custom_text_slider_athkar_sabah.dart';
+import 'package:athkarix/view/widget/custom_text_slider_athkar_istiqadh.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class AthkarSabah extends StatelessWidget {
-  const AthkarSabah({super.key});
+class AthkarIstiqadh extends StatelessWidget {
+  const AthkarIstiqadh({super.key});
 
   @override
   Widget build(BuildContext context) {
-    //AthkarSabahControllerImp controllerS = Get.put(AthkarSabahControllerImp());
-    final controllerS = Get.find<AthkarSabahControllerImp>();
+    final controllerI = Get.find<AthkarIstiqadhControllerImp>();
     Get.put(FloatingButtonControllerImp());
     FontControllerImp fontControllerImp = Get.find<FontControllerImp>();
     return Scaffold(
@@ -26,13 +25,13 @@ class AthkarSabah extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             IconButton(
-              // share content by pass controlle as a parameter of current page
-              onPressed: () => customShareContent(controllerS),
+              // share content by pass controller as a parameter of current page
+              onPressed: () => customShareContent(controllerI),
               icon: const Icon(Icons.share),
             ),
             const Center(
               child: Text(
-                "أذكار الصباح",
+                "أذكار الاستيقاظ",
                 style: TextStyle(
                     color: AppColor.primaryColorGolden,
                     backgroundColor: AppColor.primaryColorBlack2),
@@ -44,8 +43,7 @@ class AthkarSabah extends StatelessWidget {
         leading: GestureDetector(
           onTap: () {
             // reset before return to home page
-            Get.find<AthkarSabahControllerImp>().resetCounter();
-            //controllerS.resetCounter();
+            Get.find<AthkarIstiqadhControllerImp>().resetCounter();
             Get.toNamed(AppRoute.home);
           },
           child: const Icon(
@@ -95,9 +93,9 @@ class AthkarSabah extends StatelessWidget {
             onTap: () {
               // test adding sound when tap
               Feedback.forTap(context);
-              controllerS.increamentPageController();
+              controllerI.increamentPageController();
             },
-            child: const CustomTextSliderAthkarSabah()),
+            child: const CustomTextSliderAthkarIstiqadh()),
       ),
 
       // Floating Buttons
@@ -106,12 +104,12 @@ class AthkarSabah extends StatelessWidget {
         children: [
           GetBuilder<FloatingButtonControllerImp>(
             builder: (context) {
-              return GetBuilder<AthkarSabahControllerImp>(builder: (context) {
+              return GetBuilder<AthkarIstiqadhControllerImp>(builder: (context) {
                 return CustomFloatingButton(
                   herotag: 'f2',
-                  onPressed: () => controllerS.increamentPageController(),
+                  onPressed: () => controllerI.increamentPageController(),
                   text: Text(
-                    '${controllerS.currentPageCounter}',
+                    '${controllerI.currentPageCounter}',
                     style: AppTheme.goldenTheme.textTheme.titleMedium,
                   ),
                 );

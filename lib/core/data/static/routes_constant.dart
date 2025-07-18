@@ -16,4 +16,7 @@ class AppRoute {
   static const String aboutUs = "/aboutUs";
   static const String catalogue = "/catalogue";
   static const String comprehensiveAdhkar = "/comprehensiveAdhkar";
+  static const String athkarNawm = "/athkarNawm";
+  static const String athkarIstiqadh = "/athkarIstiqadh";
+  static const String athkarOther = "/athkarOther";
 }

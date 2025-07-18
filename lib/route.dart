@@ -14,6 +14,9 @@ import 'view/pages/athkar_after_salat_page.dart';
 import 'view/pages/athkar_massa_page.dart';
 import 'view/pages/athkar_sabah_page.dart';
 import 'view/pages/dua_men_sunnah.dart';
+import 'view/pages/athkar_nawm_page.dart';
+import 'view/pages/athkar_istiqadh_page.dart';
+import 'view/pages/athkar_other_page.dart';
 
 List<GetPage<dynamic>> routes = [
   GetPage(name: AppRoute.athkarSabah, page: (() => const AthkarSabah())),
@@ -37,5 +40,8 @@ List<GetPage<dynamic>> routes = [
   GetPage(
       name: AppRoute.comprehensiveAdhkar,
       page: (() => const ComprehensiveAdhkar())),
+  GetPage(name: AppRoute.athkarNawm, page: (() => const AthkarNawm())),
+  GetPage(name: AppRoute.athkarIstiqadh, page: (() => const AthkarIstiqadh())),
+  GetPage(name: AppRoute.athkarOther, page: (() => const AthkarOther())),
 //  GetPage(name: AppRoute.catalogue, page: (() => CataloguePage())),
 ];

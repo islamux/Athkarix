@@ -17,6 +17,9 @@ abstract class HomeController extends GetxController {
   goToAthkarBeforeGoToBed();
   goToCatalogue();
   goToComprehensiveAdhkar();
+  goToAthkarNawm();
+  goToAthkarIstiqadh();
+  goToAthkarOther();
 }
 
 class HomeControllerImp extends HomeController {
@@ -93,5 +96,20 @@ class HomeControllerImp extends HomeController {
   @override
   goToComprehensiveAdhkar() {
     Get.toNamed(AppRoute.comprehensiveAdhkar);
+  }
+
+  @override
+  goToAthkarNawm() {
+    Get.toNamed(AppRoute.athkarNawm);
+  }
+
+  @override
+  goToAthkarIstiqadh() {
+    Get.toNamed(AppRoute.athkarIstiqadh);
+  }
+
+  @override
+  goToAthkarOther() {
+    Get.toNamed(AppRoute.athkarOther);
   }
 }
