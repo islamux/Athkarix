@@ -1,4 +1,5 @@
 import 'package:athkarix/controller/assma_hussna_controller.dart';
+import 'package:athkarix/controller/font_controller.dart';
 import 'package:athkarix/core/data/static/imagelink/image_link.dart';
 import 'package:athkarix/core/data/static/theme/app_color_constant.dart';
 import 'package:athkarix/core/data/static/theme/app_them.dart'; // Import AppTheme
@@ -12,6 +13,7 @@ class CustomTextSliderAssmaHussna extends StatelessWidget {
   Widget build(BuildContext context) {
     final AssmaHussnaControllerImp controllerAs =
         Get.find<AssmaHussnaControllerImp>();
+    final FontControllerImp fontController = Get.find<FontControllerImp>();
     // to enable refresh ui (slider() moving)
     return GetBuilder<AssmaHussnaControllerImp>(
       builder: (_) {
@@ -49,8 +51,13 @@ class CustomTextSliderAssmaHussna extends StatelessWidget {
                           child: Obx(
                             () => Text(
                               controllerAs.dataList[i].duaText ?? '',
-                              style: AppTheme.goldenTheme.textTheme
-                                  .bodyLarge, // Use theme style
+                              style: TextStyle(
+                                fontSize: fontController.fontSize.value,
+                                fontFamily: fontController.selectFont.value,
+                                fontWeight: FontWeight.normal,
+                                color: AppColor.black,
+                                height: 1.6,
+                              ),
                               textAlign: TextAlign.right,
                             ),
                           ),

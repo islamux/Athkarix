@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:athkarix/controller/base_athkar_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 
 class AthkarMassaControllerImp extends BaseAthkarController {
   // instance from PageController to go to next page in pageview builder.
@@ -25,9 +26,13 @@ class AthkarMassaControllerImp extends BaseAthkarController {
   
   // Load adhkar from the specific JSON file
   Future<void> loadAdhkarData() async {
-    final String jsonString = await rootBundle.loadString('lib/core/data/json/adhkar_massa.json');
-    adhkarMassaList = json.decode(jsonString);
-    update();
+    try {
+      final String jsonString = await rootBundle.loadString('lib/core/data/json/adhkar_massa.json');
+      adhkarMassaList = json.decode(jsonString);
+      update();
+    } catch (e) {
+      print('Error loading adhkar data: $e');
+    }
   }
 
   @override
@@ -37,33 +42,63 @@ class AthkarMassaControllerImp extends BaseAthkarController {
       return adhkarMassaList!.map((item) => item['count'] as int? ?? 1).toList();
     }
     
-    // Return default list if data not loaded yet
-    return [
-        1, // الحمدلله وحده
-        1, // الكرسي
-        3, // المعوذات
-        1, // امسينا وامسى الملك
-        1, // بك امسينا
-        1, // سيد الاستغفار
-        4, // امسيت اشهدك
-        1, // ما امسى
-        3, // عافني
-        7, // حسبي الله
-        1, // العفو والعافيه
-        1, // عالم الغيب
-        3, // بسم الله
-        3, //رضيت
-        1, // يا حي ياقيوم
-        1, // امسينا
-        1, // امسينا
-        100, // سبحان الله وبحمده
-        10, // لا اله الا الله
-        100, // استغفر الله
-        3, // اعوذ بكلمات الله
-        10 // اللهم صلى
-      ];
+    // Return empty list if data not loaded yet
+    return [];
   }
 
   @override
   String get completionMessage => 'أنهيت قراءة أذكار المساء !';
+  
+  // Override increamentPageController to handle JSON data properly
+  @override
+  void increamentPageController() {
+    // Ensure data is loaded and valid
+    if (adhkarMassaList == null || adhkarMassaList!.isEmpty || maxPageCounters.isEmpty) {
+      return;
+    }
+    
+    currentPageCounter++;
+    if (currentPageCounter >= maxPageCounters[currentPageIndex]) {
+      currentPageIndex++;
+      if (currentPageIndex < maxPageCounters.length) {
+        currentPageCounter = 0;
+        HapticFeedback.vibrate();
+        pageController.nextPage(
+            duration: const Duration(milliseconds: 500),
+            curve: Curves.easeInOut);
+      } else {
+        Get.snackbar('الحمدلله', completionMessage);
+      }
+    }
+    update();
+  }
+  
+  // Helper methods to access JSON data
+  String getAthkarText(int index) {
+    if (adhkarMassaList != null && index < adhkarMassaList!.length) {
+      return adhkarMassaList![index]['text'] ?? '';
+    }
+    return '';
+  }
+  
+  String getAthkarDescription(int index) {
+    if (adhkarMassaList != null && index < adhkarMassaList!.length) {
+      return adhkarMassaList![index]['description'] ?? '';
+    }
+    return '';
+  }
+  
+  String getAthkarReference(int index) {
+    if (adhkarMassaList != null && index < adhkarMassaList!.length) {
+      return adhkarMassaList![index]['reference'] ?? '';
+    }
+    return '';
+  }
+  
+  int getAthkarCount(int index) {
+    if (adhkarMassaList != null && index < adhkarMassaList!.length) {
+      return adhkarMassaList![index]['count'] ?? 1;
+    }
+    return 1;
+  }
 }

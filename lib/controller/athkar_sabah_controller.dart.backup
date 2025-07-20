@@ -31,13 +31,9 @@ class AthkarSabahControllerImp extends BaseAthkarController {
   
   // Load adhkar from the specific JSON file
   Future<void> loadAdhkarData() async {
-    try {
-      final String jsonString = await rootBundle.loadString('lib/core/data/json/adhkar_sabah.json');
-      adhkarSabahList = json.decode(jsonString);
-      update();
-    } catch (e) {
-      print('Error loading adhkar data: $e');
-    }
+    final String jsonString = await rootBundle.loadString('lib/core/data/json/adhkar_sabah.json');
+    adhkarSabahList = json.decode(jsonString);
+    update();
   }
 
   // Provide the specific max counters for this page
@@ -48,25 +44,47 @@ class AthkarSabahControllerImp extends BaseAthkarController {
       return adhkarSabahList!.map((item) => item['count'] as int? ?? 1).toList();
     }
     
-    // Return empty list if data not loaded yet
-    return [];
+    // Return default list if data not loaded yet
+    return [
+        1,
+        1,
+        3,
+        1,
+        1,
+        1,
+        4,
+        1,
+        3,
+        7,
+        1,
+        1,
+        3,
+        3,
+        1,
+        1,
+        1,
+        100,
+        10,
+        100,
+        3,
+        1,
+        100,
+        10
+      ];
   }
 
   // --- Optional Specific Overrides ---
-  // Override increamentPageController to handle JSON data properly
+  // If Athkar Sabah needs a different starting counter or specific haptic feedback,
+  // you could override methods like resetCounter or increamentPageController here.
+  // For example, if it needs haptic feedback:
   @override
   void increamentPageController() {
-    // Ensure data is loaded and valid
-    if (adhkarSabahList == null || adhkarSabahList!.isEmpty || maxPageCounters.isEmpty) {
-      return;
-    }
-    
     currentPageCounter++;
     if (currentPageCounter >= maxPageCounters[currentPageIndex]) {
       currentPageIndex++;
       if (currentPageIndex < maxPageCounters.length) {
-        currentPageCounter = 0;
-        HapticFeedback.vibrate();
+        currentPageCounter = 0; // Or 1 if needed
+        HapticFeedback.vibrate(); // Specific haptic feedback
         pageController.nextPage(
             duration: const Duration(milliseconds: 500),
             curve: Curves.easeInOut);
@@ -76,38 +94,35 @@ class AthkarSabahControllerImp extends BaseAthkarController {
     }
     update();
   }
-  
-  // Helper methods to access JSON data
-  String getAthkarText(int index) {
-    if (adhkarSabahList != null && index < adhkarSabahList!.length) {
-      return adhkarSabahList![index]['text'] ?? '';
-    }
-    return '';
-  }
-  
-  String getAthkarDescription(int index) {
-    if (adhkarSabahList != null && index < adhkarSabahList!.length) {
-      return adhkarSabahList![index]['description'] ?? '';
-    }
-    return '';
-  }
-  
-  String getAthkarReference(int index) {
-    if (adhkarSabahList != null && index < adhkarSabahList!.length) {
-      return adhkarSabahList![index]['reference'] ?? '';
-    }
-    return '';
-  }
-  
-  int getAthkarCount(int index) {
-    if (adhkarSabahList != null && index < adhkarSabahList!.length) {
-      return adhkarSabahList![index]['count'] ?? 1;
-    }
-    return 1;
-  }
+  // If no specific overrides are needed, you don't need to add anything else.
 
-  // Old static counter list - kept for reference
-  // The controller now uses dynamic counters from JSON data
+  // @override
+  // List<int> maxPageCounters = [
+  //   1, // الحمد
+  //   1, // الكرسي
+  //   3, // المعوذات
+  //   1, //اصبحنا واصبح الملك
+  //   1, // بك اصبحنا
+  //   1, // سيد الاستغفار
+  //   4, // اصبحت اشهدك
+  //   1, //ما اصبح بي
+  //   3, //عافني في بدني
+  //   7, //حسبي الله
+  //   1, //العفو والغافية
+  //   1, // عالم الغيب
+  //   3, //بسم الله الذي
+  //   3, // رضيت بالله
+  //   1, //ياحي ياقيوم
+  //   1, //اصبحنا واصبح الملك
+  //   1, // أصبحنا على فطرة
+  //   100, // سبحان الله وبحمده
+  //   10, // لا اله الا الله
+  //   100, // لا اله الا الله
+  //   3, // سبحان الله وبحمده
+  //   1, // علما نافعا
+  //   100, // استغفر الله
+  //   10 // اللهم صلى
+  // ];
 
   // @override
   // goToHome() {
