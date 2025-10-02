@@ -184,15 +184,7 @@ class Home extends StatelessWidget {
                               icon: const Icon(Icons.menu_book),
                             ),
                           ),
-                          const SizedBox(height: 15),
-                          Center(
-                            child: CustomButton(
-                              customText: " أذكار النوم   ",
-                              onPressed: () =>
-                                  controllerE.goToAthkarBeforeGoToBed(),
-                              icon: const Icon(Icons.menu_book),
-                            ),
-                          ),
+
                           const SizedBox(height: 15),
                           Center(
                             child: CustomButton(

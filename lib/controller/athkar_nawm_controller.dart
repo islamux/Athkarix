@@ -31,7 +31,7 @@ class AthkarNawmControllerImp extends BaseAthkarController {
   
   // Load adhkar from the specific JSON file
   Future<void> loadAdhkarData() async {
-    final String jsonString = await rootBundle.loadString('lib/core/data/json/adhkar_nawm.json');
+    final String jsonString = await rootBundle.loadString('assets/json/adhkar_nawm.json');
     adhkarNawmList = json.decode(jsonString);
     update();
   }
