@@ -1,9 +1,7 @@
 import 'package:athkarix/controller/duaa_men_quran_controller.dart';
-import 'package:athkarix/core/data/model/model_list/dua_men_quran_list.dart';
 import 'package:athkarix/core/data/static/imagelink/image_link.dart';
 import 'package:athkarix/core/data/static/theme/app_color_constant.dart';
 import 'package:athkarix/core/data/static/theme/app_them.dart'; // Import AppTheme
-import 'package:athkarix/view/widget/get_pages/get_pags_texts.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -16,7 +14,10 @@ class CustomTextSliderDuaMenQuran extends StatelessWidget {
         Get.find<DuaMenQuranControllerImp>();
     // to enable refresh ui (slider() moving)
     return GetBuilder<DuaMenQuranControllerImp>(
-      builder: (_) {
+      builder: (controller) {
+        if (controller.duaMenQuranList == null || controller.duaMenQuranList!.isEmpty) {
+          return const Center(child: CircularProgressIndicator());
+        }
         return Stack(
           children: [
             // 1 in stack
@@ -39,7 +40,7 @@ class CustomTextSliderDuaMenQuran extends StatelessWidget {
                 onPageChanged: (index) =>
                     // How to pass index. ==> onPageChanged(index)
                     controllerD.onPageChanged(index),
-                itemCount: duaMenQuranList.length,
+                itemCount: controller.duaMenQuranList!.length,
                 itemBuilder: (context, i) => Column(
                   children: [
                     // To make text scrollable make insid contatiner and the container inside Expanded
@@ -57,18 +58,18 @@ class CustomTextSliderDuaMenQuran extends StatelessWidget {
                                     style: AppTheme
                                         .goldenTheme.textTheme.bodyLarge,
                                     children: [
-                                      ...getPagesTexts(i, duaMenQuranList)
+                                      TextSpan(text: controller.duaMenQuranList![i]['text'])
                                     ],
                                   ),
                                   textAlign: TextAlign.right,
                                 ),
                               ),
-                              if (duaMenQuranList[i].footer != null)
+                              if (controller.duaMenQuranList![i]['description'] != null && controller.duaMenQuranList![i]['description'].isNotEmpty)
                                 Padding(
                                   padding: const EdgeInsets.only(top: 16.0),
                                   child: Obx(
                                     () => Text(
-                                      duaMenQuranList[i].footer!,
+                                      controller.duaMenQuranList![i]['description']!,
                                       style: AppTheme.customTextStyleFooter(),
                                       textAlign: TextAlign.right,
                                     ),
@@ -101,13 +102,12 @@ class CustomTextSliderDuaMenQuran extends StatelessWidget {
                         controllerD.goToPage(value.toInt());
                       },
                       min: 0,
-                      max: duaMenQuranList.length.toDouble() - 1,
+                      max: controller.duaMenQuranList!.length.toDouble() - 1,
                     ),
                   ),
                   // Display current page number
                   Text(
-                    //'${controllerD.currentPageCounter + 1} / ${duaMenQuranList.length}',
-                    '${controllerD.currentPageIndex.toInt()} / ${duaMenQuranList.length}',
+                    '${controllerD.currentPageIndex.toInt() + 1} / ${controller.duaMenQuranList!.length}',
                     style: const TextStyle(
                         fontSize: 14, fontWeight: FontWeight.bold),
                   )

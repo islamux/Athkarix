@@ -1,53 +1,38 @@
+import 'dart:convert';
 import 'package:athkarix/controller/base_athkar_controller.dart';
-import 'package:athkarix/core/data/model/model_list/dua_men_quran_list.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 
 class DuaMenQuranControllerImp extends BaseAthkarController {
   final PageController pageControllerQuran = PageController();
-  // new from clin ai
+  List<dynamic>? duaMenQuranList;
+
+  @override
+  void onInit() {
+    super.onInit();
+    loadAdhkarData();
+  }
+
+  Future<void> loadAdhkarData() async {
+    try {
+      final String jsonString = await rootBundle.loadString('assets/json/dua_men_quran.json');
+      duaMenQuranList = json.decode(jsonString);
+      update();
+    } catch (e) {
+      print('Error loading adhkar data: $e');
+    }
+  }
+
   @override
   PageController get pageController => pageControllerQuran;
 
   @override
-  List<dynamic> get dataList => duaMenQuranList;
+  List<dynamic> get dataList => duaMenQuranList ?? [];
 
   @override
-  List<int> get maxPageCounters => List.filled(duaMenQuranList.length, 1);
+  List<int> get maxPageCounters => List.filled(duaMenQuranList?.length ?? 0, 1);
 
   @override
   String get completionMessage => 'أنهيت قراءة أدعية من القراءن !';
-
-  // // Proberties
-  // int currentPageIndex = 0;
-  // int currentPageCounter = 0;
-  // double fontSize = 21.0;
-  // int counter = 0;
-
-  // @override
-  // goToHome() {
-  //   Get.toNamed(AppRoute.home);
-  // }
-
-  // @override
-  // onPageChanged(int index) {
-  //   currentPageIndex = index;
-  //   update();
-  // }
-
-  // @override
-  // decreaseFontSize() {
-  //   fontSize -= 2;
-  //   update();
-  // }
-
-  // @override
-  // increaseFontSize() {
-  //   fontSize += 2;
-  //   update();
-  // }
-
-  // @override
-  // String getShareText(int index) {
-  //   return duaMenQuranList[index].duaText ?? '';
-  // }
 }

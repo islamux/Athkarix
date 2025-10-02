@@ -3,18 +3,18 @@ description: A new Flutter project.
 
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
-version: 1.0.0+1
+version: 1.0.1+2
 
 environment:
   sdk: '>=2.18.2 <3.0.0'
 
 dependencies:
-  flutter_lints: ^2.0.0
+  flutter_lints: ^6.0.0
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
   #flutter_share: ^2.0.0
-  share_plus: ^10.0.0
+  share_plus: ^11.1.0
   get: ^4.6.5
   hex: ^0.2.0
   intl: ^0.20.1

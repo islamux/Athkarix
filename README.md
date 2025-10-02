@@ -9,6 +9,12 @@
 
 ---
 
+## 📖 Project Documentation
+
+For a complete breakdown of the project architecture, development guides, and technical analysis, please see our **[Full Documentation Hub](./docs/README.md)**.
+
+---
+
 ## 🚀 Features
 
 - 🕌 Comprehensive collection of daily Athkar, Duas, and Quranic supplications

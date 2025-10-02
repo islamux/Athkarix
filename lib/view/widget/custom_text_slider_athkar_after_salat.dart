@@ -1,9 +1,7 @@
 import 'package:athkarix/controller/athkar_after_salat_controller.dart';
-import 'package:athkarix/core/data/model/model_list/athkar_after_salat_list.dart';
 import 'package:athkarix/core/data/static/imagelink/image_link.dart';
 import 'package:athkarix/core/data/static/theme/app_color_constant.dart';
 import 'package:athkarix/core/data/static/theme/app_them.dart'; // Import AppTheme
-import 'package:athkarix/view/widget/get_pages/get_pags_texts.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -16,7 +14,11 @@ class CustomTextSliderAthkarAfterSalat extends StatelessWidget {
         Get.find<AthkarAfterSalatControllerImp>();
     // to enable refresh ui (slider() moving)
     return GetBuilder<AthkarAfterSalatControllerImp>(
-      builder: (_) {
+      builder: (controller) {
+        // To handle case of list is empty or null
+        if (controller.adhkarAfterSalatList == null || controller.adhkarAfterSalatList!.isEmpty) {
+          return const Center(child: CircularProgressIndicator());
+        }
         return Stack(
           children: [
             // 1 in stack
@@ -39,7 +41,7 @@ class CustomTextSliderAthkarAfterSalat extends StatelessWidget {
                 onPageChanged: (index) =>
                     // How to pass index. ==> onPageChanged(index)
                     controllerAfter.onPageChanged(index),
-                itemCount: athkarAfterSalatList.length,
+                itemCount: controller.adhkarAfterSalatList!.length,
                 itemBuilder: (context, i) => Column(
                   children: [
                     // To make text scrollable make insid contatiner and the container inside Expanded
@@ -57,18 +59,18 @@ class CustomTextSliderAthkarAfterSalat extends StatelessWidget {
                                     style: AppTheme
                                         .goldenTheme.textTheme.bodyLarge,
                                     children: [
-                                      ...getPagesTexts(i, athkarAfterSalatList)
+                                      TextSpan(text: controller.adhkarAfterSalatList![i]['text'])
                                     ],
                                   ),
                                   textAlign: TextAlign.right,
                                 ),
                               ),
-                              if (athkarAfterSalatList[i].footer != null)
+                              if (controller.adhkarAfterSalatList![i]['description'] != null && controller.adhkarAfterSalatList![i]['description'].isNotEmpty)
                                 Padding(
                                   padding: const EdgeInsets.only(top: 16.0),
                                   child: Obx(
                                     () => Text(
-                                      athkarAfterSalatList[i].footer!,
+                                      controller.adhkarAfterSalatList![i]['description']!,
                                       style: AppTheme.customTextStyleFooter(),
                                       textAlign: TextAlign.right,
                                     ),
@@ -101,13 +103,12 @@ class CustomTextSliderAthkarAfterSalat extends StatelessWidget {
                         controllerAfter.goToPage(value.toInt());
                       },
                       min: 0,
-                      max: athkarAfterSalatList.length.toDouble() - 1,
+                      max: controller.adhkarAfterSalatList!.length.toDouble() - 1,
                     ),
                   ),
                   // Display current page number
                   Text(
-                    //'${controllerAfter.currentPageCounter + 1} / ${afterSalatList.length}',
-                    '${controllerAfter.currentPageIndex.toInt()} / ${athkarAfterSalatList.length}',
+                    '${controllerAfter.currentPageIndex.toInt() + 1} / ${controller.adhkarAfterSalatList!.length}',
                     style: const TextStyle(
                         fontSize: 14, fontWeight: FontWeight.bold),
                   )
