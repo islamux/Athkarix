@@ -95,4 +95,3 @@ Read more: [https://opensource.org/licenses/MIT](https://opensource.org/licenses
 - More languages and custom themes
 - Community-contributed Athkar/duas
 - Widget support for quick access
-````
