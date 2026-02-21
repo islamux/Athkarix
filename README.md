@@ -2,7 +2,7 @@
 
 ![Flutter](https://img.shields.io/badge/Flutter-3.x-blue?logo=flutter&style=flat-square)
 ![Platform](https://img.shields.io/badge/Platform-Android%20%7C%20iOS-blueviolet?style=flat-square)
-![License](https://img.shields.io/badge/License-GNU%20GPL-red?logo=gnu&style=flat-square)
+![License](https://img.shields.io/badge/License-MIT-blue?logo=gnu&style=flat-square)
 
 > **Athkarix** is a modern app for daily Islamic Athkar (remembrances) and Duas, offering a beautiful, multilingual, and user-friendly experience for Muslims worldwide.  
 > Built with ❤️ by [@islamux](https://github.com/islamux)
