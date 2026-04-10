@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter/services.dart';
 import 'package:athkarix/core/data/service/assma_hussna_service.dart';
@@ -8,7 +9,7 @@ void main() {
     setUpAll(() async {
       // Ensure the test binding is initialized
       TestWidgetsFlutterBinding.ensureInitialized();
-      
+
       // Set up test asset bundle if necessary
       TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
           .setMockMethodCallHandler(
@@ -29,24 +30,24 @@ void main() {
       // We'll skip it if assets are not available in test environment
       try {
         final data = await AssmaHussnaService.loadAssmaHussnaData();
-        
+
         // Verify we have data
         expect(data, isNotEmpty);
-        
+
         // Verify structure
         expect(data.first, isA<AssmaHussnaModel>());
         expect(data.first.id, isA<int>());
         expect(data.first.name, isA<String>());
         expect(data.first.text, isA<String>());
-        
+
         // Verify expected count (should be 99 or 100 names)
         expect(data.length, greaterThanOrEqualTo(99));
         expect(data.length, lessThanOrEqualTo(100));
-        
-        print('✓ Successfully loaded ${data.length} Asma-ul-Husna names');
+
+        debugPrint('✓ Successfully loaded ${data.length} Asma-ul-Husna names');
       } catch (e) {
-        print('⚠ Test skipped: Assets not available in test environment');
-        print('Error: $e');
+        debugPrint('⚠ Test skipped: Assets not available in test environment');
+        debugPrint('Error: $e');
       }
     });
 
@@ -54,10 +55,10 @@ void main() {
       try {
         final isValid = await AssmaHussnaService.validateData();
         expect(isValid, isTrue);
-        print('✓ Data validation passed');
+        debugPrint('✓ Data validation passed');
       } catch (e) {
-        print('⚠ Test skipped: Assets not available in test environment');
-        print('Error: $e');
+        debugPrint('⚠ Test skipped: Assets not available in test environment');
+        debugPrint('Error: $e');
       }
     });
 
@@ -67,10 +68,10 @@ void main() {
         expect(name, isNotNull);
         expect(name?.id, equals(1));
         expect(name?.name, equals('اللَّهُ'));
-        print('✓ Successfully retrieved name by ID');
+        debugPrint('✓ Successfully retrieved name by ID');
       } catch (e) {
-        print('⚠ Test skipped: Assets not available in test environment');
-        print('Error: $e');
+        debugPrint('⚠ Test skipped: Assets not available in test environment');
+        debugPrint('Error: $e');
       }
     });
 
@@ -79,10 +80,10 @@ void main() {
         final results = await AssmaHussnaService.searchByName('الرَّحْمَنُ');
         expect(results, isNotEmpty);
         expect(results.first.name, contains('الرَّحْمَنُ'));
-        print('✓ Successfully searched by name');
+        debugPrint('✓ Successfully searched by name');
       } catch (e) {
-        print('⚠ Test skipped: Assets not available in test environment');
-        print('Error: $e');
+        debugPrint('⚠ Test skipped: Assets not available in test environment');
+        debugPrint('Error: $e');
       }
     });
 
@@ -91,19 +92,15 @@ void main() {
         final count = await AssmaHussnaService.getCount();
         expect(count, greaterThanOrEqualTo(99));
         expect(count, lessThanOrEqualTo(100));
-        print('✓ Count verification passed');
+        debugPrint('✓ Count verification passed');
       } catch (e) {
-        print('⚠ Test skipped: Assets not available in test environment');
-        print('Error: $e');
+        debugPrint('⚠ Test skipped: Assets not available in test environment');
+        debugPrint('Error: $e');
       }
     });
 
     test('AssmaHussnaModel should serialize/deserialize correctly', () {
-      final json = {
-        'id': 1,
-        'name': 'اللَّهُ',
-        'text': 'وهو الاسم الأعظم...'
-      };
+      final json = {'id': 1, 'name': 'اللَّهُ', 'text': 'وهو الاسم الأعظم...'};
 
       final model = AssmaHussnaModel.fromJson(json);
       expect(model.id, equals(1));
@@ -114,8 +111,8 @@ void main() {
       expect(serialized['id'], equals(1));
       expect(serialized['name'], equals('اللَّهُ'));
       expect(serialized['text'], equals('وهو الاسم الأعظم...'));
-      
-      print('✓ Model serialization/deserialization works correctly');
+
+      debugPrint('✓ Model serialization/deserialization works correctly');
     });
   });
 }

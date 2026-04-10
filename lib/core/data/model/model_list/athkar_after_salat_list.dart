@@ -10,28 +10,28 @@ List<AthkarModel> athkarAfterSalatList = [
   //
   AthkarModel(
     duaText: AthkarAfterSalatText.athkarAfterSalat5,
-    footer: AthkarAfterSalatText.athkarAfterSalat5_Footer,
+    footer: AthkarAfterSalatText.athkarAfterSalat5Footer,
   ),
   //
   AthkarModel(
     duaText: AthkarAfterSalatText.athkarAfterSalat6,
-    footer: AthkarAfterSalatText.athkarAfterSalat6_Footer,
+    footer: AthkarAfterSalatText.athkarAfterSalat6Footer,
   ),
   //
   AthkarModel(
     duaText: AthkarAfterSalatText.athkarAfterSalat7,
-    footer: AthkarAfterSalatText.athkarAfterSalat7_Footer,
+    footer: AthkarAfterSalatText.athkarAfterSalat7Footer,
   ),
   //
   AthkarModel(
     duaText: AthkarAfterSalatText.athkarAfterSalat8,
-    footer: AthkarAfterSalatText.athkarAfterSalat8_Footer,
+    footer: AthkarAfterSalatText.athkarAfterSalat8Footer,
   ),
   //
   AthkarModel(duaText: AthkarAfterSalatText.athkarAfterSalat9),
   //
   AthkarModel(
     duaText: AthkarAfterSalatText.athkarAfterSalat10,
-    footer: AthkarAfterSalatText.athkarAfterSalat10_Footer,
+    footer: AthkarAfterSalatText.athkarAfterSalat10Footer,
   ),
 ];

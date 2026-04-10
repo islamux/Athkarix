@@ -1,12 +1,16 @@
 import 'package:athkarix/controller/assma_hussna_controller.dart';
+import 'package:athkarix/controller/font_controller.dart';
 import 'package:athkarix/controller/floating_action_button_controller.dart';
-import 'package:athkarix/controller/font_controller.dart'; // Import FontControllerImp
 import 'package:athkarix/core/data/static/routes_constant.dart';
 import 'package:athkarix/core/data/static/theme/app_color_constant.dart';
+import 'package:athkarix/core/data/static/theme/app_them.dart';
+import 'package:athkarix/core/utils/responsive_helper.dart';
 import 'package:athkarix/function/custom_share_content.dart';
 import 'package:athkarix/view/widget/custom_text_slider_assma_hussna.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import '../../core/data/static/theme/app_color_constant.dart';
 
 class AssmaHussna extends StatelessWidget {
   const AssmaHussna({super.key});
@@ -15,9 +19,7 @@ class AssmaHussna extends StatelessWidget {
   Widget build(BuildContext context) {
     final AssmaHussnaControllerImp controllerAs =
         Get.find<AssmaHussnaControllerImp>();
-    final FontControllerImp fontController =
-        Get.find<FontControllerImp>(); // Get FontControllerImp instance
-    //AssmaHussnaControllerImp controllerAs = Get.put(AthkarSabahControllerImp());
+    final FontControllerImp fontController = Get.find<FontControllerImp>();
     Get.put(FloatingButtonControllerImp());
     return Scaffold(
       appBar: AppBar(
@@ -26,16 +28,20 @@ class AssmaHussna extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             IconButton(
-              // share content by pass controlle as a parameter of current page
               onPressed: () => customShareContent(controllerAs),
-              icon: const Icon(Icons.share),
+              icon: Icon(
+                Icons.share,
+                size: ResponsiveHelper.scaledIconSize(context, 24),
+              ),
             ),
-            const Center(
+            Center(
               child: Text(
-                "الأسماء الحسنى    ",
+                "الأسماء الحسنى",
                 style: TextStyle(
-                    color: AppColor.primaryColorGolden,
-                    backgroundColor: AppColor.primaryColorBlack2),
+                  color: AppColor.primaryColorGolden,
+                  backgroundColor: AppColor.primaryColorBlack2,
+                  fontSize: ResponsiveHelper.scaledFontSize(context, 20),
+                ),
               ),
             ),
           ],
@@ -43,57 +49,56 @@ class AssmaHussna extends StatelessWidget {
         centerTitle: true,
         leading: GestureDetector(
           onTap: () {
-            // reset before return to home page
             Get.find<AssmaHussnaControllerImp>().resetCounter();
             Get.toNamed(AppRoute.home);
           },
-          child: const Icon(
+          child: Icon(
             Icons.arrow_back,
             color: Colors.amber,
+            size: ResponsiveHelper.scaledIconSize(context, 24),
           ),
         ),
         actions: [
           IconButton(
             onPressed: () {
-              fontController.decreaseFontSize(); // Use FontControllerImp
+              fontController.decreaseFontSize();
             },
-            icon: const Icon(
+            icon: Icon(
               Icons.remove,
               color: Colors.amber,
+              size: ResponsiveHelper.scaledIconSize(context, 24),
             ),
           ),
-          // Font between + -
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
                 "الخط",
                 style: TextStyle(
-                    fontSize: Theme.of(context).textTheme.titleLarge?.fontSize,
-                    color: AppColor.primaryColorGolden),
+                  fontSize: Theme.of(context).textTheme.titleLarge?.fontSize,
+                  color: AppColor.primaryColorGolden,
+                ),
               ),
             ],
           ),
-
           IconButton(
-              onPressed: () {
-                fontController.increaseFontSize(); // Use FontControllerImp
-              },
-              icon: const Icon(
-                Icons.add,
-                color: Colors.amber,
-              ))
+            onPressed: () {
+              fontController.increaseFontSize();
+            },
+            icon: Icon(
+              Icons.add,
+              color: Colors.amber,
+              size: ResponsiveHelper.scaledIconSize(context, 24),
+            ),
+          )
         ],
       ),
-      body: const SafeArea(
+      body: SafeArea(
         child: Column(
           children: [
             Expanded(
               child: CustomTextSliderAssmaHussna(),
             ),
-            // Slider to control the page
-
-            // Scroll down indicator to tell user scroll down to reach to the end of txt
           ],
         ),
       ),

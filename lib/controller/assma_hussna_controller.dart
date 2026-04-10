@@ -41,7 +41,7 @@ class AssmaHussnaControllerImp extends BaseAthkarController {
       // Validate data
       final isValid = await AssmaHussnaService.validateData();
       if (!isValid) {
-        print('Warning: Data validation failed');
+        debugPrint('Warning: Data validation failed');
       }
       
       isLoading.value = false;
@@ -51,8 +51,8 @@ class AssmaHussnaControllerImp extends BaseAthkarController {
       isLoading.value = false;
       
       // Fallback to static data if JSON loading fails
-      print('Error loading JSON data: $e');
-      print('Falling back to static data...');
+      debugPrint('Error loading JSON data: $e');
+      debugPrint('Falling back to static data...');
       _athkarModelList = assmaHussnaList; // Use existing static data as fallback
     }
   }
