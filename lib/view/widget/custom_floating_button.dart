@@ -1,10 +1,10 @@
 import 'package:athkarix/controller/floating_action_button_controller.dart';
 import 'package:athkarix/core/data/static/theme/app_color_constant.dart';
+import 'package:athkarix/core/utils/responsive_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class CustomFloatingButton extends StatelessWidget {
-  // instance off FloatingController
   final FloatingButtonControllerImp floatingController =
       Get.find<FloatingButtonControllerImp>();
   final Object herotag;
@@ -20,9 +20,10 @@ class CustomFloatingButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = ResponsiveHelper.scaledFontSize(context, 80);
     return SizedBox(
-      height: 80.0,
-      width: 80.0,
+      height: size,
+      width: size,
       child: FloatingActionButton(
         onPressed: onPressed,
         heroTag: herotag,
@@ -30,12 +31,18 @@ class CustomFloatingButton extends StatelessWidget {
         backgroundColor: AppColor.floatingColor2,
         elevation: 2,
         shape: const StadiumBorder(),
-        //StadiumBorder:disable the button when the counter reaches the maxCounter value
-        // or when maxCounter is not specified
         disabledElevation: 0,
         isExtended: true,
-
-        child: text,
+        child: DefaultTextStyle(
+          style: text.style?.copyWith(
+                fontSize: ResponsiveHelper.scaledFontSize(
+                    context, text.style?.fontSize ?? 21),
+              ) ??
+              TextStyle(
+                fontSize: ResponsiveHelper.scaledFontSize(context, 21),
+              ),
+          child: text,
+        ),
       ),
     );
   }

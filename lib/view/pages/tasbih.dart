@@ -4,6 +4,7 @@ import 'package:athkarix/controller/tasbih_controller.dart';
 import 'package:athkarix/core/data/static/routes_constant.dart';
 import 'package:athkarix/core/data/static/theme/app_color_constant.dart';
 import 'package:athkarix/core/data/static/theme/app_them.dart';
+import 'package:athkarix/core/utils/responsive_helper.dart';
 import 'package:athkarix/function/custom_share_content.dart';
 import 'package:athkarix/view/widget/custom_floating_button.dart';
 import 'package:athkarix/view/widget/custom_text_slider_tasbih.dart';
@@ -17,9 +18,7 @@ class Tasbih extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Inject controller
     final controller = Get.find<TasbihControllerImp>();
-    //TasbihControllerImp controller = Get.put(TasbihControllerImp());
     FloatingButtonControllerImp floatingController =
         Get.put(FloatingButtonControllerImp());
 
@@ -31,16 +30,20 @@ class Tasbih extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             IconButton(
-              // share content by pass controlle as a parameter of current page
               onPressed: () => customShareContent(controller),
-              icon: const Icon(Icons.share),
+              icon: Icon(
+                Icons.share,
+                size: ResponsiveHelper.scaledIconSize(context, 24),
+              ),
             ),
-            const Center(
+            Center(
               child: Text(
-                "تسبيح       ",
+                "تسبيح",
                 style: TextStyle(
-                    color: AppColor.primaryColorGolden,
-                    backgroundColor: AppColor.primaryColorBlack2),
+                  color: AppColor.primaryColorGolden,
+                  backgroundColor: AppColor.primaryColorBlack2,
+                  fontSize: ResponsiveHelper.scaledFontSize(context, 20),
+                ),
               ),
             ),
           ],
@@ -50,23 +53,25 @@ class Tasbih extends StatelessWidget {
           onTap: () {
             Get.toNamed(AppRoute.home);
           },
-          child: const Icon(
+          child: Icon(
             Icons.arrow_back,
             color: Colors.amber,
+            size: ResponsiveHelper.scaledIconSize(context, 24),
           ),
         ),
         actions: [
           IconButton(
-              onPressed: () {
-                if (fontControllerImp.fontSize > 15.0) {
-                  fontControllerImp.decreaseFontSize();
-                }
-              },
-              icon: const Icon(
-                Icons.remove,
-                color: Colors.amber,
-              )),
-          // Font between + -
+            onPressed: () {
+              if (fontControllerImp.fontSize > 15.0) {
+                fontControllerImp.decreaseFontSize();
+              }
+            },
+            icon: Icon(
+              Icons.remove,
+              color: Colors.amber,
+              size: ResponsiveHelper.scaledIconSize(context, 24),
+            ),
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -79,17 +84,18 @@ class Tasbih extends StatelessWidget {
               ),
             ],
           ),
-
           IconButton(
-              onPressed: () {
-                if (fontControllerImp.fontSize <= 37.0) {
-                  fontControllerImp.increaseFontSize();
-                }
-              },
-              icon: const Icon(
-                Icons.add,
-                color: Colors.amber,
-              ))
+            onPressed: () {
+              if (fontControllerImp.fontSize <= 37.0) {
+                fontControllerImp.increaseFontSize();
+              }
+            },
+            icon: Icon(
+              Icons.add,
+              color: Colors.amber,
+              size: ResponsiveHelper.scaledIconSize(context, 24),
+            ),
+          )
         ],
       ),
       body: SafeArea(
@@ -104,25 +110,33 @@ class Tasbih extends StatelessWidget {
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          GetBuilder<FloatingButtonControllerImp>(builder: (context) {
-            return CustomFloatingButton(
-              herotag: 'f2',
-              onPressed: () => floatingController.increamentCounterUntil100(),
-              text: Text(
-                '${floatingController.counter}',
-                style: AppTheme.goldenTheme.textTheme.titleMedium,
-              ),
-            );
+          GetBuilder<FloatingButtonControllerImp>(builder: (_) {
+            return Builder(builder: (ctx) {
+              return CustomFloatingButton(
+                herotag: 'f2',
+                onPressed: () => floatingController.increamentCounterUntil100(),
+                text: Text(
+                  '${floatingController.counter}',
+                  style: AppTheme.goldenTheme.textTheme.titleMedium?.copyWith(
+                    fontSize: ResponsiveHelper.scaledFontSize(ctx, 21),
+                  ),
+                ),
+              );
+            });
           }),
-          GetBuilder<FloatingButtonControllerImp>(builder: (context) {
-            return CustomFloatingButton(
-              herotag: 'f3',
-              onPressed: () => floatingController.reset(),
-              text: Text(
-                'تصفير',
-                style: AppTheme.goldenTheme.textTheme.titleMedium,
-              ),
-            );
+          GetBuilder<FloatingButtonControllerImp>(builder: (_) {
+            return Builder(builder: (ctx) {
+              return CustomFloatingButton(
+                herotag: 'f3',
+                onPressed: () => floatingController.reset(),
+                text: Text(
+                  'تصفير',
+                  style: AppTheme.goldenTheme.textTheme.titleMedium?.copyWith(
+                    fontSize: ResponsiveHelper.scaledFontSize(ctx, 21),
+                  ),
+                ),
+              );
+            });
           })
         ],
       ),

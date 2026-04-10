@@ -1,7 +1,6 @@
 import 'package:athkarix/core/data/static/routes_constant.dart';
 import 'package:athkarix/view/pages/assma_hussna_page.dart';
 import 'package:athkarix/view/pages/athkar_before_.go_to_bed.dart';
-import 'package:athkarix/view/pages/comprehensive_adhkar.dart';
 import 'package:athkarix/view/pages/dua_men_quran.dart';
 import 'package:athkarix/view/pages/estigfar.dart';
 import 'package:athkarix/view/pages/hamd.dart';
@@ -34,8 +33,4 @@ List<GetPage<dynamic>> routes = [
   GetPage(
       name: AppRoute.athkarBeforeGoToBed,
       page: (() => const AthkarBeforeGoToBed())),
-  GetPage(
-      name: AppRoute.comprehensiveAdhkar,
-      page: (() => const ComprehensiveAdhkar())),
-//  GetPage(name: AppRoute.catalogue, page: (() => CataloguePage())),
 ];

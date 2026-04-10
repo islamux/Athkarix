@@ -1,5 +1,6 @@
 import 'package:athkarix/core/data/model/athkar_model.dart';
 import 'package:athkarix/core/data/static/theme/app_color_constant.dart';
+import 'package:athkarix/core/utils/responsive_helper.dart';
 import 'package:flutter/material.dart';
 
 class CustomSearchResultPage extends StatelessWidget {
@@ -15,17 +16,20 @@ class CustomSearchResultPage extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: AppColor.black,
           title: const Text(
-            ' نتائج البحث',
+            'نتائج البحث',
             style: TextStyle(
-                color: AppColor.primaryColorGolden,
-                backgroundColor: AppColor.primaryColorBlack2),
+              color: AppColor.primaryColorGolden,
+              backgroundColor: AppColor.primaryColorBlack2,
+              fontSize: 20,
+            ),
           ),
         ),
         body: SingleChildScrollView(
           padding: const EdgeInsets.all(16),
           child: Text(
             athkar.duaText!,
-            style: const TextStyle(fontSize: 16),
+            style: TextStyle(
+                fontSize: ResponsiveHelper.scaledFontSize(context, 16)),
           ),
         ),
       ),
