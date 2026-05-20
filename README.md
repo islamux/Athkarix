@@ -33,8 +33,7 @@
 
 ## 📦 Requirements
 
-- Flutter 3.x
-- Dart 3.x
+- Flutter SDK (compatible with Dart `>=2.18.2 <3.0.0`)
 - Android Studio / Xcode (for running on device or emulator)
 
 Install dependencies:
@@ -68,6 +67,20 @@ flutter run
 - Athkar are displayed and filtered client-side, with dynamic language and theme switching.
 - Fully responsive and visually enhanced with Flutter widgets and animations.
 - Smart notification system to remind users at the right times.
+
+---
+
+## 📂 Documentation Directory
+
+All developer and project documentation is located in the [docs/](file:///media/islamux/Variety/Flutter_Projects/Athkarix/docs) directory:
+
+- **[BACKLOG.md](file:///media/islamux/Variety/Flutter_Projects/Athkarix/docs/BACKLOG.md)**: Main project roadmap, feature backlog, and optimization list.
+- **[ai-rules.md](file:///media/islamux/Variety/Flutter_Projects/Athkarix/docs/ai-rules.md)**: AI agent instructions, guidelines, coding rules, and TUI config notes.
+- **[SETUP_COMMAND_CENTER.md](file:///media/islamux/Variety/Flutter_Projects/Athkarix/docs/SETUP_COMMAND_CENTER.md)**: Setup and operation guide for the command center TUI dashboard (`ccui`) and MCP.
+- **[APK_DISTRIBUTION_GUIDE.md](file:///media/islamux/Variety/Flutter_Projects/Athkarix/docs/docs/APK_DISTRIBUTION_GUIDE.md)**: The build and release process for Android APK distribution.
+- **[SEARCH_FUNCTIONALITY.md](file:///media/islamux/Variety/Flutter_Projects/Athkarix/docs/SEARCH_FUNCTIONALITY.md)**: Design blueprint for search and indexing features.
+- **[workflow.md](file:///media/islamux/Variety/Flutter_Projects/Athkarix/docs/workflow.md)**: Task lifecycle state-machine and agent workflow guidelines.
+- **[archive/](file:///media/islamux/Variety/Flutter_Projects/Athkarix/docs/archive)**: Historical blueprints and scratchpad documents.
 
 ---
 

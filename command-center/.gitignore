@@ -1,0 +1,11 @@
+node_modules/
+dist/
+*.map
+*.tsbuildinfo
+.cc-backups/
+.DS_Store
+*.log
+.env
+temp/
+tmp/
+project-tracker.json

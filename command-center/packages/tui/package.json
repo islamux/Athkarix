@@ -1,0 +1,25 @@
+{
+  "name": "command-center-tui",
+  "version": "1.0.0",
+  "description": "Terminal UI dashboard for the Command Center",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "command-center-tui": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "dependencies": {
+    "blessed": "^0.1.81",
+    "chokidar": "^4.0.0",
+    "command-center-shared": "file:../shared",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/blessed": "^0.1.25",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0"
+  }
+}
