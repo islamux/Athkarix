@@ -96,4 +96,10 @@ abstract class BaseAthkarController extends GetxController {
     pageController.dispose();
     super.onClose();
   }
+
+  @override
+  void onClose() {
+    pageController.dispose();
+    super.onClose();
+  }
 }
