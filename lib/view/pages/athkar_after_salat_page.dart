@@ -110,13 +110,13 @@ class AthkarAfterSalat extends StatelessWidget {
         children: [
           GetBuilder<FloatingButtonControllerImp>(
             builder: (_) {
-              return GetBuilder<AthkarAfterSalatControllerImp>(builder: (_) {
+              return Obx(() {
                 return Builder(builder: (ctx) {
                   return CustomFloatingButton(
                     herotag: 'f2',
                     onPressed: () => controllerAfter.increamentPageController(),
                     text: Text(
-                      '${controllerAfter.currentPageCounter}',
+                      '${controllerAfter.currentPageCounter.value}',
                       style:
                           AppTheme.goldenTheme.textTheme.titleMedium?.copyWith(
                         fontSize: ResponsiveHelper.scaledFontSize(ctx, 21),
