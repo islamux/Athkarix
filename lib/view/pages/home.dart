@@ -7,7 +7,7 @@ import 'package:athkarix/view/widget/home/custom_drawer_listview.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../widget/custom_botton.dart';
+import '../widget/custom_button.dart';
 import '../widget/home/search/custom_data_search.dart';
 
 class Home extends StatelessWidget {

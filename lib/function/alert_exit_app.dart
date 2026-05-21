@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'package:athkarix/core/data/static/theme/app_color_constant.dart';
 import 'package:athkarix/core/utils/responsive_helper.dart';
-import 'package:athkarix/view/widget/custom_botton.dart';
+import 'package:athkarix/view/widget/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

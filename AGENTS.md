@@ -99,6 +99,14 @@ Steps:
 4. `gh pr merge --squash` — accept & merge
 5. `git checkout main && git pull origin main` — sync main
 
+## Planning Workflow
+
+Before implementing any feature or bugfix (when starting a plan):
+
+1. **Create branch**: Create a branch based on the naming style (`feature/<name>` or `fix/<name>`)
+2. **Create milestone**: Use `cc create-milestone` to track the work in the project tracker
+3. **Deep analysis dive**: Analyze the codebase thoroughly to catch bugs, logic issues, edge cases, and potential regressions before writing any code
+
 ## Testing
 - `test/` directory exists
 - Run: `flutter test`

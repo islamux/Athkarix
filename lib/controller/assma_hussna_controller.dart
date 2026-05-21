@@ -96,10 +96,4 @@ class AssmaHussnaControllerImp extends BaseAthkarController {
         .where((item) => item.text.contains(query))
         .toList();
   }
-
-  @override
-  void onClose() {
-    pageControllerAssma.dispose();
-    super.onClose();
-  }
 }

@@ -8,9 +8,6 @@ abstract class FloatingButtonController extends GetxController {
 }
 
 class FloatingButtonControllerImp extends FloatingButtonController {
-  //static final PageController pageControllerF = PageController();
-  int currenPage = 0;
-  int maxPage = 10;
   int counter = 0;
   @override
   void increamentCouter() {
@@ -22,7 +19,6 @@ class FloatingButtonControllerImp extends FloatingButtonController {
   void increamentCounterUntil100() {
     counter++;
     if (counter == 100) {
-      // Make vibiration to next zekr
       counter = 1;
       HapticFeedback.vibrate();
     }

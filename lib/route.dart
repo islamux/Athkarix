@@ -25,7 +25,6 @@ List<GetPage<dynamic>> routes = [
   GetPage(name: AppRoute.home, page: (() => const Home())),
   GetPage(name: AppRoute.hamd, page: (() => const Hamd())),
   GetPage(name: AppRoute.estigfar, page: (() => const Estigfar())),
-  GetPage(name: AppRoute.hamd, page: (() => const Hamd())),
   GetPage(name: AppRoute.tasbih, page: (() => const Tasbih())),
   GetPage(name: AppRoute.duaMenQuran, page: (() => const DuaMenQuran())),
   GetPage(name: AppRoute.duaMenSunnah, page: (() => const DuaMenSunnah())),

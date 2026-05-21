@@ -20,7 +20,6 @@ dependencies:
   hex: ^0.2.0
   intl: ^0.20.1
   rename_app: ^1.6.1
-  shared_preferences: ^2.5.0
   url_launcher: ^6.2.5
   flutter_native_splash: ^2.3.0
 
@@ -46,7 +45,6 @@ flutter:
     - assets/images/91k.jpg
     - assets/images/athkari5.jpg
     - assets/json/
-    - lib/core/data/json/adkar.json
 
   fonts:
     - family: Amiri
