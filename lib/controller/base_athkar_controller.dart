@@ -93,4 +93,10 @@ abstract class BaseAthkarController extends GetxController {
     }
     update(); // Update UI to reflect counter change
   }
+
+  @override
+  void onClose() {
+    pageController.dispose();
+    super.onClose();
+  }
 }
