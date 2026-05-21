@@ -9,20 +9,14 @@ abstract class HomeController extends GetxController {
   goToEstigfar();
   goToHamd();
   goToSalatAlaRasoulAllah();
-  goToSalatDuha();
   goToDuaMenSunnah();
   goToDuaMenQuran();
   goToAthkarAfterSalat();
   goToAssmaHussna();
   goToAthkarBeforeGoToBed();
-  goToCatalogue();
 }
 
 class HomeControllerImp extends HomeController {
-  // My special athkar
-  var myAthkarList = RxList<String>([]); // to do | not working yet
-  List<String> pages =
-      List.generate(210, (index) => 'Page ${index + 1}'); // tesing
 
   @override
   goToAthkarMassa() {
@@ -47,11 +41,6 @@ class HomeControllerImp extends HomeController {
   @override
   goToSalatAlaRasoulAllah() {
     Get.toNamed(AppRoute.salatAlaRasoulAllah);
-  }
-
-  @override
-  goToSalatDuha() {
-    Get.toNamed(AppRoute.salatDuha);
   }
 
   @override
@@ -83,10 +72,4 @@ class HomeControllerImp extends HomeController {
   goToAthkarBeforeGoToBed() {
     Get.toNamed(AppRoute.athkarBeforeGoToBed);
   }
-
-  @override
-  goToCatalogue() {
-    Get.toNamed(AppRoute.catalogue);
-  }
-
 }
