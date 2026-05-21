@@ -11,8 +11,6 @@ import 'package:athkarix/view/widget/custom_text_slider_hamd.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../core/data/static/theme/app_them.dart';
-
 class Hamd extends StatelessWidget {
   const Hamd({
     super.key,

@@ -3,14 +3,11 @@ import 'package:athkarix/controller/font_controller.dart';
 import 'package:athkarix/controller/floating_action_button_controller.dart';
 import 'package:athkarix/core/data/static/routes_constant.dart';
 import 'package:athkarix/core/data/static/theme/app_color_constant.dart';
-import 'package:athkarix/core/data/static/theme/app_them.dart';
 import 'package:athkarix/core/utils/responsive_helper.dart';
 import 'package:athkarix/function/custom_share_content.dart';
 import 'package:athkarix/view/widget/custom_text_slider_assma_hussna.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import '../../core/data/static/theme/app_color_constant.dart';
 
 class AssmaHussna extends StatelessWidget {
   const AssmaHussna({super.key});

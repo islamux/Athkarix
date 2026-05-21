@@ -8,8 +8,6 @@ import 'package:athkarix/view/widget/custom_text_slider_dua_men_quran.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../core/data/static/theme/app_color_constant.dart';
-
 class DuaMenQuran extends StatelessWidget {
   const DuaMenQuran({
     super.key,

@@ -11,8 +11,6 @@ import 'package:athkarix/view/widget/custom_text_slider_salat_ala_rasoul.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../core/data/static/theme/app_them.dart';
-
 class SalatAlaRasoulAllah extends StatelessWidget {
   const SalatAlaRasoulAllah({
     super.key,

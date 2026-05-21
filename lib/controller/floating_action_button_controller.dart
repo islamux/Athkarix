@@ -31,9 +31,4 @@ class FloatingButtonControllerImp extends FloatingButtonController {
     counter = 0;
     update();
   }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
 }
