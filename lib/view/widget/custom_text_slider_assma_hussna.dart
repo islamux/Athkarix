@@ -84,7 +84,7 @@ class CustomTextSliderAssmaHussna extends StatelessWidget {
                   ),
                   // Display current page number
                   Text(
-                    '${controllerAs.currentPageCounter + 1} / ${controllerAs.dataList.length}',
+                    '${controllerAs.currentPageCounter.value + 1} / ${controllerAs.dataList.length}',
                     style: const TextStyle(
                         fontSize: 14, fontWeight: FontWeight.bold),
                   )

@@ -106,24 +106,22 @@ class AthkarBeforeGoToBed extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           GetBuilder<FloatingButtonControllerImp>(builder: (_) {
-            return GetBuilder<AthkarBeforeGoToBedControllerImp>(
-              builder: (_) {
-                return Builder(builder: (ctx) {
-                  return CustomFloatingButton(
-                    herotag: 'f2',
-                    onPressed: () =>
-                        controllerBefore.increamentPageController(),
-                    text: Text(
-                      '${controllerBefore.currentPageCounter}',
-                      style:
-                          AppTheme.goldenTheme.textTheme.titleMedium?.copyWith(
-                        fontSize: ResponsiveHelper.scaledFontSize(ctx, 21),
-                      ),
+            return Obx(() {
+              return Builder(builder: (ctx) {
+                return CustomFloatingButton(
+                  herotag: 'f2',
+                  onPressed: () =>
+                      controllerBefore.increamentPageController(),
+                  text: Text(
+                    '${controllerBefore.currentPageCounter.value}',
+                    style:
+                        AppTheme.goldenTheme.textTheme.titleMedium?.copyWith(
+                      fontSize: ResponsiveHelper.scaledFontSize(ctx, 21),
                     ),
-                  );
-                });
-              },
-            );
+                  ),
+                );
+              });
+            });
           }),
         ],
       ),

@@ -56,11 +56,11 @@ class AthkarSabahControllerImp extends BaseAthkarController {
   // For example, if it needs haptic feedback:
   @override
   void increamentPageController() {
-    currentPageCounter++;
-    if (currentPageCounter >= maxPageCounters[currentPageIndex]) {
+    currentPageCounter.value++;
+    if (currentPageCounter.value >= maxPageCounters[currentPageIndex]) {
       currentPageIndex++;
       if (currentPageIndex < maxPageCounters.length) {
-        currentPageCounter = 0; // Or 1 if needed
+        currentPageCounter.value = 0; // Or 1 if needed
         HapticFeedback.vibrate(); // Specific haptic feedback
         pageController.nextPage(
             duration: const Duration(milliseconds: 500),
@@ -69,7 +69,6 @@ class AthkarSabahControllerImp extends BaseAthkarController {
         Get.snackbar('الحمدلله', completionMessage);
       }
     }
-    update();
   }
   // If no specific overrides are needed, you don't need to add anything else.
 

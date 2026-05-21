@@ -20,8 +20,7 @@ abstract class BaseAthkarController extends GetxController {
 
   // --- Common Properties ---
   int currentPageIndex = 0;
-  int currentPageCounter =
-      0; // Initial counter value might vary, subclasses can override resetCounter if needed
+  RxInt currentPageCounter = 0.obs;
 
   // --- Common Methods ---
   void goToHome() {
@@ -30,8 +29,7 @@ abstract class BaseAthkarController extends GetxController {
 
   // Reset counter - subclasses can override if the initial value isn't 0
   void resetCounter() {
-    currentPageCounter = 0;
-    update();
+    currentPageCounter.value = 0;
   }
 
   // Handle page change in the PageView
@@ -63,13 +61,13 @@ abstract class BaseAthkarController extends GetxController {
 
   // Increment counter and potentially navigate to the next page
   void increamentPageController() {
-    currentPageCounter++;
+    currentPageCounter.value++;
 
-    if (currentPageCounter >= maxPageCounters[currentPageIndex]) {
+    if (currentPageCounter.value >= maxPageCounters[currentPageIndex]) {
       currentPageIndex++;
 
       if (currentPageIndex < maxPageCounters.length) {
-        currentPageCounter = 0; // Reset counter for the new page
+        currentPageCounter.value = 0; // Reset counter for the new page
 
         // Consider adding HapticFeedback here if desired universally
         // HapticFeedback.vibrate();
@@ -91,7 +89,6 @@ abstract class BaseAthkarController extends GetxController {
         // goToHome();
       }
     }
-    update(); // Update UI to reflect counter change
   }
 
   @override

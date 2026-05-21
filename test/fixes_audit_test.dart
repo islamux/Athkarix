@@ -1,7 +1,6 @@
 import 'package:athkarix/core/data/static/routes_constant.dart';
 import 'package:athkarix/controller/athkar_sabah_controller.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:get/get.dart';
 
 void main() {
   group('Routes', () {
@@ -42,7 +41,7 @@ void main() {
       final controller = AthkarSabahControllerImp();
 
       expect(controller.currentPageIndex, equals(0));
-      expect(controller.currentPageCounter, equals(0));
+      expect(controller.currentPageCounter.value, equals(0));
       expect(controller.completionMessage, isNotEmpty);
       expect(controller.maxPageCounters.length, greaterThan(0));
       expect(controller.dataList.length,

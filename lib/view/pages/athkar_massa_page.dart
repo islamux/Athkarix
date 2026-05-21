@@ -109,13 +109,13 @@ class AthkarMassa extends StatelessWidget {
         children: [
           GetBuilder<FloatingButtonControllerImp>(
             builder: (_) {
-              return GetBuilder<AthkarMassaControllerImp>(builder: (_) {
+              return Obx(() {
                 return Builder(builder: (ctx) {
                   return CustomFloatingButton(
                     herotag: 'f2',
                     onPressed: () => controllerM.increamentPageController(),
                     text: Text(
-                      '${controllerM.currentPageCounter}',
+                      '${controllerM.currentPageCounter.value}',
                       style:
                           AppTheme.goldenTheme.textTheme.titleMedium?.copyWith(
                         fontSize: ResponsiveHelper.scaledFontSize(ctx, 21),
