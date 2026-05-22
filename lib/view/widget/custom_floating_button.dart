@@ -1,17 +1,13 @@
-import 'package:athkarix/controller/floating_action_button_controller.dart';
 import 'package:athkarix/core/data/static/theme/app_color_constant.dart';
 import 'package:athkarix/core/utils/responsive_helper.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class CustomFloatingButton extends StatelessWidget {
-  final FloatingButtonControllerImp floatingController =
-      Get.find<FloatingButtonControllerImp>();
   final Object herotag;
   final void Function()? onPressed;
-  final Text text;
+  final Widget text;
 
-  CustomFloatingButton({
+  const CustomFloatingButton({
     super.key,
     required this.herotag,
     required this.onPressed,
@@ -33,16 +29,7 @@ class CustomFloatingButton extends StatelessWidget {
         shape: const StadiumBorder(),
         disabledElevation: 0,
         isExtended: true,
-        child: DefaultTextStyle(
-          style: text.style?.copyWith(
-                fontSize: ResponsiveHelper.scaledFontSize(
-                    context, text.style?.fontSize ?? 21),
-              ) ??
-              TextStyle(
-                fontSize: ResponsiveHelper.scaledFontSize(context, 21),
-              ),
-          child: text,
-        ),
+        child: text,
       ),
     );
   }

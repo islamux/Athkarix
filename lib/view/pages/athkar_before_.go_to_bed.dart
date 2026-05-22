@@ -1,5 +1,4 @@
 import 'package:athkarix/controller/athkar_before_go_to_bed_controller.dart';
-import 'package:athkarix/controller/floating_action_button_controller.dart';
 import 'package:athkarix/controller/font_controller.dart';
 import 'package:athkarix/core/data/static/routes_constant.dart';
 import 'package:athkarix/core/data/static/theme/app_color_constant.dart';
@@ -18,8 +17,6 @@ class AthkarBeforeGoToBed extends StatelessWidget {
   Widget build(BuildContext context) {
     final AthkarBeforeGoToBedControllerImp controllerBefore =
         Get.find<AthkarBeforeGoToBedControllerImp>();
-
-    Get.find<FloatingButtonControllerImp>();
     final FontControllerImp fontControllerImp = Get.find<FontControllerImp>();
 
     return Scaffold(
@@ -105,24 +102,18 @@ class AthkarBeforeGoToBed extends StatelessWidget {
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          GetBuilder<FloatingButtonControllerImp>(builder: (_) {
-            return Obx(() {
-              return Builder(builder: (ctx) {
-                return CustomFloatingButton(
-                  herotag: 'f2',
-                  onPressed: () =>
-                      controllerBefore.increamentPageController(),
-                  text: Text(
-                    '${controllerBefore.currentPageCounter.value}',
-                    style:
-                        AppTheme.goldenTheme.textTheme.titleMedium?.copyWith(
-                      fontSize: ResponsiveHelper.scaledFontSize(ctx, 21),
-                    ),
-                  ),
-                );
-              });
-            });
-          }),
+          CustomFloatingButton(
+            herotag: 'f2',
+            onPressed: () =>
+                controllerBefore.increamentPageController(),
+            text: Obx(() => Text(
+              '${controllerBefore.currentPageCounter.value}',
+              style:
+                  AppTheme.goldenTheme.textTheme.titleMedium?.copyWith(
+                fontSize: ResponsiveHelper.scaledFontSize(context, 21),
+              ),
+            )),
+          ),
         ],
       ),
     );

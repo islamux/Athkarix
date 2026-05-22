@@ -1,6 +1,5 @@
 import 'package:athkarix/controller/assma_hussna_controller.dart';
 import 'package:athkarix/controller/font_controller.dart';
-import 'package:athkarix/controller/floating_action_button_controller.dart';
 import 'package:athkarix/core/data/static/routes_constant.dart';
 import 'package:athkarix/core/data/static/theme/app_color_constant.dart';
 import 'package:athkarix/core/utils/responsive_helper.dart';
@@ -17,7 +16,6 @@ class AssmaHussna extends StatelessWidget {
     final AssmaHussnaControllerImp controllerAs =
         Get.find<AssmaHussnaControllerImp>();
     final FontControllerImp fontController = Get.find<FontControllerImp>();
-    Get.put(FloatingButtonControllerImp());
     return Scaffold(
       appBar: AppBar(
         backgroundColor: AppColor.black,

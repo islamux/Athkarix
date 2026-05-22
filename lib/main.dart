@@ -1,3 +1,4 @@
+import 'package:athkarix/core/data/service/notification_service.dart';
 import 'package:athkarix/core/data/static/theme/app_them.dart';
 import 'package:athkarix/route.dart';
 import 'package:flutter/material.dart';
@@ -5,17 +6,11 @@ import 'package:get/get.dart';
 import 'binding.dart';
 import 'view/pages/home.dart';
 
-void main() {
-  // splash screen (commented for now)
-  // WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
-  // FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
-  
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await NotificationService().initialize();
+
   runApp(const Athkari());
-  
-  // Remove splash after delay (commented for now)
-  // Future.delayed(const Duration(seconds: 4), () {
-  //   FlutterNativeSplash.remove();
-  // });
 }
 
 class Athkari extends StatelessWidget {

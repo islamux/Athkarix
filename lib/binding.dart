@@ -9,17 +9,17 @@ import 'package:athkarix/controller/estigfar_controller.dart';
 import 'package:athkarix/controller/floating_action_button_controller.dart';
 import 'package:athkarix/controller/hamd_controller.dart';
 import 'package:athkarix/controller/home_controller.dart';
+import 'package:athkarix/controller/notification_controller.dart';
 import 'package:athkarix/controller/salat_ala_rasoul_controller.dart';
 import 'package:athkarix/controller/tasbih_controller.dart';
-import 'package:athkarix/controller/font_controller.dart'; // Add this import
+import 'package:athkarix/controller/font_controller.dart';
 import 'package:get/get.dart';
 
 class MyBinding extends Bindings {
   @override
   void dependencies() {
-    // Initialize FontControllerImp
-    Get.put(FontControllerImp()); // Add this line
-    // binding Page controller
+    Get.put(FontControllerImp());
+    Get.put(NotificationController());
     Get.put(EstigfarControllerImp());
     Get.put(TasbihControllerImp());
     Get.put(HamdControllerImp());
