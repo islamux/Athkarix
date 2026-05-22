@@ -19,7 +19,7 @@ class Estigfar extends StatelessWidget {
   Widget build(BuildContext context) {
     final EstigfarControllerImp controller = Get.find<EstigfarControllerImp>();
     FloatingButtonControllerImp floatingController =
-        Get.put(FloatingButtonControllerImp());
+        Get.find<FloatingButtonControllerImp>();
 
     final FontControllerImp fontControllerImp = Get.find<FontControllerImp>();
 
@@ -110,34 +110,26 @@ class Estigfar extends StatelessWidget {
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          GetBuilder<FloatingButtonControllerImp>(builder: (_) {
-            return Builder(builder: (ctx) {
-              return CustomFloatingButton(
-                herotag: 'f2',
-                onPressed: () => floatingController.increamentCouter(),
-                text: Text(
-                  '${floatingController.counter}',
-                  style: AppTheme.goldenTheme.textTheme.titleMedium?.copyWith(
-                    fontSize: ResponsiveHelper.scaledFontSize(ctx, 21),
-                  ),
-                ),
-              );
-            });
-          }),
-          GetBuilder<FloatingButtonControllerImp>(builder: (_) {
-            return Builder(builder: (ctx) {
-              return CustomFloatingButton(
-                herotag: 'f3',
-                onPressed: () => floatingController.reset(),
-                text: Text(
-                  'تصفير',
-                  style: AppTheme.goldenTheme.textTheme.titleMedium?.copyWith(
-                    fontSize: ResponsiveHelper.scaledFontSize(ctx, 21),
-                  ),
-                ),
-              );
-            });
-          })
+          CustomFloatingButton(
+            herotag: 'f2',
+            onPressed: () => floatingController.increamentCouter(),
+            text: GetBuilder<FloatingButtonControllerImp>(builder: (_) => Text(
+              '${floatingController.counter}',
+              style: AppTheme.goldenTheme.textTheme.titleMedium?.copyWith(
+                fontSize: ResponsiveHelper.scaledFontSize(context, 21),
+              ),
+            )),
+          ),
+          CustomFloatingButton(
+            herotag: 'f3',
+            onPressed: () => floatingController.reset(),
+            text: Text(
+              'تصفير',
+              style: AppTheme.goldenTheme.textTheme.titleMedium?.copyWith(
+                fontSize: ResponsiveHelper.scaledFontSize(context, 21),
+              ),
+            ),
+          ),
         ],
       ),
     );

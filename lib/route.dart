@@ -5,6 +5,7 @@ import 'package:athkarix/view/pages/dua_men_quran.dart';
 import 'package:athkarix/view/pages/estigfar.dart';
 import 'package:athkarix/view/pages/hamd.dart';
 import 'package:athkarix/view/pages/home.dart';
+import 'package:athkarix/view/pages/notification_settings_page.dart';
 import 'package:athkarix/view/pages/salat_ala_rasoul.dart';
 import 'package:athkarix/view/pages/tasbih.dart';
 import 'package:get/get.dart';
@@ -32,4 +33,7 @@ List<GetPage<dynamic>> routes = [
   GetPage(
       name: AppRoute.athkarBeforeGoToBed,
       page: (() => const AthkarBeforeGoToBed())),
+  GetPage(
+      name: AppRoute.notificationSettings,
+      page: (() => const NotificationSettingsPage())),
 ];

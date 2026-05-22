@@ -9,9 +9,9 @@
     "overall_progress": 0
   },
   "dashboard": {
-    "current_focus": "Full codebase audit — bug/issue/logic detection",
-    "active_milestone": "codebase_analysis",
-    "next_priority": "Analyze controllers & state management",
+    "current_focus": "Notifications system — FAB optimization & notification reminders",
+    "active_milestone": "notifications_system",
+    "next_priority": "Implement FAB GetBuilder optimization, then user custom notification times",
     "blockers": "None",
     "health": "Good"
   },
@@ -307,10 +307,6 @@
         ],
         "dependencies": [],
         "notes": []
-      }
-        ],
-        "dependencies": [],
-        "notes": []
       },
       {
         "id": "supplications_content",
@@ -454,7 +450,7 @@
         "phase": "system",
         "planned_start": "2026-05-20",
         "planned_end": null,
-        "actual_start": null,
+        "actual_start": "2026-05-22",
         "actual_end": null,
         "drift_days": 0,
         "progress": 0,
@@ -464,15 +460,15 @@
           {
             "id": "notify_001",
             "label": "Reminders",
-            "status": "todo",
+            "status": "in_progress",
             "done": false,
-            "assignee": null,
+            "assignee": "opencode",
             "blocked_by": null,
             "blocked_reason": null,
             "completed_at": null,
             "completed_by": null,
             "priority": "P2",
-            "notes": "Implement localized notifications to remind users to read their Morning and Evening Athkar.",
+            "notes": "Implemented: NotificationService (flutter_local_notifications singleton with zoned scheduling), NotificationController (GetX + SharedPreferences), NotificationSettingsPage (toggle + time picker UI). Route, binding, drawer entry, and Android manifest permissions added. Needs testing.",
             "prompt": null,
             "context_files": [],
             "reference_docs": [],
@@ -487,15 +483,15 @@
           {
             "id": "notify_002",
             "label": "GetX State Optimization",
-            "status": "todo",
-            "done": false,
-            "assignee": null,
+            "status": "done",
+            "done": true,
+            "assignee": "opencode",
             "blocked_by": null,
             "blocked_reason": null,
-            "completed_at": null,
-            "completed_by": null,
+            "completed_at": "2026-05-22",
+            "completed_by": "opencode",
             "priority": "P2",
-            "notes": "Refactor floating action buttons to remove the parent GetBuilder wrap, and apply it only to the specific internal text widget needing updates (improving widget rebuild performance).",
+            "notes": "Done: Removed GetBuilder<FloatingButtonControllerImp> wrapping from all 10 athkar pages. Simplified CustomFloatingButton to accept Widget text. Changed GetPut to GetFind in tasbih/estigfar/hamd/salat pages. Removed redundant Obx+Builder nesting from sabah/massa/after_salat/before_bed pages.",
             "prompt": null,
             "context_files": [],
             "reference_docs": [],

@@ -1,5 +1,4 @@
 import 'package:athkarix/controller/athkar_sabah_controller.dart';
-import 'package:athkarix/controller/floating_action_button_controller.dart';
 import 'package:athkarix/core/data/static/routes_constant.dart';
 import 'package:athkarix/core/data/static/theme/app_color_constant.dart';
 import 'package:athkarix/core/data/static/theme/app_them.dart';
@@ -18,7 +17,6 @@ class AthkarSabah extends StatelessWidget {
   Widget build(BuildContext context) {
     final AthkarSabahControllerImp controllerS =
         Get.find<AthkarSabahControllerImp>();
-    Get.put(FloatingButtonControllerImp());
 
     final FontControllerImp fontControllerImp = Get.find<FontControllerImp>();
     return Scaffold(
@@ -108,24 +106,16 @@ class AthkarSabah extends StatelessWidget {
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          GetBuilder<FloatingButtonControllerImp>(
-            builder: (_) {
-              return Obx(() {
-                return Builder(builder: (ctx) {
-                  return CustomFloatingButton(
-                    herotag: 'f2',
-                    onPressed: () => controllerS.increamentPageController(),
-                    text: Text(
-                      '${controllerS.currentPageCounter.value}',
-                      style:
-                          AppTheme.goldenTheme.textTheme.titleMedium?.copyWith(
-                        fontSize: ResponsiveHelper.scaledFontSize(ctx, 21),
-                      ),
-                    ),
-                  );
-                });
-              });
-            },
+          CustomFloatingButton(
+            herotag: 'f2',
+            onPressed: () => controllerS.increamentPageController(),
+            text: Obx(() => Text(
+              '${controllerS.currentPageCounter.value}',
+              style:
+                  AppTheme.goldenTheme.textTheme.titleMedium?.copyWith(
+                fontSize: ResponsiveHelper.scaledFontSize(context, 21),
+              ),
+            )),
           ),
         ],
       ),

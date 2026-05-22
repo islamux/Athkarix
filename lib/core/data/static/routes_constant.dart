@@ -12,4 +12,5 @@ class AppRoute {
   static const String athkarAfterSalat = "/athkarAfterSalat";
   static const String assmaHussna = "/assmaHussna";
   static const String athkarBeforeGoToBed = "/athkarBeforeGoToBed";
+  static const String notificationSettings = "/notificationSettings";
 }

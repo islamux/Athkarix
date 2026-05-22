@@ -1,5 +1,4 @@
 import 'package:athkarix/controller/athkar_massa_controller.dart';
-import 'package:athkarix/controller/floating_action_button_controller.dart';
 import 'package:athkarix/controller/font_controller.dart';
 import 'package:athkarix/core/data/static/routes_constant.dart';
 import 'package:athkarix/core/data/static/theme/app_color_constant.dart';
@@ -17,7 +16,6 @@ class AthkarMassa extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controllerM = Get.find<AthkarMassaControllerImp>();
-    Get.put(FloatingButtonControllerImp());
     FontControllerImp fontControllerImp = Get.find<FontControllerImp>();
 
     return Scaffold(
@@ -107,24 +105,16 @@ class AthkarMassa extends StatelessWidget {
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          GetBuilder<FloatingButtonControllerImp>(
-            builder: (_) {
-              return Obx(() {
-                return Builder(builder: (ctx) {
-                  return CustomFloatingButton(
-                    herotag: 'f2',
-                    onPressed: () => controllerM.increamentPageController(),
-                    text: Text(
-                      '${controllerM.currentPageCounter.value}',
-                      style:
-                          AppTheme.goldenTheme.textTheme.titleMedium?.copyWith(
-                        fontSize: ResponsiveHelper.scaledFontSize(ctx, 21),
-                      ),
-                    ),
-                  );
-                });
-              });
-            },
+          CustomFloatingButton(
+            herotag: 'f2',
+            onPressed: () => controllerM.increamentPageController(),
+            text: Obx(() => Text(
+              '${controllerM.currentPageCounter.value}',
+              style:
+                  AppTheme.goldenTheme.textTheme.titleMedium?.copyWith(
+                fontSize: ResponsiveHelper.scaledFontSize(context, 21),
+              ),
+            )),
           ),
         ],
       ),

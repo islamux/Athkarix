@@ -1,5 +1,4 @@
 import 'package:athkarix/controller/athkar_after_salat_controller.dart';
-import 'package:athkarix/controller/floating_action_button_controller.dart';
 import 'package:athkarix/controller/font_controller.dart';
 import 'package:athkarix/core/data/static/routes_constant.dart';
 import 'package:athkarix/core/data/static/theme/app_color_constant.dart';
@@ -18,8 +17,6 @@ class AthkarAfterSalat extends StatelessWidget {
   Widget build(BuildContext context) {
     final AthkarAfterSalatControllerImp controllerAfter =
         Get.find<AthkarAfterSalatControllerImp>();
-
-    Get.find<FloatingButtonControllerImp>();
     FontControllerImp fontControllerImp = Get.find<FontControllerImp>();
 
     return Scaffold(
@@ -108,24 +105,16 @@ class AthkarAfterSalat extends StatelessWidget {
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          GetBuilder<FloatingButtonControllerImp>(
-            builder: (_) {
-              return Obx(() {
-                return Builder(builder: (ctx) {
-                  return CustomFloatingButton(
-                    herotag: 'f2',
-                    onPressed: () => controllerAfter.increamentPageController(),
-                    text: Text(
-                      '${controllerAfter.currentPageCounter.value}',
-                      style:
-                          AppTheme.goldenTheme.textTheme.titleMedium?.copyWith(
-                        fontSize: ResponsiveHelper.scaledFontSize(ctx, 21),
-                      ),
-                    ),
-                  );
-                });
-              });
-            },
+          CustomFloatingButton(
+            herotag: 'f2',
+            onPressed: () => controllerAfter.increamentPageController(),
+            text: Obx(() => Text(
+              '${controllerAfter.currentPageCounter.value}',
+              style:
+                  AppTheme.goldenTheme.textTheme.titleMedium?.copyWith(
+                fontSize: ResponsiveHelper.scaledFontSize(context, 21),
+              ),
+            )),
           ),
         ],
       ),
