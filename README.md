@@ -2,7 +2,7 @@
 
 ![Flutter](https://img.shields.io/badge/Flutter-3.x-blue?logo=flutter&style=flat-square)
 ![Platform](https://img.shields.io/badge/Platform-Android%20%7C%20iOS-blueviolet?style=flat-square)
-![License](https://img.shields.io/badge/License-MIT-blue?logo=gnu&style=flat-square)
+![License](https://img.shields.io/badge/License-GPLv3-blue?logo=gnu&style=flat-square)
 
 > **Athkarix** is a modern app for daily Islamic Athkar (remembrances) and Duas, offering a beautiful, multilingual, and user-friendly experience for Muslims worldwide.  
 > Built with ❤️ by [@islamux](https://github.com/islamux)
@@ -86,9 +86,9 @@ All developer and project documentation is located in the [docs/](file:///media/
 
 ## 📜 License
 
-This project is licensed under the **MIT License**.  
+This project is licensed under the **GNU General Public License v3.0**.  
 Feel free to use, share, and contribute!  
-Read more: [https://opensource.org/licenses/MIT](https://opensource.org/licenses/MIT)
+Read more: [https://www.gnu.org/licenses/gpl-3.0.html](https://www.gnu.org/licenses/gpl-3.0.html)
 
 ---
 
