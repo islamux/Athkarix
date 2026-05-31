@@ -115,6 +115,21 @@ Before implementing any feature or bugfix (when starting a plan):
 - See `docs/APK_DISTRIBUTION_GUIDE.md` for APK release process
 - Release artifacts go in `releases/`
 
+## Documentation
+
+Key docs referenced during development:
+
+| File | Purpose |
+|------|---------|
+| `docs/ai-rules.md` | Universal AI protocols — 5-phase workflow (Think → Analyze → Execute → Verify → Sync) |
+| `docs/workflow.md` | Task lifecycle state machine and agent role definitions |
+| `docs/BACKLOG.md` | Feature backlog and optimization roadmap |
+| `docs/SEARCH_FUNCTIONALITY.md` | Search feature implementation details |
+| `docs/APK_DISTRIBUTION_GUIDE.md` | APK build and release process |
+| `docs/SETUP_COMMAND_CENTER.md` | Command center TUI/MCP setup guide |
+| `docs/superpowers/plans/` | Superpowers implementation plans |
+| `docs/superpowers/specs/` | Superpowers design specifications |
+
 ## Notes
 - Splash screen (`flutter_native_splash`) is configured but commented out in `main.dart`
 - Data loaded from `lib/core/data/json/adkar.json` and TypeScript model lists
