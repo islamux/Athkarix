@@ -75,12 +75,13 @@ flutter run
 All developer and project documentation is located in the [docs/](file:///media/islamux/Variety/Flutter_Projects/Athkarix/docs) directory:
 
 - **[BACKLOG.md](file:///media/islamux/Variety/Flutter_Projects/Athkarix/docs/BACKLOG.md)**: Main project roadmap, feature backlog, and optimization list.
-- **[ai-rules.md](file:///media/islamux/Variety/Flutter_Projects/Athkarix/docs/ai-rules.md)**: AI agent instructions, guidelines, coding rules, and TUI config notes.
+- **[ai-rules.md](file:///media/islamux/Variety/Flutter_Projects/Athkarix/docs/ai-rules.md)**: Universal AI agent protocols — 5-phase workflow for all tasks.
 - **[SETUP_COMMAND_CENTER.md](file:///media/islamux/Variety/Flutter_Projects/Athkarix/docs/SETUP_COMMAND_CENTER.md)**: Setup and operation guide for the command center TUI dashboard (`ccui`) and MCP.
-- **[APK_DISTRIBUTION_GUIDE.md](file:///media/islamux/Variety/Flutter_Projects/Athkarix/docs/docs/APK_DISTRIBUTION_GUIDE.md)**: The build and release process for Android APK distribution.
+- **[APK_DISTRIBUTION_GUIDE.md](file:///media/islamux/Variety/Flutter_Projects/Athkarix/docs/APK_DISTRIBUTION_GUIDE.md)**: Build and release process for Android APK distribution.
 - **[SEARCH_FUNCTIONALITY.md](file:///media/islamux/Variety/Flutter_Projects/Athkarix/docs/SEARCH_FUNCTIONALITY.md)**: Design blueprint for search and indexing features.
 - **[workflow.md](file:///media/islamux/Variety/Flutter_Projects/Athkarix/docs/workflow.md)**: Task lifecycle state-machine and agent workflow guidelines.
 - **[archive/](file:///media/islamux/Variety/Flutter_Projects/Athkarix/docs/archive)**: Historical blueprints and scratchpad documents.
+- **[superpowers/](file:///media/islamux/Variety/Flutter_Projects/Athkarix/docs/superpowers)**: Superpowers implementation plans and design specifications.
 
 ---
 
