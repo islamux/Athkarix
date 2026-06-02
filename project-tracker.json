@@ -1,17 +1,16 @@
 {
-  "schemaVersion": 1,
   "project": {
     "name": "Athkarix",
     "start_date": "2026-05-20",
     "target_date": "2026-07-31",
     "current_week": 4,
     "schedule_status": "on_track",
-    "overall_progress": 0
+    "overall_progress": 29
   },
   "dashboard": {
-    "current_focus": "Notifications system — FAB optimization & notification reminders",
-    "active_milestone": "notifications_system",
-    "next_priority": "Implement FAB GetBuilder optimization, then user custom notification times",
+    "current_focus": "Kotlin Port — Full native Android rebuild of Athkarix",
+    "active_milestone": "kotlin_port",
+    "next_priority": "Task 1: Project scaffold & theme (Gradle, Compose, Nav)",
     "blockers": "None",
     "health": "Good"
   },
@@ -28,7 +27,6 @@
         "actual_start": null,
         "actual_end": null,
         "drift_days": 0,
-        "progress": 0,
         "is_key_milestone": false,
         "key_milestone_label": null,
         "subtasks": [
@@ -36,7 +34,6 @@
             "id": "ui_001",
             "label": "Adaptive Screens",
             "status": "todo",
-            "done": false,
             "assignee": null,
             "blocked_by": null,
             "blocked_reason": null,
@@ -59,7 +56,6 @@
             "id": "ui_002",
             "label": "Index Page",
             "status": "todo",
-            "done": false,
             "assignee": null,
             "blocked_by": null,
             "blocked_reason": null,
@@ -82,7 +78,6 @@
             "id": "ui_003",
             "label": "Current Font Size Indicator",
             "status": "todo",
-            "done": false,
             "assignee": null,
             "blocked_by": null,
             "blocked_reason": null,
@@ -105,7 +100,6 @@
             "id": "ui_004",
             "label": "Custom Fonts",
             "status": "todo",
-            "done": false,
             "assignee": null,
             "blocked_by": null,
             "blocked_reason": null,
@@ -139,7 +133,6 @@
         "actual_start": "2026-05-21",
         "actual_end": null,
         "drift_days": 0,
-        "progress": 100,
         "is_key_milestone": false,
         "key_milestone_label": null,
         "subtasks": [
@@ -147,7 +140,6 @@
             "id": "audit_001",
             "label": "Controllers & State",
             "status": "done",
-            "done": true,
             "assignee": "opencode",
             "blocked_by": null,
             "blocked_reason": null,
@@ -156,9 +148,14 @@
             "priority": "P1",
             "notes": "Audit complete. Found: (1) PageController leak in 13/15 controllers — missing onClose disposal. (2) dataList[index].duaText dynamic access — runtime crash risk. (3) Typo 'increamentCouter' in floating button controller. (4) FontController changeFont(Object?) overrides changeFont(String). (5) Dead code in HomeController. (6) Hardcoded maxPageCounters in AthkarSabah vs dynamic elsewhere.",
             "prompt": null,
-            "context_files": ["lib/controller/"],
+            "context_files": [
+              "lib/controller/"
+            ],
             "reference_docs": [],
-            "acceptance_criteria": ["All controllers reviewed", "Issues documented with file:line references"],
+            "acceptance_criteria": [
+              "All controllers reviewed",
+              "Issues documented with file:line references"
+            ],
             "constraints": [],
             "agent_target": null,
             "execution_mode": "agent",
@@ -170,7 +167,6 @@
             "id": "audit_002",
             "label": "Views & Pages",
             "status": "done",
-            "done": true,
             "assignee": "opencode",
             "blocked_by": null,
             "blocked_reason": null,
@@ -179,9 +175,14 @@
             "priority": "P1",
             "notes": "Audit complete. Found: (1) Duplicate imports in 5+ page files (analyzer warnings). (2) 4 pages missing GestureDetector tap handler on body (athkar_before_go_to_bed, dua_men_quran, dua_men_sunnah, assma_hussna). (3) Font size UI guard checks 15.0 but controller min is 21.0. (4) GetBuilder wraps entire FAB instead of just Text per convention. (5) Get.put called in build() on multiple pages.",
             "prompt": null,
-            "context_files": ["lib/view/pages/"],
+            "context_files": [
+              "lib/view/pages/"
+            ],
             "reference_docs": [],
-            "acceptance_criteria": ["All pages reviewed", "Issues documented with file:line references"],
+            "acceptance_criteria": [
+              "All pages reviewed",
+              "Issues documented with file:line references"
+            ],
             "constraints": [],
             "agent_target": null,
             "execution_mode": "agent",
@@ -193,7 +194,6 @@
             "id": "audit_003",
             "label": "Widgets",
             "status": "done",
-            "done": true,
             "assignee": "opencode",
             "blocked_by": null,
             "blocked_reason": null,
@@ -202,9 +202,14 @@
             "priority": "P1",
             "notes": "Audit complete. Found: (1) Massive code duplication in 11 custom_text_slider_*.dart files (~1100 lines). (2) athkar_sabah slider missing Slider navigation widget and GetBuilder wrapper. (3) assma_hussna page display uses counter+1 instead of pageIndex. (4) Filename typo: custom_botton.dart (should be button). (5) Force unwrap in search_result.",
             "prompt": null,
-            "context_files": ["lib/view/widget/"],
+            "context_files": [
+              "lib/view/widget/"
+            ],
             "reference_docs": [],
-            "acceptance_criteria": ["All widgets reviewed", "Issues documented with file:line references"],
+            "acceptance_criteria": [
+              "All widgets reviewed",
+              "Issues documented with file:line references"
+            ],
             "constraints": [],
             "agent_target": null,
             "execution_mode": "agent",
@@ -216,7 +221,6 @@
             "id": "audit_004",
             "label": "Data Layer",
             "status": "done",
-            "done": true,
             "assignee": "opencode",
             "blocked_by": null,
             "blocked_reason": null,
@@ -225,9 +229,14 @@
             "priority": "P1",
             "notes": "Audit complete. Found: (1) adkar.json (264KB) — orphaned, zero references. (2) athkar_sabah.json — registered asset, never loaded. (3) assma_hussna_dynamic_list_model.dart — completely dead code, zero imports. (4) assma_hussna_list_model.dart (504 lines) — only used as fallback. (5) shared_preferences declared but never used. Redundant 3-layer data architecture (JSON → model lists → text constants).",
             "prompt": null,
-            "context_files": ["lib/core/data/"],
+            "context_files": [
+              "lib/core/data/"
+            ],
             "reference_docs": [],
-            "acceptance_criteria": ["Data layer reviewed", "Issues documented with file:line references"],
+            "acceptance_criteria": [
+              "Data layer reviewed",
+              "Issues documented with file:line references"
+            ],
             "constraints": [],
             "agent_target": null,
             "execution_mode": "agent",
@@ -239,7 +248,6 @@
             "id": "audit_005",
             "label": "Theming & Responsiveness",
             "status": "done",
-            "done": true,
             "assignee": "opencode",
             "blocked_by": null,
             "blocked_reason": null,
@@ -248,9 +256,14 @@
             "priority": "P1",
             "notes": "Audit complete. Found: (1) No dark theme — only goldenTheme, no darkTheme in GetMaterialApp. (2) Premature FontControllerImp registration in AppTheme before MyBinding. (3) goldenTheme getter creates new ThemeData each access. (4) ResponsiveHelper is basic 1.5x tablet multiplier only.",
             "prompt": null,
-            "context_files": ["lib/core/data/static/"],
+            "context_files": [
+              "lib/core/data/static/"
+            ],
             "reference_docs": [],
-            "acceptance_criteria": ["Theme & responsiveness reviewed", "Issues documented"],
+            "acceptance_criteria": [
+              "Theme & responsiveness reviewed",
+              "Issues documented"
+            ],
             "constraints": [],
             "agent_target": null,
             "execution_mode": "agent",
@@ -262,7 +275,6 @@
             "id": "audit_006",
             "label": "Routing & Bindings",
             "status": "done",
-            "done": true,
             "assignee": "opencode",
             "blocked_by": null,
             "blocked_reason": null,
@@ -271,9 +283,14 @@
             "priority": "P1",
             "notes": "Audit complete. Found: (1) Duplicate /hamd route registered twice at route.dart:26 & :28. (2) 3 missing routes: salatDuha, catalogue, aboutUs — defined in constants but no GetPage. Runtime crash if navigated to.",
             "prompt": null,
-            "context_files": ["lib/route.dart", "lib/binding.dart"],
+            "context_files": [
+              "lib/route.dart",
+              "lib/binding.dart"
+            ],
             "reference_docs": [],
-            "acceptance_criteria": ["All routes & bindings verified"],
+            "acceptance_criteria": [
+              "All routes & bindings verified"
+            ],
             "constraints": [],
             "agent_target": null,
             "execution_mode": "agent",
@@ -285,7 +302,6 @@
             "id": "audit_007",
             "label": "Performance & Memory",
             "status": "done",
-            "done": true,
             "assignee": "opencode",
             "blocked_by": null,
             "blocked_reason": null,
@@ -296,7 +312,10 @@
             "prompt": null,
             "context_files": [],
             "reference_docs": [],
-            "acceptance_criteria": ["Performance reviewed", "Issues documented"],
+            "acceptance_criteria": [
+              "Performance reviewed",
+              "Issues documented"
+            ],
             "constraints": [],
             "agent_target": null,
             "execution_mode": "agent",
@@ -319,7 +338,6 @@
         "actual_start": null,
         "actual_end": null,
         "drift_days": 0,
-        "progress": 0,
         "is_key_milestone": false,
         "key_milestone_label": null,
         "subtasks": [
@@ -327,7 +345,6 @@
             "id": "supp_001",
             "label": "Distress Supplications",
             "status": "todo",
-            "done": false,
             "assignee": null,
             "blocked_by": null,
             "blocked_reason": null,
@@ -350,7 +367,6 @@
             "id": "supp_002",
             "label": "Meanings & Explanations",
             "status": "todo",
-            "done": false,
             "assignee": null,
             "blocked_by": null,
             "blocked_reason": null,
@@ -373,7 +389,6 @@
             "id": "supp_003",
             "label": "Sunnah Supplications",
             "status": "todo",
-            "done": false,
             "assignee": null,
             "blocked_by": null,
             "blocked_reason": null,
@@ -396,7 +411,6 @@
             "id": "supp_004",
             "label": "Formulas for Forgiveness",
             "status": "todo",
-            "done": false,
             "assignee": null,
             "blocked_by": null,
             "blocked_reason": null,
@@ -419,7 +433,6 @@
             "id": "supp_005",
             "label": "Istighfar Benefits",
             "status": "todo",
-            "done": false,
             "assignee": null,
             "blocked_by": null,
             "blocked_reason": null,
@@ -453,7 +466,6 @@
         "actual_start": "2026-05-22",
         "actual_end": null,
         "drift_days": 0,
-        "progress": 0,
         "is_key_milestone": false,
         "key_milestone_label": null,
         "subtasks": [
@@ -461,7 +473,6 @@
             "id": "notify_001",
             "label": "Reminders",
             "status": "in_progress",
-            "done": false,
             "assignee": "opencode",
             "blocked_by": null,
             "blocked_reason": null,
@@ -484,7 +495,6 @@
             "id": "notify_002",
             "label": "GetX State Optimization",
             "status": "done",
-            "done": true,
             "assignee": "opencode",
             "blocked_by": null,
             "blocked_reason": null,
@@ -499,6 +509,244 @@
             "constraints": [],
             "agent_target": null,
             "execution_mode": "agent",
+            "depends_on": [],
+            "last_run_id": null,
+            "builder_prompt": null
+          }
+        ],
+        "dependencies": [],
+        "notes": []
+      },
+      {
+        "id": "kotlin_port",
+        "title": "Kotlin Port — Athkarix Native Android",
+        "domain": "android",
+        "week": 0,
+        "phase": "port",
+        "planned_start": "2026-06-02",
+        "planned_end": null,
+        "actual_start": null,
+        "actual_end": null,
+        "drift_days": 0,
+        "is_key_milestone": false,
+        "key_milestone_label": null,
+        "subtasks": [
+          {
+            "id": "kotlin_port_001",
+            "label": "Project Scaffold & Theme",
+            "status": "todo",
+            "assignee": null,
+            "blocked_by": null,
+            "blocked_reason": null,
+            "completed_at": null,
+            "completed_by": null,
+            "priority": "P0",
+            "notes": "Create Android project with Gradle Kotlin DSL. Add Compose, Navigation, WorkManager deps. Set up AthkarixApp, MainActivity, golden dark theme, Amiri+Cairo fonts. Add background images and font assets.",
+            "prompt": null,
+            "context_files": [],
+            "reference_docs": [],
+            "acceptance_criteria": [],
+            "constraints": [],
+            "agent_target": null,
+            "execution_mode": "human",
+            "depends_on": [],
+            "last_run_id": null,
+            "builder_prompt": null
+          },
+          {
+            "id": "kotlin_port_002",
+            "label": "Data Layer — Models + Static Text",
+            "status": "todo",
+            "assignee": null,
+            "blocked_by": null,
+            "blocked_reason": null,
+            "completed_at": null,
+            "completed_by": null,
+            "priority": "P0",
+            "notes": "Create AthkarItem, AssmaHussnaItem data classes. Port 12 Flutter text files to Kotlin objects. AthkarRepository with all lists. AssmaHussnaService JSON loader. SharedPrefsManager.",
+            "prompt": null,
+            "context_files": [],
+            "reference_docs": [],
+            "acceptance_criteria": [],
+            "constraints": [],
+            "agent_target": null,
+            "execution_mode": "human",
+            "depends_on": [],
+            "last_run_id": null,
+            "builder_prompt": null
+          },
+          {
+            "id": "kotlin_port_003",
+            "label": "Navigation + DI Wiring",
+            "status": "todo",
+            "assignee": null,
+            "blocked_by": null,
+            "blocked_reason": null,
+            "completed_at": null,
+            "completed_by": null,
+            "priority": "P0",
+            "notes": "Routes.kt (13 route constants). NavGraph.kt (NavHost + 13 composable routes). AppModule.kt (manual DI factories). Verify navigation works with placeholder screens.",
+            "prompt": null,
+            "context_files": [],
+            "reference_docs": [],
+            "acceptance_criteria": [],
+            "constraints": [],
+            "agent_target": null,
+            "execution_mode": "human",
+            "depends_on": [],
+            "last_run_id": null,
+            "builder_prompt": null
+          },
+          {
+            "id": "kotlin_port_004",
+            "label": "Base ViewModel + Shared Components",
+            "status": "todo",
+            "assignee": null,
+            "blocked_by": null,
+            "blocked_reason": null,
+            "completed_at": null,
+            "completed_by": null,
+            "priority": "P0",
+            "notes": "BaseAthkarViewModel (paging, counter, page advance). FontViewModel (size/family). FloatingCounterViewModel (tasbeeh 0-99). AthkarTextSlider (HorizontalPager + bg + text). CustomButton, FAB, Drawer, FontControls. DiacriticUtil.",
+            "prompt": null,
+            "context_files": [],
+            "reference_docs": [],
+            "acceptance_criteria": [],
+            "constraints": [],
+            "agent_target": null,
+            "execution_mode": "human",
+            "depends_on": [],
+            "last_run_id": null,
+            "builder_prompt": null
+          },
+          {
+            "id": "kotlin_port_005",
+            "label": "Home Screen",
+            "status": "todo",
+            "assignee": null,
+            "blocked_by": null,
+            "blocked_reason": null,
+            "completed_at": null,
+            "completed_by": null,
+            "priority": "P0",
+            "notes": "HomeViewModel (goTo event methods). HomeScreen (Scaffold + TopAppBar + Drawer + LazyColumn of CustomButtons + background). Exit confirmation dialog on back press.",
+            "prompt": null,
+            "context_files": [],
+            "reference_docs": [],
+            "acceptance_criteria": [],
+            "constraints": [],
+            "agent_target": null,
+            "execution_mode": "human",
+            "depends_on": [],
+            "last_run_id": null,
+            "builder_prompt": null
+          },
+          {
+            "id": "kotlin_port_006",
+            "label": "11 Athkar Screens",
+            "status": "todo",
+            "assignee": null,
+            "blocked_by": null,
+            "blocked_reason": null,
+            "completed_at": null,
+            "completed_by": null,
+            "priority": "P0",
+            "notes": "Create 11 ViewModels (extend BaseAthkarViewModel). 11 Screen composables (AthkarTextSlider + TopAppBar). Sabah has hardcoded repetition counts. Tasbih/Estigfar/Hamd/Salat add FAB counter + reset button.",
+            "prompt": null,
+            "context_files": [],
+            "reference_docs": [],
+            "acceptance_criteria": [],
+            "constraints": [],
+            "agent_target": null,
+            "execution_mode": "human",
+            "depends_on": [],
+            "last_run_id": null,
+            "builder_prompt": null
+          },
+          {
+            "id": "kotlin_port_007",
+            "label": "AssmaHussna — 99 Names Screen",
+            "status": "todo",
+            "assignee": null,
+            "blocked_by": null,
+            "blocked_reason": null,
+            "completed_at": null,
+            "completed_by": null,
+            "priority": "P0",
+            "notes": "AssmaHussnaViewModel (loading/error/data states from JSON). Screen with spinner, error retry, text slider. searchByName/searchByText. Fallback to static data on JSON failure.",
+            "prompt": null,
+            "context_files": [],
+            "reference_docs": [],
+            "acceptance_criteria": [],
+            "constraints": [],
+            "agent_target": null,
+            "execution_mode": "human",
+            "depends_on": [],
+            "last_run_id": null,
+            "builder_prompt": null
+          },
+          {
+            "id": "kotlin_port_008",
+            "label": "Search System",
+            "status": "todo",
+            "assignee": null,
+            "blocked_by": null,
+            "blocked_reason": null,
+            "completed_at": null,
+            "completed_by": null,
+            "priority": "P0",
+            "notes": "SearchScreen (search field + results list). SearchResultScreen (full dua text). Search across all AthkarRepository lists with diacritic normalization. Wire from Home TopAppBar.",
+            "prompt": null,
+            "context_files": [],
+            "reference_docs": [],
+            "acceptance_criteria": [],
+            "constraints": [],
+            "agent_target": null,
+            "execution_mode": "human",
+            "depends_on": [],
+            "last_run_id": null,
+            "builder_prompt": null
+          },
+          {
+            "id": "kotlin_port_009",
+            "label": "Notification System",
+            "status": "todo",
+            "assignee": null,
+            "blocked_by": null,
+            "blocked_reason": null,
+            "completed_at": null,
+            "completed_by": null,
+            "priority": "P0",
+            "notes": "NotificationService (channel, schedule/cancel). AthkarReminderReceiver BroadcastReceiver. Register in manifest. NotificationSettingsScreen (toggles, time pickers). Wire from Drawer.",
+            "prompt": null,
+            "context_files": [],
+            "reference_docs": [],
+            "acceptance_criteria": [],
+            "constraints": [],
+            "agent_target": null,
+            "execution_mode": "human",
+            "depends_on": [],
+            "last_run_id": null,
+            "builder_prompt": null
+          },
+          {
+            "id": "kotlin_port_010",
+            "label": "Utilities, Sharing & Final Polish",
+            "status": "todo",
+            "assignee": null,
+            "blocked_by": null,
+            "blocked_reason": null,
+            "completed_at": null,
+            "completed_by": null,
+            "priority": "P0",
+            "notes": "ShareUtil (Intent.ACTION_SEND). WhatsAppUtil (wa.me + GP fallback). FontScaleUtil (tablet 600dp detection + 1.5x). RTL enforcement. Back press exit on Home. Verify all 22 features.",
+            "prompt": null,
+            "context_files": [],
+            "reference_docs": [],
+            "acceptance_criteria": [],
+            "constraints": [],
+            "agent_target": null,
+            "execution_mode": "human",
             "depends_on": [],
             "last_run_id": null,
             "builder_prompt": null
@@ -539,9 +787,354 @@
         "agent",
         "mcp"
       ]
+    },
+    {
+      "agent_id": "orchestrator",
+      "action": "create_milestone",
+      "target_type": "milestone",
+      "target_id": "kotlin_port",
+      "description": "Created milestone \"Kotlin Port — Athkarix Native Android\" in backlog",
+      "tags": [
+        "milestone"
+      ],
+      "id": "log_1780432789826_reubew",
+      "timestamp": "2026-06-02T20:39:49.826Z"
+    },
+    {
+      "agent_id": "orchestrator",
+      "action": "add_milestone_task",
+      "target_type": "task",
+      "target_id": "kotlin_port_001",
+      "description": "Added task \"Project Scaffold & Theme\" to milestone \"Kotlin Port — Athkarix Native Android\"",
+      "tags": [
+        "milestone",
+        "task"
+      ],
+      "id": "log_1780432795108_1xev2c",
+      "timestamp": "2026-06-02T20:39:55.108Z"
+    },
+    {
+      "agent_id": "orchestrator",
+      "action": "add_milestone_task",
+      "target_type": "task",
+      "target_id": "kotlin_port_002",
+      "description": "Added task \"Data Layer — Models + Static Text\" to milestone \"Kotlin Port — Athkarix Native Android\"",
+      "tags": [
+        "milestone",
+        "task"
+      ],
+      "id": "log_1780432795672_mvia26",
+      "timestamp": "2026-06-02T20:39:55.672Z"
+    },
+    {
+      "agent_id": "orchestrator",
+      "action": "add_milestone_task",
+      "target_type": "task",
+      "target_id": "kotlin_port_003",
+      "description": "Added task \"Navigation + DI Wiring\" to milestone \"Kotlin Port — Athkarix Native Android\"",
+      "tags": [
+        "milestone",
+        "task"
+      ],
+      "id": "log_1780432796261_8lirs7",
+      "timestamp": "2026-06-02T20:39:56.261Z"
+    },
+    {
+      "agent_id": "orchestrator",
+      "action": "add_milestone_task",
+      "target_type": "task",
+      "target_id": "kotlin_port_004",
+      "description": "Added task \"Base ViewModel + Shared Components\" to milestone \"Kotlin Port — Athkarix Native Android\"",
+      "tags": [
+        "milestone",
+        "task"
+      ],
+      "id": "log_1780432796800_27iis8",
+      "timestamp": "2026-06-02T20:39:56.800Z"
+    },
+    {
+      "agent_id": "orchestrator",
+      "action": "add_milestone_task",
+      "target_type": "task",
+      "target_id": "kotlin_port_005",
+      "description": "Added task \"Home Screen\" to milestone \"Kotlin Port — Athkarix Native Android\"",
+      "tags": [
+        "milestone",
+        "task"
+      ],
+      "id": "log_1780432797193_tixcv7",
+      "timestamp": "2026-06-02T20:39:57.193Z"
+    },
+    {
+      "agent_id": "orchestrator",
+      "action": "add_milestone_task",
+      "target_type": "task",
+      "target_id": "kotlin_port_006",
+      "description": "Added task \"11 Athkar Screens (Sabah, Massa, etc.)\" to milestone \"Kotlin Port — Athkarix Native Android\"",
+      "tags": [
+        "milestone",
+        "task"
+      ],
+      "id": "log_1780432797856_33j3du",
+      "timestamp": "2026-06-02T20:39:57.856Z"
+    },
+    {
+      "agent_id": "orchestrator",
+      "action": "add_milestone_task",
+      "target_type": "task",
+      "target_id": "kotlin_port_007",
+      "description": "Added task \"AssmaHussna — 99 Names Screen\" to milestone \"Kotlin Port — Athkarix Native Android\"",
+      "tags": [
+        "milestone",
+        "task"
+      ],
+      "id": "log_1780432798294_g9lp9j",
+      "timestamp": "2026-06-02T20:39:58.294Z"
+    },
+    {
+      "agent_id": "orchestrator",
+      "action": "add_milestone_task",
+      "target_type": "task",
+      "target_id": "kotlin_port_008",
+      "description": "Added task \"Search System\" to milestone \"Kotlin Port — Athkarix Native Android\"",
+      "tags": [
+        "milestone",
+        "task"
+      ],
+      "id": "log_1780432798787_7f60zg",
+      "timestamp": "2026-06-02T20:39:58.787Z"
+    },
+    {
+      "agent_id": "orchestrator",
+      "action": "add_milestone_task",
+      "target_type": "task",
+      "target_id": "kotlin_port_009",
+      "description": "Added task \"Notification System\" to milestone \"Kotlin Port — Athkarix Native Android\"",
+      "tags": [
+        "milestone",
+        "task"
+      ],
+      "id": "log_1780432799357_zpl8ys",
+      "timestamp": "2026-06-02T20:39:59.357Z"
+    },
+    {
+      "agent_id": "orchestrator",
+      "action": "add_milestone_task",
+      "target_type": "task",
+      "target_id": "kotlin_port_010",
+      "description": "Added task \"Utilities, Sharing, WhatsApp & Final Polish\" to milestone \"Kotlin Port — Athkarix Native Android\"",
+      "tags": [
+        "milestone",
+        "task"
+      ],
+      "id": "log_1780432799756_s3kix9",
+      "timestamp": "2026-06-02T20:39:59.756Z"
+    },
+    {
+      "agent_id": "orchestrator",
+      "action": "update_task",
+      "target_type": "task",
+      "target_id": "kotlin_port_003",
+      "description": "Updated task \"Navigation + DI Wiring\": notes updated",
+      "tags": [
+        "update"
+      ],
+      "id": "log_1780432808917_hcw3dk",
+      "timestamp": "2026-06-02T20:40:08.917Z"
+    },
+    {
+      "agent_id": "orchestrator",
+      "action": "update_task",
+      "target_type": "task",
+      "target_id": "kotlin_port_005",
+      "description": "Updated task \"Home Screen\": notes updated",
+      "tags": [
+        "update"
+      ],
+      "id": "log_1780432810796_vfc6t0",
+      "timestamp": "2026-06-02T20:40:10.796Z"
+    },
+    {
+      "agent_id": "orchestrator",
+      "action": "update_task",
+      "target_type": "task",
+      "target_id": "kotlin_port_008",
+      "description": "Updated task \"Search System\": notes updated",
+      "tags": [
+        "update"
+      ],
+      "id": "log_1780432813460_ofgzfg",
+      "timestamp": "2026-06-02T20:40:13.460Z"
+    },
+    {
+      "agent_id": "orchestrator",
+      "action": "create_milestone",
+      "target_type": "milestone",
+      "target_id": "kotlin_port",
+      "description": "Created milestone \"Kotlin Port — Athkarix Native Android\" in backlog",
+      "tags": [
+        "milestone"
+      ],
+      "id": "log_1780432978602_ueb23i",
+      "timestamp": "2026-06-02T20:42:58.602Z"
+    },
+    {
+      "agent_id": "orchestrator",
+      "action": "add_milestone_task",
+      "target_type": "task",
+      "target_id": "kotlin_port_001",
+      "description": "Added task \"Project Scaffold & Theme\" to milestone \"Kotlin Port — Athkarix Native Android\"",
+      "tags": [
+        "milestone",
+        "task"
+      ],
+      "id": "log_1780432985814_jfr51r",
+      "timestamp": "2026-06-02T20:43:05.814Z"
+    },
+    {
+      "agent_id": "orchestrator",
+      "action": "add_milestone_task",
+      "target_type": "task",
+      "target_id": "kotlin_port_002",
+      "description": "Added task \"Data Layer — Models + Static Text\" to milestone \"Kotlin Port — Athkarix Native Android\"",
+      "tags": [
+        "milestone",
+        "task"
+      ],
+      "id": "log_1780432986473_sahot6",
+      "timestamp": "2026-06-02T20:43:06.473Z"
+    },
+    {
+      "agent_id": "orchestrator",
+      "action": "add_milestone_task",
+      "target_type": "task",
+      "target_id": "kotlin_port_003",
+      "description": "Added task \"Navigation + DI Wiring\" to milestone \"Kotlin Port — Athkarix Native Android\"",
+      "tags": [
+        "milestone",
+        "task"
+      ],
+      "id": "log_1780432987113_46u1l9",
+      "timestamp": "2026-06-02T20:43:07.113Z"
+    },
+    {
+      "agent_id": "orchestrator",
+      "action": "add_milestone_task",
+      "target_type": "task",
+      "target_id": "kotlin_port_004",
+      "description": "Added task \"Base ViewModel + Shared Components\" to milestone \"Kotlin Port — Athkarix Native Android\"",
+      "tags": [
+        "milestone",
+        "task"
+      ],
+      "id": "log_1780432987742_wkq6vj",
+      "timestamp": "2026-06-02T20:43:07.742Z"
+    },
+    {
+      "agent_id": "orchestrator",
+      "action": "add_milestone_task",
+      "target_type": "task",
+      "target_id": "kotlin_port_005",
+      "description": "Added task \"Home Screen\" to milestone \"Kotlin Port — Athkarix Native Android\"",
+      "tags": [
+        "milestone",
+        "task"
+      ],
+      "id": "log_1780432988400_36rrwb",
+      "timestamp": "2026-06-02T20:43:08.400Z"
+    },
+    {
+      "agent_id": "orchestrator",
+      "action": "add_milestone_task",
+      "target_type": "task",
+      "target_id": "kotlin_port_006",
+      "description": "Added task \"11 Athkar Screens\" to milestone \"Kotlin Port — Athkarix Native Android\"",
+      "tags": [
+        "milestone",
+        "task"
+      ],
+      "id": "log_1780432989058_mou9tp",
+      "timestamp": "2026-06-02T20:43:09.058Z"
+    },
+    {
+      "agent_id": "orchestrator",
+      "action": "add_milestone_task",
+      "target_type": "task",
+      "target_id": "kotlin_port_007",
+      "description": "Added task \"AssmaHussna — 99 Names Screen\" to milestone \"Kotlin Port — Athkarix Native Android\"",
+      "tags": [
+        "milestone",
+        "task"
+      ],
+      "id": "log_1780432989701_kqlcv8",
+      "timestamp": "2026-06-02T20:43:09.701Z"
+    },
+    {
+      "agent_id": "orchestrator",
+      "action": "add_milestone_task",
+      "target_type": "task",
+      "target_id": "kotlin_port_008",
+      "description": "Added task \"Search System\" to milestone \"Kotlin Port — Athkarix Native Android\"",
+      "tags": [
+        "milestone",
+        "task"
+      ],
+      "id": "log_1780432990330_1piz5a",
+      "timestamp": "2026-06-02T20:43:10.330Z"
+    },
+    {
+      "agent_id": "orchestrator",
+      "action": "add_milestone_task",
+      "target_type": "task",
+      "target_id": "kotlin_port_009",
+      "description": "Added task \"Notification System\" to milestone \"Kotlin Port — Athkarix Native Android\"",
+      "tags": [
+        "milestone",
+        "task"
+      ],
+      "id": "log_1780432990985_r1akb6",
+      "timestamp": "2026-06-02T20:43:10.985Z"
+    },
+    {
+      "agent_id": "orchestrator",
+      "action": "add_milestone_task",
+      "target_type": "task",
+      "target_id": "kotlin_port_010",
+      "description": "Added task \"Utilities, Sharing & Final Polish\" to milestone \"Kotlin Port — Athkarix Native Android\"",
+      "tags": [
+        "milestone",
+        "task"
+      ],
+      "id": "log_1780432991628_x9ak6v",
+      "timestamp": "2026-06-02T20:43:11.628Z"
+    },
+    {
+      "agent_id": "orchestrator",
+      "action": "activate_milestone",
+      "target_type": "milestone",
+      "target_id": "kotlin_port",
+      "description": "Activated milestone \"Kotlin Port — Athkarix Native Android\" — moved from backlog to active",
+      "tags": [
+        "milestone"
+      ],
+      "id": "log_1780433004454_0kv56n",
+      "timestamp": "2026-06-02T20:43:24.454Z"
+    }
+  ],
+  "history_log": [
+    {
+      "date": "2026-06-02",
+      "action": "Created milestone \"Kotlin Port — Athkarix Native Android\"",
+      "agent": "orchestrator"
+    },
+    {
+      "date": "2026-06-02",
+      "action": "Activated milestone \"Kotlin Port — Athkarix Native Android\" with 10 tasks and updated dashboard focus",
+      "agent": "orchestrator"
     }
   ],
   "schedule": {
     "phases": []
-  }
+  },
+  "_schema_version": 1
 }
