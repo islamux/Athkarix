@@ -551,7 +551,15 @@
             "execution_mode": "human",
             "depends_on": [],
             "last_run_id": null,
-            "builder_prompt": null
+            "builder_prompt": null,
+            "subtasks": [
+              "Create Gradle project structure with Compose deps",
+              "Set up AthkarixApp + MainActivity",
+              "Create golden dark theme (AppColor + AppTheme)",
+              "Add Amiri + Cairo font resources",
+              "Copy background images to drawable/",
+              "Verify build compiles"
+            ]
           },
           {
             "id": "kotlin_port_002",
@@ -573,7 +581,14 @@
             "execution_mode": "human",
             "depends_on": [],
             "last_run_id": null,
-            "builder_prompt": null
+            "builder_prompt": null,
+            "subtasks": [
+              "Create AthkarItem + AssmaHussnaItem data classes",
+              "Port 12 Flutter text files to Kotlin objects",
+              "Create AthkarRepository with all lists",
+              "Create AssmaHussnaService (JSON loader + cache)",
+              "Create SharedPrefsManager wrapper"
+            ]
           },
           {
             "id": "kotlin_port_003",
@@ -595,7 +610,14 @@
             "execution_mode": "human",
             "depends_on": [],
             "last_run_id": null,
-            "builder_prompt": null
+            "builder_prompt": null,
+            "subtasks": [
+              "Create Routes.kt with 13 route constants",
+              "Create AppModule.kt manual DI factory",
+              "Create NavGraph.kt NavHost with 13 routes",
+              "Add placeholder screens for each route",
+              "Verify navigation works"
+            ]
           },
           {
             "id": "kotlin_port_004",
@@ -617,7 +639,15 @@
             "execution_mode": "human",
             "depends_on": [],
             "last_run_id": null,
-            "builder_prompt": null
+            "builder_prompt": null,
+            "subtasks": [
+              "Create BaseAthkarViewModel (paging, counter, events)",
+              "Create FontViewModel (size/family)",
+              "Create FloatingCounterViewModel (tasbeeh)",
+              "Build AthkarTextSlider composable (HorizontalPager)",
+              "Build shared components (Button, FAB, Drawer, FontControls)",
+              "Create DiacriticUtil + FontScaleUtil"
+            ]
           },
           {
             "id": "kotlin_port_005",
@@ -639,7 +669,15 @@
             "execution_mode": "human",
             "depends_on": [],
             "last_run_id": null,
-            "builder_prompt": null
+            "builder_prompt": null,
+            "subtasks": [
+              "Create HomeViewModel with goTo event methods",
+              "Build HomeScreen layout (Scaffold + bg + buttons)",
+              "Wire Drawer with 3 items",
+              "Create AlertExitApp dialog",
+              "Wire back press exit on Home",
+              "Verify navigation + drawer + exit"
+            ]
           },
           {
             "id": "kotlin_port_006",
@@ -661,7 +699,15 @@
             "execution_mode": "human",
             "depends_on": [],
             "last_run_id": null,
-            "builder_prompt": null
+            "builder_prompt": null,
+            "subtasks": [
+              "Create 11 ViewModels extending BaseAthkarViewModel",
+              "Create base AthkarScreen composable (reusable layout)",
+              "Build 11 screen files (one per category)",
+              "Add FAB counter + reset to Tasbih/Estigfar/Hamd/Salat",
+              "Wire all 11 screens in NavGraph",
+              "Verify each screen: data, counter, advance, share, font"
+            ]
           },
           {
             "id": "kotlin_port_007",
@@ -683,7 +729,14 @@
             "execution_mode": "human",
             "depends_on": [],
             "last_run_id": null,
-            "builder_prompt": null
+            "builder_prompt": null,
+            "subtasks": [
+              "Create AssmaHussnaViewModel (loading/error/data)",
+              "Build AssmaHussnaScreen with state handling",
+              "Implement searchByName + searchByText",
+              "Copy assma-hussna.json to Android assets",
+              "Wire in NavGraph and verify"
+            ]
           },
           {
             "id": "kotlin_port_008",
@@ -705,7 +758,14 @@
             "execution_mode": "human",
             "depends_on": [],
             "last_run_id": null,
-            "builder_prompt": null
+            "builder_prompt": null,
+            "subtasks": [
+              "Create SearchViewModel with diacritic search",
+              "Build SearchScreen (field + results list)",
+              "Build SearchResultScreen (full dua display)",
+              "Wire search from Home TopAppBar",
+              "Verify search across all lists + diacritics"
+            ]
           },
           {
             "id": "kotlin_port_009",
@@ -727,7 +787,15 @@
             "execution_mode": "human",
             "depends_on": [],
             "last_run_id": null,
-            "builder_prompt": null
+            "builder_prompt": null,
+            "subtasks": [
+              "Create AthkarReminderReceiver BroadcastReceiver",
+              "Create NotificationService (channel, schedule, cancel)",
+              "Register receiver in AndroidManifest",
+              "Create NotificationSettingsScreen (toggles + time)",
+              "Initialize service in AthkarixApp.onCreate",
+              "Wire settings from Drawer + verify"
+            ]
           },
           {
             "id": "kotlin_port_010",
@@ -749,7 +817,15 @@
             "execution_mode": "human",
             "depends_on": [],
             "last_run_id": null,
-            "builder_prompt": null
+            "builder_prompt": null,
+            "subtasks": [
+              "Create ShareUtil (text + app share intents)",
+              "Create WhatsAppUtil (wa.me + fallback)",
+              "Wire all drawer actions",
+              "Enforce RTL layout direction",
+              "Add vertical scroll to AthkarTextSlider",
+              "Verify all 30 features from checklist"
+            ]
           }
         ],
         "dependencies": [],
